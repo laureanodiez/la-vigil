@@ -7,6 +7,8 @@ public class PlayerFlashbangSystem : MonoBehaviour
 {
     [Header("Referencias")]
     [SerializeField] private Light2D globalLight;
+    [SerializeField] private GameObject escombros;
+
     [SerializeField] private Light2D spotLight;
     [SerializeField] private Light2D quimiVision;
 
@@ -34,7 +36,7 @@ public class PlayerFlashbangSystem : MonoBehaviour
     private void Start()
     {
         initialOuterRadius = spotLight.pointLightOuterRadius;
-
+        
         gameplayStartPosition = initialSpawnPoint != null ? 
             initialSpawnPoint.position : 
             transform.position;
@@ -56,6 +58,8 @@ public class PlayerFlashbangSystem : MonoBehaviour
 
         currentTime -= Time.deltaTime;
         quimiVision.enabled = false; 
+        escombros.SetActive(true);
+
 
 
         //Reducir progresivamente el radio de la luz
