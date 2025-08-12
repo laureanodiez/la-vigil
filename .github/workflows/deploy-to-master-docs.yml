@@ -7,8 +7,7 @@ on:
 
 jobs:
   publish-docs:
-    # Evita que el job corra si el actor es el bot que hizo el push
-    if: github.actor != 'github-actions[bot]'
+    if: ${{ github.actor != 'github-actions[bot]' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -17,6 +16,7 @@ jobs:
         with:
           lfs: true
           fetch-depth: 0
+          persist-credentials: true
 
       - name: Pull git-lfs objects
         run: |
@@ -34,14 +34,11 @@ jobs:
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         run: |
-          # Config user
           git config user.name "$GIT_COMMITTER_NAME"
           git config user.email "$GIT_COMMITTER_EMAIL"
 
-          # Aseguramos que los archivos del working tree (descargados por git-lfs) sean añadidos
           git add docs
 
-          # Solo commit/push si hay cambios
           if ! git diff --cached --quiet; then
             git commit -m "ci: update docs (ensure LFS blobs present)"
             git push origin HEAD:master
