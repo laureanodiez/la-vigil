@@ -1,0 +1,32 @@
+name: Deploy WebGL to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main   # ajusta si tu rama principal tiene otro nombre
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository (with LFS)
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Ensure git-lfs objects are pulled
+        run: |
+          git lfs pull
+
+      - name: Show docs directory (debug)
+        run: |
+          echo "Contents of docs:"
+          ls -la docs || true
+          echo "Contents of docs/Build:"
+          ls -la docs/Build || true
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
