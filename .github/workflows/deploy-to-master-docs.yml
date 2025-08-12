@@ -1,4 +1,4 @@
-name: Publish docs (ensure LFS blobs) to master/docs
+﻿name: Publish docs (ensure LFS blobs) to master/docs
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
         run: |
           git lfs pull
 
-      - name: Debug: list docs contents
+      - name: Debug - list docs contents
         run: |
           echo "---- docs/ ----"
           ls -la docs || true
