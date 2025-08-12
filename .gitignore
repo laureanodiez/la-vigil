@@ -1,32 +1,28 @@
-[Llaves y metadatos del repositorio]
-.vscode/
-.idea/
+# Unity
+[Llave y metadatos]
 *.csproj
 *.unityproj
 *.sln
-*.suo
-*.tmp
-*.user
-*.userprefs
-*.pidb
-*.booproj
-*.svd
-*.pdb
-*.mdb
-*.opendb
-*.VC.db
 
-# Directorios de Unity
+# Unity artefactos
 Library/
 Temp/
 Obj/
 Build/
 Builds/
 MemoryCaptures/
+UserSettings/
+Logs/
 
-# Configuración del paquete de Unity
+# Paquetes y caches
 Packages/com.unity.collab-proxy/
-
-# Archivos generados por el sistema operativo
+# OS
 .DS_Store
 Thumbs.db
+
+# Visual Studio, Rider, VSCode
+.vscode/
+.idea/
+*.suo
+*.user
+*.userprefs
