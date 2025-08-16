@@ -8,12 +8,16 @@ public class PlayerFlashbangSystem : MonoBehaviour
     [Header("Referencias")]
     [SerializeField] private Light2D globalLight;
     [SerializeField] private GameObject escombros;
+    [SerializeField] private GameObject escombros1;
+    [SerializeField] private GameObject pared;
 
     [SerializeField] private Light2D spotLight;
     [SerializeField] private Light2D quimiVision;
 
     //[SerializeField] private CanvasGroup flashEffect;
     [SerializeField] private Transform resetPoint;
+    [SerializeField] private GameObject mapa1;
+    [SerializeField] private GameObject mapa1_final;
 
     [Header("Configuración")]
     [SerializeField] private float totalDuration = 30f;
@@ -26,6 +30,7 @@ public class PlayerFlashbangSystem : MonoBehaviour
     [Header("Posiciones")]
     [SerializeField] private Transform initialSpawnPoint;
     [SerializeField] private Transform explosionResetPoint;
+    [SerializeField] private Transform finalSpawnPoint;
 
     private float initialGlobalIntensity;
     private float initialOuterRadius;
@@ -128,7 +133,7 @@ public class PlayerFlashbangSystem : MonoBehaviour
         globalLight.intensity = endIntensity;
     }
 
-    private IEnumerator EndFlashSequence()
+    private IEnumerator BadEndFlashSequence()
     {
         isActive = false;
         
@@ -142,31 +147,52 @@ public class PlayerFlashbangSystem : MonoBehaviour
         yield return StartCoroutine(FlashEffect(false));
     }
 
-    private void ResetSystem()
-    {        
-        // 1. Teletransportar al punto de respawn actual
+    public void GoodEndFlashSequence()
+    {
+        isActive = false;
+        gameplayStartPosition = finalSpawnPoint.position;
         TeleportPlayer(gameplayStartPosition);
-        
-        // 2. Resetear luces
-        if (globalLight != null) 
+                if (globalLight != null)
         {
             globalLight.enabled = true;
             globalLight.intensity = initialGlobalIntensity;
         }
-        
+
         if (spotLight != null)
         {
             spotLight.gameObject.SetActive(false);
             spotLight.pointLightOuterRadius = initialOuterRadius;
         }
-        
+        escombros1.SetActive(true);
+        mapa1.SetActive(false);
+        mapa1_final.SetActive(true);
+    }
+
+    private void ResetSystem()
+    {
+        // 1. Teletransportar al punto de respawn actual
+        TeleportPlayer(gameplayStartPosition);
+
+        // 2. Resetear luces
+        if (globalLight != null)
+        {
+            globalLight.enabled = true;
+            globalLight.intensity = initialGlobalIntensity;
+        }
+
+        if (spotLight != null)
+        {
+            spotLight.gameObject.SetActive(false);
+            spotLight.pointLightOuterRadius = initialOuterRadius;
+        }
+
         // 3. Reactivar trigger
         var trigger = FindObjectOfType<TriggerFlashbang>();
-        if (trigger != null) 
+        if (trigger != null)
         {
             trigger.GetComponent<Collider2D>().enabled = true;
         }
-        
+
         isActive = false;
     }
 

@@ -7,12 +7,12 @@
 # Unity artefactos
 Library/
 Temp/
-Obj/
-Build/
+#Obj/
+#Build/
 Builds/
 MemoryCaptures/
 UserSettings/
-Logs/
+#Logs/
 
 # Paquetes y caches
 Packages/com.unity.collab-proxy/
