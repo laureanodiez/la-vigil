@@ -8,11 +8,13 @@
 Library/
 Temp/
 #Obj/
-#Build/
+Build/
 Builds/
+DevBuild/
 MemoryCaptures/
 UserSettings/
 #Logs/
+
 
 # Paquetes y caches
 Packages/com.unity.collab-proxy/
