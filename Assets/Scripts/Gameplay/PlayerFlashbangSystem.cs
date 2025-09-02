@@ -65,7 +65,7 @@ public class PlayerFlashbangSystem : MonoBehaviour
         if (!isActive) return;
 
         currentTime -= Time.deltaTime;
-        //quimiVision.enabled = false; 
+        quimiVision.enabled = false; 
         escombros.SetActive(true);
         quimiController.enabled = true;
 
@@ -78,7 +78,7 @@ public class PlayerFlashbangSystem : MonoBehaviour
             initialOuterRadius, 
             progress
         );
-        
+
 
         //Finalizar la secuencia cuando el tiempo se acaba
         if (currentTime <= 0f)
