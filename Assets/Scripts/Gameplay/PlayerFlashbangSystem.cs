@@ -18,6 +18,9 @@ public class PlayerFlashbangSystem : MonoBehaviour
     [SerializeField] private Transform resetPoint;
     [SerializeField] private GameObject mapa1;
     [SerializeField] private GameObject mapa1_final;
+    [SerializeField] private GameObject pared_sombra;
+    [SerializeField] private GameObject pared_sombra1;
+    [SerializeField] private QuimiSpriteAnimator quimiController;
 
     [Header("Configuración")]
     [SerializeField] private float totalDuration = 30f;
@@ -62,8 +65,9 @@ public class PlayerFlashbangSystem : MonoBehaviour
         if (!isActive) return;
 
         currentTime -= Time.deltaTime;
-        quimiVision.enabled = false; 
+        //quimiVision.enabled = false; 
         escombros.SetActive(true);
+        quimiController.enabled = true;
 
 
 
@@ -74,6 +78,7 @@ public class PlayerFlashbangSystem : MonoBehaviour
             initialOuterRadius, 
             progress
         );
+        
 
         //Finalizar la secuencia cuando el tiempo se acaba
         if (currentTime <= 0f)
@@ -84,6 +89,7 @@ public class PlayerFlashbangSystem : MonoBehaviour
     
     private IEnumerator FlashSequence()
     {
+        quimiController.enabled = false;
         // 1. Flash inicial (aumento brusco de intensidad)
         yield return StartCoroutine(FlashEffect(true));
         
@@ -149,23 +155,60 @@ public class PlayerFlashbangSystem : MonoBehaviour
 
     public void GoodEndFlashSequence()
     {
-        isActive = false;
-        gameplayStartPosition = finalSpawnPoint.position;
-        TeleportPlayer(gameplayStartPosition);
-                if (globalLight != null)
-        {
-            globalLight.enabled = true;
-            globalLight.intensity = initialGlobalIntensity;
-        }
+        StartCoroutine(GoodEndFlashSequenceCoroutine());
+    }
 
+    private IEnumerator GoodEndFlashSequenceCoroutine()
+    {
+        // 1) detener el timer/gameplay
+        isActive = false;
+
+        if (quimiController != null) quimiController.enabled = false;
+
+        if (globalLight != null) globalLight.enabled = true;
+
+        // (opcional) guardar color original por si lo modificásemos (normalmente es blanco)
+        Color originalColor = globalLight != null ? globalLight.color : Color.white;
+        if (globalLight != null) globalLight.color = Color.white;
+
+        // 4) FADE-IN (flash a blanco / aumento de intensidad)
+        yield return StartCoroutine(FlashEffect(true));
+
+        // 5) Teleport mientras la pantalla/escena sigue 'blanca'
+        if (finalSpawnPoint != null)
+        {
+            gameplayStartPosition = finalSpawnPoint.position;
+        }
+        TeleportPlayer(gameplayStartPosition);
+
+        // 6) aplicar cambios de mapa/estado mientras el jugador no ve (pantalla blanca)
         if (spotLight != null)
         {
             spotLight.gameObject.SetActive(false);
             spotLight.pointLightOuterRadius = initialOuterRadius;
         }
+        if (globalLight != null)
+        {
+            globalLight.enabled = true;
+            globalLight.intensity = initialGlobalIntensity; // lo normalizamos para el fade-out
+        }
         escombros1.SetActive(true);
         mapa1.SetActive(false);
         mapa1_final.SetActive(true);
+        pared_sombra.SetActive(false);
+        pared_sombra1.SetActive(false);
+
+        // Pequeña espera para asegurar que Unity haya aplicado transform/objetos (un frame)
+        yield return null;
+
+        // 7) FADE-OUT (volver a la normalidad)
+        yield return StartCoroutine(FlashEffect(false));
+
+        // 8) restaurar color si lo tocamos
+        if (globalLight != null) globalLight.color = originalColor;
+
+        // 9) devolver control al jugador
+        if (quimiController != null) quimiController.enabled = true;
     }
 
     private void ResetSystem()
