@@ -2783,7 +2783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd0dcf5bf37e954e8d64533caf008ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sortingOffset: 0
+  sortingOffset: -30
   multiplier: 100
 --- !u!212 &656079062
 SpriteRenderer:
@@ -2828,7 +2828,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -780392627
   m_SortingLayer: 3
-  m_SortingOrder: -1295
+  m_SortingOrder: -1277
   m_Sprite: {fileID: 3286163911610860551, guid: aa38aae2913d4f74d8c19b6069660774, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6413,7 +6413,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -780392627
   m_SortingLayer: 3
-  m_SortingOrder: -405
+  m_SortingOrder: -1371
   m_Sprite: {fileID: 2066222075009217869, guid: 75a94eafa6c058b469fa9ef2469b3af4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
