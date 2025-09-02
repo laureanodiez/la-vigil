@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Presente silla atras_0: -7591734613112201230
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

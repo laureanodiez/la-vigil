@@ -15,7 +15,7 @@ G:/Proyectos/Vigil/Vigil
 -logFile
 Logs/AssetImportWorker4.log
 -srvPort
-60403
+60991
 -job-worker-count
 9
 -background-job-worker-count
@@ -59,19 +59,19 @@ G:/Proyectos/Vigil/Vigil
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [15156]  Target information:
+Player connection [4208]  Target information:
 
-Player connection [15156]  * "[IP] 192.168.1.64 [Port] 0 [Flags] 2 [Guid] 867835157 [EditorId] 867835157 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-JND5JB5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [4208]  * "[IP] 192.168.1.64 [Port] 0 [Flags] 2 [Guid] 1071842736 [EditorId] 1071842736 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-JND5JB5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [15156]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 867835157 [EditorId] 867835157 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-JND5JB5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [4208]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1071842736 [EditorId] 1071842736 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-JND5JB5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [15156] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [15156] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [4208] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [4208] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
 Library Redirect Path: Library/
-Refreshing native plugins compatible for Editor in 2.54 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.36 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.23f1 (1c4764c07fb4)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/Resources/UnitySubsystems
@@ -87,48 +87,48 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56424
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56084
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.006387 seconds.
-- Loaded All Assemblies, in  0.434 seconds
+Registered in 0.007656 seconds.
+- Loaded All Assemblies, in  0.533 seconds
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.360 seconds
-Domain Reload Profiling: 791ms
-	BeginReloadAssembly (160ms)
+- Finished resetting the current domain, in  0.453 seconds
+Domain Reload Profiling: 982ms
+	BeginReloadAssembly (168ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (38ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (53ms)
-	LoadAllAssembliesAndSetupDomain (166ms)
-		LoadAssemblies (156ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (69ms)
+	LoadAllAssembliesAndSetupDomain (230ms)
+		LoadAssemblies (164ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (163ms)
-			TypeCache.Refresh (162ms)
-				TypeCache.ScanAssembly (147ms)
+		AnalyzeDomain (226ms)
+			TypeCache.Refresh (223ms)
+				TypeCache.ScanAssembly (201ms)
 			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (361ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (453ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (317ms)
+		SetupLoadedEditorAssemblies (382ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (25ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (8ms)
-			ProcessInitializeOnLoadAttributes (208ms)
-			ProcessInitializeOnLoadMethodAttributes (69ms)
-			AfterProcessingInitializeOnLoad (3ms)
+			InitializePlatformSupportModulesInManaged (37ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (9ms)
+			ProcessInitializeOnLoadAttributes (251ms)
+			ProcessInitializeOnLoadMethodAttributes (74ms)
+			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
@@ -139,11 +139,11 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.336 seconds
+- Loaded All Assemblies, in  1.513 seconds
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 1.32 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.64 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
@@ -153,284 +153,140 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.035 seconds
-Domain Reload Profiling: 2367ms
-	BeginReloadAssembly (573ms)
+- Finished resetting the current domain, in  1.274 seconds
+Domain Reload Profiling: 2782ms
+	BeginReloadAssembly (558ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (66ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (39ms)
-	LoadAllAssembliesAndSetupDomain (673ms)
-		LoadAssemblies (503ms)
+		CreateAndSetChildDomain (47ms)
+	RebuildCommonClasses (52ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (831ms)
+		LoadAssemblies (565ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (336ms)
-			TypeCache.Refresh (233ms)
-				TypeCache.ScanAssembly (207ms)
-			BuildScriptInfoCaches (86ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (1035ms)
+		AnalyzeDomain (408ms)
+			TypeCache.Refresh (277ms)
+				TypeCache.ScanAssembly (252ms)
+			BuildScriptInfoCaches (111ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (1275ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (705ms)
+		SetupLoadedEditorAssemblies (914ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (85ms)
-			ProcessInitializeOnLoadAttributes (490ms)
-			ProcessInitializeOnLoadMethodAttributes (108ms)
-			AfterProcessingInitializeOnLoad (12ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (110ms)
+			ProcessInitializeOnLoadAttributes (643ms)
+			ProcessInitializeOnLoadMethodAttributes (132ms)
+			AfterProcessingInitializeOnLoad (14ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.61 seconds
-Refreshing native plugins compatible for Editor in 2.22 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (12ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 2.17 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 241 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7591 unused Assets / (5.8 MB). Loaded Objects now: 8411.
-Memory consumption went from 230.8 MB to 225.0 MB.
-Total: 34.267200 ms (FindLiveObjects: 4.229200 ms CreateObjectMapping: 4.210800 ms MarkObjects: 18.501700 ms  DeleteObjects: 7.320700 ms)
+Unloading 7591 unused Assets / (5.7 MB). Loaded Objects now: 8411.
+Memory consumption went from 228.7 MB to 223.1 MB.
+Total: 30.415300 ms (FindLiveObjects: 1.288400 ms CreateObjectMapping: 2.201500 ms MarkObjects: 16.841000 ms  DeleteObjects: 10.081700 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 11312.507136 seconds.
-  path: Assets/Art/Sprites/Presente/Quimi
-  artifactKey: Guid(b548893e31d358b4789ebb9dd35db137) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Quimi using Guid(b548893e31d358b4789ebb9dd35db137) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5b84f996763affc5e0c3903cd53ab312') in 0.005992 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.014285 seconds.
-  path: Assets/Art/Sprites/Presente/Quimi/Der 1.png
-  artifactKey: Guid(9fd9d47e0c21ee44ba4d79c85dba6903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Quimi/Der 1.png using Guid(9fd9d47e0c21ee44ba4d79c85dba6903) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e3f8a1ac330db50b79e425fa3950e62c') in 0.0946261 seconds
+  Time since last request: 12072.593495 seconds.
+  path: Assets/Art/Sprites/Presente/Objetos/Bot.png
+  artifactKey: Guid(04368c5b15d23c3478af164d63f23d72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/Bot.png using Guid(04368c5b15d23c3478af164d63f23d72) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '14c14b4026f79dc65977833d0fbf289e') in 0.0905828 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Art/Sprites/Presente/Quimi/Quime_Mesa de trabajo 1 copia 2.svg
-  artifactKey: Guid(f0638f8174995b54a9fb9bb70a9231ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Quimi/Quime_Mesa de trabajo 1 copia 2.svg using Guid(f0638f8174995b54a9fb9bb70a9231ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9fee73623fc0c63624e0abd3e0da5190') in 0.5118689 seconds
+  Time since last request: 0.000025 seconds.
+  path: Assets/Art/Sprites/Presente/Objetos/Bancos corredizos - vr 1.svg
+  artifactKey: Guid(fd340a4010cd6d143a9ca8ffc74ce8ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/Bancos corredizos - vr 1.svg using Guid(fd340a4010cd6d143a9ca8ffc74ce8ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1972528ab7f473c0d5fdf20e91b41da4') in 0.5276546 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Art/Sprites/Presente/Quimi/Espalda 1.png
-  artifactKey: Guid(b13ba2977a0cb1548b8f27f56ef1a6db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Quimi/Espalda 1.png using Guid(b13ba2977a0cb1548b8f27f56ef1a6db) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '307e17ffa1767d90c9fd985f52c6ad9a') in 0.0109283 seconds
+  Time since last request: 0.000050 seconds.
+  path: Assets/Art/Sprites/Presente/Objetos/Hall 1 presente - mesa de serigrafia estampada.png
+  artifactKey: Guid(170e30d542d2c9e429432ebe71608da3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/Hall 1 presente - mesa de serigrafia estampada.png using Guid(170e30d542d2c9e429432ebe71608da3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cb35d636ffd11ab39c11fcde8b09751c') in 0.0084768 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Art/Sprites/Presente/Quimi/Quime_Mesa de trabajo 1 copia 8.svg
-  artifactKey: Guid(f17516f2198b24a43acd2d5bc5c01157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Quimi/Quime_Mesa de trabajo 1 copia 8.svg using Guid(f17516f2198b24a43acd2d5bc5c01157) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '87241c8cfef3f939ddb1a0e57fe1f6da') in 0.0161439 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000047 seconds.
-  path: Assets/Art/Sprites/Presente/Quimi/Quime_Mesa de trabajo 1 copia.svg
-  artifactKey: Guid(98102baccc1df1747ab4e5ded4d1babd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Quimi/Quime_Mesa de trabajo 1 copia.svg using Guid(98102baccc1df1747ab4e5ded4d1babd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e504a6a27d577c16e6b2048f4047896f') in 0.0100209 seconds
+  path: Assets/Art/Sprites/Presente/NPCs/Hall 1 presente - Recepcionista frame 2.svg
+  artifactKey: Guid(54b6ee0ce3cc22446bd84c5a98543893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/NPCs/Hall 1 presente - Recepcionista frame 2.svg using Guid(54b6ee0ce3cc22446bd84c5a98543893) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '76e45952ce95946cc53c700d4e0cc8b9') in 0.0146524 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Art/Sprites/Presente/Quimi/Quime_Mesa de trabajo 1 copia 5.svg
-  artifactKey: Guid(c16417ad104190a4089c5dbebd0c8938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Quimi/Quime_Mesa de trabajo 1 copia 5.svg using Guid(c16417ad104190a4089c5dbebd0c8938) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '42d307b4144b70fb0655b9da9d47d2c7') in 0.0096582 seconds
+  Time since last request: 0.000028 seconds.
+  path: Assets/Art/Sprites/Presente/Objetos/ciervo azul presente.svg
+  artifactKey: Guid(dcb7f7c8e3746c7429b0c4b3c5ee4a75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/ciervo azul presente.svg using Guid(dcb7f7c8e3746c7429b0c4b3c5ee4a75) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aac3b76f77669a213031f834bf79895c') in 0.0134219 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Art/Sprites/Presente/Quimi/Izq 2.png
-  artifactKey: Guid(537f851709005e341a9cf092b33c590d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Quimi/Izq 2.png using Guid(537f851709005e341a9cf092b33c590d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f5dcf6880f904bcb5415f28557f50d67') in 0.0102971 seconds
+  Time since last request: 0.235196 seconds.
+  path: Assets/Art/Sprites/Presente/Objetos/Hall 1 presente - Silla 1.png
+  artifactKey: Guid(f5b9d731bde8452448e1cc1b1f4d2d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/Hall 1 presente - Silla 1.png using Guid(f5b9d731bde8452448e1cc1b1f4d2d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f7284dd697a9615a9624a62c447b25bf') in 0.0162251 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000057 seconds.
-  path: Assets/Art/Sprites/Presente/Quimi/Quime_Mesa de trabajo 1 copia 6.svg
-  artifactKey: Guid(a121a949ec85a6a43a69f0e5052ab5e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Quimi/Quime_Mesa de trabajo 1 copia 6.svg using Guid(a121a949ec85a6a43a69f0e5052ab5e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '85e01fb55aa6db75d4e3652a3b53ab58') in 0.0103118 seconds
+  Time since last request: 0.000023 seconds.
+  path: Assets/Art/Sprites/Presente/Objetos/Hall 1 presente - Silla3.svg
+  artifactKey: Guid(a249d94330c99b044bd059b25490ac30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/Hall 1 presente - Silla3.svg using Guid(a249d94330c99b044bd059b25490ac30) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Incomplete mesh data in Sprite. Please reimport or recreate the Sprite.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
+UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.UniversalCameraData) (at ./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs:825)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,UnityEngine.Rendering.Universal.UniversalAdditionalCameraData&) (at ./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs:690)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at ./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs:665)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at ./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs:482)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,UnityEngine.Object,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEngine.Camera:Render ()
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview (UnityEditor.GameObjectInspector/PreviewData)
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs line 825]
+
+ -> (artifact id: '1e89c66a9064ba7d9f5e4305a08bac12') in 0.0140695 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Art/Sprites/Presente/Quimi/Izq 1.png
-  artifactKey: Guid(fc285e00c9b7354499adadee82ad6d3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Quimi/Izq 1.png using Guid(fc285e00c9b7354499adadee82ad6d3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5fc6b9dc3e7f75165e563f1f3669daae') in 0.0095888 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Art/Sprites/Presente/Quimi/Frente 1.png
-  artifactKey: Guid(5d6b1ad0491b8e649adaf14848289365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Quimi/Frente 1.png using Guid(5d6b1ad0491b8e649adaf14848289365) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '334e25d1edf18f5d7ec6a3fc08f2afd0') in 0.0099851 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.199122 seconds.
-  path: Assets/Art/Sprites/Presente/Objetos/Bancos corredizos - vr 1.png
-  artifactKey: Guid(1fe3e195ff7a58d4381d7ea36c1882ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Objetos/Bancos corredizos - vr 1.png using Guid(1fe3e195ff7a58d4381d7ea36c1882ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7321c48329da4fe82b11f292200d64ec') in 0.0136219 seconds
+  Time since last request: 0.000036 seconds.
+  path: Assets/Art/Sprites/Presente/Objetos/Silla diag izquierda- presente.png
+  artifactKey: Guid(eb3bc6529517718498d0cbed839df58e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/Silla diag izquierda- presente.png using Guid(eb3bc6529517718498d0cbed839df58e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '52d14baa7d8d8b7d4160306e19b26689') in 0.0120542 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000036 seconds.
-  path: Assets/Art/Sprites/Presente/Objetos/Biblioteca.svg
-  artifactKey: Guid(3b61c5c7b5d8b034d9aeb2beb431cd7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Objetos/Biblioteca.svg using Guid(3b61c5c7b5d8b034d9aeb2beb431cd7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '406392ff5a932deb63e32be9f6c24f4b') in 0.0118937 seconds
+  path: Assets/Art/Sprites/Presente/Objetos/Silla diag izquierda- presente.svg
+  artifactKey: Guid(8720a4ac99bd1e04b84baac7914222c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/Silla diag izquierda- presente.svg using Guid(8720a4ac99bd1e04b84baac7914222c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6f615861fe0c31f09bfcceb2a8a1811d') in 0.0125334 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Art/Sprites/Pasado/Objetos/Brush.png
-  artifactKey: Guid(70744e3694ebbc24b88a1fdc41021e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Pasado/Objetos/Brush.png using Guid(70744e3694ebbc24b88a1fdc41021e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6be03017043dc98ee9698ca7a5ddf818') in 0.0141858 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Art/Sprites/Pasado/Constancio/Constancio_objetos chicos copia 4.svg
-  artifactKey: Guid(5c1fccc7e220a334c81a7ec15a65382f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Pasado/Constancio/Constancio_objetos chicos copia 4.svg using Guid(5c1fccc7e220a334c81a7ec15a65382f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '17cd49cba23dbf58c3f701552f1615d7') in 0.0120302 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Art/Sprites/Pasado/Objetos/Escombros horizontal.svg
-  artifactKey: Guid(a8c48b8782effcb4482e500f43444c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Pasado/Objetos/Escombros horizontal.svg using Guid(a8c48b8782effcb4482e500f43444c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0a57a2cf930deb533da4e6d9c3f58c61') in 0.0095795 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/Art/Tilesets/Frente 3 - Fondo.svg
-  artifactKey: Guid(7d0c64fee8daf9342b2c4aa5c5213dc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Tilesets/Frente 3 - Fondo.svg using Guid(7d0c64fee8daf9342b2c4aa5c5213dc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Incomplete mesh data in Sprite. Please reimport or recreate the Sprite.
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.UniversalCameraData) (at ./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs:825)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,UnityEngine.Rendering.Universal.UniversalAdditionalCameraData&) (at ./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs:690)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at ./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs:665)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at ./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs:482)
-UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,UnityEngine.Object,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-UnityEngine.Camera:Render ()
-UnityEditor.PreviewRenderUtility:Render (bool,bool)
-UnityEditor.GameObjectInspector:DoRenderPreview (UnityEditor.GameObjectInspector/PreviewData)
-UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-[./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs line 825]
-
- -> (artifact id: '94540c2fb974c801e70c4b11602cd9e7') in 0.0107413 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Art/Sprites/Pasado/Constancio/Constancio_objetos chicos copia 8.svg
-  artifactKey: Guid(3c75281af9a24974d95551799dffb30c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Pasado/Constancio/Constancio_objetos chicos copia 8.svg using Guid(3c75281af9a24974d95551799dffb30c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6ea743637198bd48db65a2aa86b61767') in 0.0109015 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Art/Sprites/Pasado/Constancio/Constancio_Front_1.svg
-  artifactKey: Guid(abc1ddb33780d3443939571a907da4e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Pasado/Constancio/Constancio_Front_1.svg using Guid(abc1ddb33780d3443939571a907da4e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b6311dee4d5247a21ac59fc429324467') in 0.010587 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/Art/Sprites/Pasado/Constancio/Constancio_objetos chicos copia 10.svg
-  artifactKey: Guid(dc55acb4c50beea4187dbb69d11ca1b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Pasado/Constancio/Constancio_objetos chicos copia 10.svg using Guid(dc55acb4c50beea4187dbb69d11ca1b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f425e6634ae9c00e15c5e7e78aa14b98') in 0.0102228 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.064427 seconds.
-  path: Assets/Art/Tilesets/Frente Vigil 1 OFICIAL_Mesa de trabajo 1-01.png
-  artifactKey: Guid(395a349630c68b5458e3ad6b37c661ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Tilesets/Frente Vigil 1 OFICIAL_Mesa de trabajo 1-01.png using Guid(395a349630c68b5458e3ad6b37c661ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '77bfc717a11a566cc379719e94ab930a') in 0.0307235 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Art/Sprites/Presente/Objetos (sin animacion)/Hall 1 presente - biblioteca.png
-  artifactKey: Guid(674b67548adf1864d893f93df2e7d2e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Objetos (sin animacion)/Hall 1 presente - biblioteca.png using Guid(674b67548adf1864d893f93df2e7d2e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '711f189c36861fd3eb6861f5451a083f') in 0.0107049 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Art/Sprites/Presente/Objetos (sin animacion)/Hall 1 presente - mesa de taller.png
-  artifactKey: Guid(19ccc7acb19e12d43bba1b486ce08c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Objetos (sin animacion)/Hall 1 presente - mesa de taller.png using Guid(19ccc7acb19e12d43bba1b486ce08c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '58e564e2d4cb927cd76b1ea78088fde0') in 0.0136463 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Art/Sprites/Presente/Animaciones (interatuables)/Hall 1 presente - Recepcionista frame 2.svg
-  artifactKey: Guid(234ef8802013b5c4da3418a6ce19bf98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Animaciones (interatuables)/Hall 1 presente - Recepcionista frame 2.svg using Guid(234ef8802013b5c4da3418a6ce19bf98) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c83e52e3126f985e6a31b97e691500b1') in 0.0119541 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Art/Sprites/Presente/Objetos (sin animacion)/Hall 1 presente - mesa de taller.svg
-  artifactKey: Guid(0f94a139bbfaa1344af7c3343484eb29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Objetos (sin animacion)/Hall 1 presente - mesa de taller.svg using Guid(0f94a139bbfaa1344af7c3343484eb29) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Incomplete mesh data in Sprite. Please reimport or recreate the Sprite.
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.Rendering.ScriptableRenderContext:Internal_Cull (UnityEngine.Rendering.ScriptableCullingParameters&,UnityEngine.Rendering.ScriptableRenderContext,intptr)
-UnityEngine.Rendering.ScriptableRenderContext:Cull (UnityEngine.Rendering.ScriptableCullingParameters&)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.UniversalCameraData) (at ./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs:825)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera,UnityEngine.Rendering.Universal.UniversalAdditionalCameraData&) (at ./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs:690)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCameraInternal (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at ./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs:665)
-UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at ./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs:482)
-UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,UnityEngine.Object,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-UnityEngine.Camera:Render ()
-UnityEditor.PreviewRenderUtility:Render (bool,bool)
-UnityEditor.GameObjectInspector:DoRenderPreview (UnityEditor.GameObjectInspector/PreviewData)
-UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-[./Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipeline.cs line 825]
-
- -> (artifact id: '5810e392c5395d5d34e8aa5820064fdc') in 0.0092639 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
