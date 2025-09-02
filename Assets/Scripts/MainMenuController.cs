@@ -9,9 +9,6 @@ public class MainMenuController : MonoBehaviour
     public GameObject optionsPanel;
     public GameObject mainButtonsPanel; // opcional, para ocultar botones cuando se abre options
 
-    [Header("Camera")]
-    public Camera camera;
-
     [Header("Audio")]
     public AudioSource uiAudioSource;
     public AudioClip clickSfx;
@@ -53,9 +50,7 @@ public class MainMenuController : MonoBehaviour
     public void PlayGame(string sceneName)
     {
         if (uiAudioSource != null && clickSfx != null) uiAudioSource.PlayOneShot(clickSfx);
-        camera.enabled = false;
-        optionsPanel.SetActive(false);
-        mainButtonsPanel.SetActive(false);
+        // carga por nombre (asegúrate de agregar la escena a Build Settings)
         SceneManager.LoadScene(sceneName);
     }
 
