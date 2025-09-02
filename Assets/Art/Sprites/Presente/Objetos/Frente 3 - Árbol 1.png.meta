@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Frente 3 - \xC1rbol 1_0": 8389936673679587233
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

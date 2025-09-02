@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ciervo azul presente_0: 2066222075009217869
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

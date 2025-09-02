@@ -15,7 +15,7 @@ G:/Proyectos/Vigil/Vigil
 -logFile
 Logs/AssetImportWorker7.log
 -srvPort
-60403
+60991
 -job-worker-count
 9
 -background-job-worker-count
@@ -59,19 +59,19 @@ G:/Proyectos/Vigil/Vigil
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [19556]  Target information:
+Player connection [18376]  Target information:
 
-Player connection [19556]  * "[IP] 192.168.1.64 [Port] 0 [Flags] 2 [Guid] 172896344 [EditorId] 172896344 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-JND5JB5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [18376]  * "[IP] 192.168.1.64 [Port] 0 [Flags] 2 [Guid] 2571411418 [EditorId] 2571411418 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-JND5JB5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [19556]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 172896344 [EditorId] 172896344 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-JND5JB5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [18376]  * "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 2571411418 [EditorId] 2571411418 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-JND5JB5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [19556] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [19556] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [18376] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [18376] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
 Library Redirect Path: Library/
-Refreshing native plugins compatible for Editor in 2.28 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.61 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.23f1 (1c4764c07fb4)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/Resources/UnitySubsystems
@@ -87,48 +87,48 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56808
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56828
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.23f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.006526 seconds.
+Registered in 0.007274 seconds.
 - Loaded All Assemblies, in  0.478 seconds
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.343 seconds
-Domain Reload Profiling: 817ms
-	BeginReloadAssembly (175ms)
+- Finished resetting the current domain, in  0.389 seconds
+Domain Reload Profiling: 863ms
+	BeginReloadAssembly (167ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (47ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (66ms)
-	LoadAllAssembliesAndSetupDomain (171ms)
-		LoadAssemblies (171ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (62ms)
+	LoadAllAssembliesAndSetupDomain (188ms)
+		LoadAssemblies (164ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (166ms)
-			TypeCache.Refresh (165ms)
-				TypeCache.ScanAssembly (151ms)
+		AnalyzeDomain (183ms)
+			TypeCache.Refresh (182ms)
+				TypeCache.ScanAssembly (167ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (344ms)
+	FinalizeReload (390ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (298ms)
+		SetupLoadedEditorAssemblies (334ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (25ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (6ms)
-			ProcessInitializeOnLoadAttributes (189ms)
-			ProcessInitializeOnLoadMethodAttributes (70ms)
-			AfterProcessingInitializeOnLoad (4ms)
+			InitializePlatformSupportModulesInManaged (30ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (7ms)
+			ProcessInitializeOnLoadAttributes (216ms)
+			ProcessInitializeOnLoadMethodAttributes (73ms)
+			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
@@ -139,11 +139,11 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.153 seconds
+- Loaded All Assemblies, in  1.361 seconds
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 1.21 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.75 ms, found 4 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
@@ -153,108 +153,192 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.963 seconds
-Domain Reload Profiling: 2112ms
-	BeginReloadAssembly (435ms)
+- Finished resetting the current domain, in  1.063 seconds
+Domain Reload Profiling: 2418ms
+	BeginReloadAssembly (500ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (8ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (36ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (41ms)
-	LoadAllAssembliesAndSetupDomain (626ms)
-		LoadAssemblies (415ms)
+		CreateAndSetChildDomain (37ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (49ms)
+	LoadAllAssembliesAndSetupDomain (750ms)
+		LoadAssemblies (482ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (324ms)
-			TypeCache.Refresh (216ms)
-				TypeCache.ScanAssembly (193ms)
-			BuildScriptInfoCaches (92ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (963ms)
+		AnalyzeDomain (398ms)
+			TypeCache.Refresh (278ms)
+				TypeCache.ScanAssembly (248ms)
+			BuildScriptInfoCaches (97ms)
+			ResolveRequiredComponents (20ms)
+	FinalizeReload (1064ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (704ms)
+		SetupLoadedEditorAssemblies (778ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
+			InitializePlatformSupportModulesInManaged (5ms)
 			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (89ms)
-			ProcessInitializeOnLoadAttributes (480ms)
-			ProcessInitializeOnLoadMethodAttributes (110ms)
-			AfterProcessingInitializeOnLoad (14ms)
+			BeforeProcessingInitializeOnLoad (94ms)
+			ProcessInitializeOnLoadAttributes (542ms)
+			ProcessInitializeOnLoadMethodAttributes (119ms)
+			AfterProcessingInitializeOnLoad (12ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (12ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 1.43 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.96 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 241 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 7591 unused Assets / (5.6 MB). Loaded Objects now: 8411.
-Memory consumption went from 232.6 MB to 227.0 MB.
-Total: 13.667200 ms (FindLiveObjects: 1.039200 ms CreateObjectMapping: 1.358300 ms MarkObjects: 6.741900 ms  DeleteObjects: 4.526900 ms)
+Memory consumption went from 230.7 MB to 225.1 MB.
+Total: 20.472900 ms (FindLiveObjects: 1.848100 ms CreateObjectMapping: 2.458100 ms MarkObjects: 10.071800 ms  DeleteObjects: 6.093100 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 11322.767704 seconds.
-  path: Assets/Art/Sprites/Presente/Objetos/Biblioteca.png
-  artifactKey: Guid(5e0d916a2e90a9c4f9b2fdb7cd7f9841) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Objetos/Biblioteca.png using Guid(5e0d916a2e90a9c4f9b2fdb7cd7f9841) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1878dba4204f4446ac2a8ef18e3bcafa') in 0.0989904 seconds
+  Time since last request: 12309.574625 seconds.
+  path: Assets/Art/Sprites/Presente/Objetos/Hall 2 presente - Casita de madera.png
+  artifactKey: Guid(6568e7a48d240984582eac158e0f3c8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/Hall 2 presente - Casita de madera.png using Guid(6568e7a48d240984582eac158e0f3c8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e6b56bed3fa68200788f7797a6e3ddac') in 0.1018126 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Art/Sprites/Presente/Objetos/ciervo azul presente.png
-  artifactKey: Guid(75a94eafa6c058b469fa9ef2469b3af4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Objetos/ciervo azul presente.png using Guid(75a94eafa6c058b469fa9ef2469b3af4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4ed2728a5022edfc930b39bf050d0106') in 0.0113714 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Art/Tilesets/Frente 2 fondo.png
-  artifactKey: Guid(a47a7b41d307ecd44856a1c26b51f5fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Tilesets/Frente 2 fondo.png using Guid(a47a7b41d307ecd44856a1c26b51f5fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2aca2555fa867d12172cd006d031abc7') in 0.0325483 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Art/Sprites/Pasado/Constancio/Constancio_Front_2.svg
-  artifactKey: Guid(0ea15a6faaa390240bf8e3f9a3533788) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Pasado/Constancio/Constancio_Front_2.svg using Guid(0ea15a6faaa390240bf8e3f9a3533788) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1edc1f6a9a1298a04eb1229e9ebfd823') in 0.4693468 seconds
+  Time since last request: 0.000050 seconds.
+  path: Assets/Art/Sprites/Presente/Objetos/Hall 3 presente - Mesa de bar chiquita 2.svg
+  artifactKey: Guid(1bc93be2ed9b76944b5fb60dc2f0395d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/Hall 3 presente - Mesa de bar chiquita 2.svg using Guid(1bc93be2ed9b76944b5fb60dc2f0395d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '58c495d87138b1699241abb18a268b77') in 0.5302479 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.749074 seconds.
-  path: Assets/Art/Sprites/Presente/Objetos (sin animacion)/Hall 1 presente - mesa de serigrafia estampada.png
-  artifactKey: Guid(0aa56229fbbdbbb449101aaa687f4b28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Objetos (sin animacion)/Hall 1 presente - mesa de serigrafia estampada.png using Guid(0aa56229fbbdbbb449101aaa687f4b28) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c15bb1239e93cb598d0b62e0aa47b90f') in 0.014379 seconds
+  Time since last request: 0.000041 seconds.
+  path: Assets/Art/Sprites/Presente/Objetos/Hall 3 presente - Mesa de bar chiquita 2.png
+  artifactKey: Guid(e800cca66d57d5642b3c8ee3da51e9a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/Hall 3 presente - Mesa de bar chiquita 2.png using Guid(e800cca66d57d5642b3c8ee3da51e9a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '772fe205e74c925a900656a785d39a6c') in 0.0094625 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Art/Sprites/Presente/Objetos (sin animacion)/Hall 1 presente - mesa de serigrafia estampada.svg
-  artifactKey: Guid(3290da3b8c860c54eb0ddbba8a948e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Objetos (sin animacion)/Hall 1 presente - mesa de serigrafia estampada.svg using Guid(3290da3b8c860c54eb0ddbba8a948e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '792501d55e3e7cd07237c025b0154c1c') in 0.0122115 seconds
+  Time since last request: 0.000068 seconds.
+  path: Assets/Art/Sprites/Presente/Objetos/Hall 2 presente - Casita de madera.svg
+  artifactKey: Guid(daf1645bbfac5ae49be810a930a3e22e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/Hall 2 presente - Casita de madera.svg using Guid(daf1645bbfac5ae49be810a930a3e22e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a0efa548faf5c9347148da5557850544') in 0.0154729 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Art/Sprites/Presente/Objetos/Hall 3 presente - Mesa de bar chiquita 1.svg
+  artifactKey: Guid(e8503ee70d821b745829b006f6d23045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/Hall 3 presente - Mesa de bar chiquita 1.svg using Guid(e8503ee70d821b745829b006f6d23045) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1d8392876960193525c9bb91803f1118') in 0.0099759 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Art/Tilesets/Hall 4 (espacio 1) vr 2.svg
+  artifactKey: Guid(b1c14c9d080acad45934c4501acf15dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilesets/Hall 4 (espacio 1) vr 2.svg using Guid(b1c14c9d080acad45934c4501acf15dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dc4555d1d4010440ed695c8ee4424eab') in 0.0109935 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000034 seconds.
-  path: Assets/Art/Sprites/Presente/Animaciones (interatuables)/Hall 1 presente - Recepcionista frame 1.png
-  artifactKey: Guid(ad4df5de1353dfe4cb2123a7fa4d267d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sprites/Presente/Animaciones (interatuables)/Hall 1 presente - Recepcionista frame 1.png using Guid(ad4df5de1353dfe4cb2123a7fa4d267d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5608faf4cb673acc4396155fa409a224') in 0.0139152 seconds
+  path: Assets/Art/Sprites/Presente/Objetos/Hall 3 presente - barra.png
+  artifactKey: Guid(45dd15e2661a62443a95b25a16edf9f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/Hall 3 presente - barra.png using Guid(45dd15e2661a62443a95b25a16edf9f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6f5a64532d6a628d697800b077577025') in 0.0098456 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Art/Animations/Presente Interactuables/Hall 1 presente - Recepcionista frame 2.svg
-  artifactKey: Guid(a5ff2d4cec3a37244a413ed4d798235e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Animations/Presente Interactuables/Hall 1 presente - Recepcionista frame 2.svg using Guid(a5ff2d4cec3a37244a413ed4d798235e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '271e78ea47f904c8b0433a760c0dc2ac') in 0.0096938 seconds
+  Time since last request: 0.000033 seconds.
+  path: Assets/Art/Tilesets/Hall 3 Presente - FONDO.png
+  artifactKey: Guid(31ad33faf86590c4ea7704e666a50de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilesets/Hall 3 Presente - FONDO.png using Guid(31ad33faf86590c4ea7704e666a50de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5966fb2fd4dc515c1469fdf096b81bfe') in 0.0115525 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Art/Tilesets/Hall 3 (espacio 4).svg
+  artifactKey: Guid(4a7c4cd020a436b448149d133403bdc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilesets/Hall 3 (espacio 4).svg using Guid(4a7c4cd020a436b448149d133403bdc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cbc57d3f4fe87c49a056a7bbb6a35641') in 0.0076803 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Art/Sprites/Presente/Objetos/Hall 3 presente - Mesa de bar chiquita 3.svg
+  artifactKey: Guid(fe0b9e8d64a7bb0489cecbdf7276eb64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Presente/Objetos/Hall 3 presente - Mesa de bar chiquita 3.svg using Guid(fe0b9e8d64a7bb0489cecbdf7276eb64) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fabf65ce15ce3f204d332275629715d3') in 0.0106194 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
+========================================================================
+Received Import Request.
+  Time since last request: 57.800545 seconds.
+  path: Assets/Art/Sprites/Pasado/Quimi/Quime Pasado - F EST.png
+  artifactKey: Guid(536976d19814ea1448ac77bff01619eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Pasado/Quimi/Quime Pasado - F EST.png using Guid(536976d19814ea1448ac77bff01619eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dd6a3fe76ce5937e3ee67a0213867ec0') in 0.0351869 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Art/Sprites/Pasado/Quimi/Quime Pasado_Mesa de trabajo 1 copia 9.png
+  artifactKey: Guid(067b68de4dce0344e9b1a6f5cc18c134) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Pasado/Quimi/Quime Pasado_Mesa de trabajo 1 copia 9.png using Guid(067b68de4dce0344e9b1a6f5cc18c134) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e7ce17a0e04551b818a6c21a2cdf4335') in 0.0121015 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Art/Sprites/Pasado/Quimi/Subsuelo/Quime Subsuelo_Mesa de trabajo 1 copia 9.svg
+  artifactKey: Guid(218018b0d579d6949bef3ecfedad89ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Pasado/Quimi/Subsuelo/Quime Subsuelo_Mesa de trabajo 1 copia 9.svg using Guid(218018b0d579d6949bef3ecfedad89ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2dacbc8027b1f19b19873ed87977fae6') in 0.0154571 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Art/Sprites/Pasado/Quimi/Quime Pasado - L MOV.png
+  artifactKey: Guid(f3da07f5dfdbf3947a75d755a06da08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Pasado/Quimi/Quime Pasado - L MOV.png using Guid(f3da07f5dfdbf3947a75d755a06da08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '46a85ce58e82f65cd609fb1ec4e25162') in 0.0250292 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Art/Sprites/Pasado/Quimi/Subsuelo/Quime Subsuelo_Mesa de trabajo 1 copia 4.svg
+  artifactKey: Guid(7f95730a7cf228f48b91b7d52547b74b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Pasado/Quimi/Subsuelo/Quime Subsuelo_Mesa de trabajo 1 copia 4.svg using Guid(7f95730a7cf228f48b91b7d52547b74b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0c2ea1489f8c8ef089ccc6e0e1278eaa') in 0.0174083 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Art/Sprites/Pasado/Quimi/Subsuelo/Quime Subsuelo_Mesa de trabajo 1 copia 3.svg
+  artifactKey: Guid(d0c1755c9aba3e44eba3cb7b1efd916e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Pasado/Quimi/Subsuelo/Quime Subsuelo_Mesa de trabajo 1 copia 3.svg using Guid(d0c1755c9aba3e44eba3cb7b1efd916e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8dc37fd8c92065cc2ed3798f744550d7') in 0.0113529 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Art/Sprites/Pasado/Quimi/Subsuelo/Quime Subsuelo_Mesa de trabajo 1 copia 5.svg
+  artifactKey: Guid(418eb073a11181e418a0d73dca0f5fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Pasado/Quimi/Subsuelo/Quime Subsuelo_Mesa de trabajo 1 copia 5.svg using Guid(418eb073a11181e418a0d73dca0f5fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0b1d7f32b1d8240fe141fcb56bfec18e') in 0.0124387 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Art/Sprites/Pasado/Quimi/Quime Pasado - F MOV.png
+  artifactKey: Guid(df4aa61cc7fced447b8fab2fa7afcd52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Sprites/Pasado/Quimi/Quime Pasado - F MOV.png using Guid(df4aa61cc7fced447b8fab2fa7afcd52) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5b5d00c8c8440b0e8bdc95c579d980c0') in 0.0199003 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Silla diag izquierda- presente_0: 1091065838460170651
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
