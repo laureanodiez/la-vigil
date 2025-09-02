@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 45dd15e2661a62443a95b25a16edf9f0
+guid: 04368c5b15d23c3478af164d63f23d72
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8164254305201028247
-    second: Hall 3 presente - barra_0
+      213: -6041226390763924132
+    second: Bot_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,23 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hall 3 presente - barra_0
+      name: Bot_0
       rect:
         serializedVersion: 2
         x: 49
         y: 9
         width: 492
-        height: 180
-      alignment: 9
-      pivot: {x: 0.5, y: 1.5888889}
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79cf575d8024d4170800000000000000
-      internalID: 8164254305201028247
+      spriteID: c551dcafa90492ca0800000000000000
+      internalID: -6041226390763924132
       vertices: []
       indices: 
       edges: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0f6f54a0a0a5d1d4d820fa4a6d463ea8
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Hall 3 presente - barra_0: 8164254305201028247
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

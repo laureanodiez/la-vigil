@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 817d000c098e36c4ab20dd684b9024c6
+guid: f0638f8174995b54a9fb9bb70a9231ab
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -39,9 +39,9 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: Quime_Mesa de trabajo 1 copia 2Sprite
+      name: 
       originalName: 
-      pivot: {x: 0.50037146, y: 0.50012463}
+      pivot: {x: 0, y: 0}
       alignment: 0
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -49,7 +49,7 @@ ScriptedImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 175
-        height: 321
-      spriteID: a79637f77e079c641b5207247e4f9fa8
+        width: 0
+        height: 0
+      spriteID: f5d4625bb5549cb42bc09f25412cc7e2
     PhysicsOutlines: []
