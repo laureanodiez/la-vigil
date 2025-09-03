@@ -11,6 +11,9 @@ public class SceneTransitionController : MonoBehaviour
     public Image fadeImage;                // UI Image (negra) que cubre toda la pantalla
     public float fadeDuration = 0.6f;
 
+    [Header("Controlador de Quime")]
+    [SerializeField] private QuimiSpriteAnimator quimiController;
+
     [Header("Opcional")]
     public AudioSource transitionSfx;      // sonido breve de transición opcional
     public Behaviour[] disableDuringTransition; // componentes a desactivar durante la transición (ej: PlayerController)
