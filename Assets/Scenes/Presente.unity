@@ -2181,11 +2181,9 @@ GameObject:
   m_Component:
   - component: {fileID: 604270831}
   - component: {fileID: 604270833}
-  - component: {fileID: 604270832}
   - component: {fileID: 604270835}
-  - component: {fileID: 604270836}
-  - component: {fileID: 604270834}
   - component: {fileID: 604270837}
+  - component: {fileID: 604270836}
   - component: {fileID: 604270841}
   - component: {fileID: 604270840}
   - component: {fileID: 604270842}
@@ -2214,28 +2212,6 @@ Transform:
   - {fileID: 925557465}
   m_Father: {fileID: 252271042}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &604270832
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604270830}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a1b60426b17c6704f93c11a37aa0e38a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &604270833
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2291,20 +2267,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &604270834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604270830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd9683588660aad43bd1ee6d1edd3db5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  canMove: 1
 --- !u!50 &604270835
 Rigidbody2D:
   serializedVersion: 5
@@ -2828,7 +2790,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -780392627
   m_SortingLayer: 3
-  m_SortingOrder: -1277
+  m_SortingOrder: -1325
   m_Sprite: {fileID: 3286163911610860551, guid: aa38aae2913d4f74d8c19b6069660774, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6490,8 +6452,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 2053528601}
   fadeDuration: 0.6
+  quimiController: {fileID: 0}
   transitionSfx: {fileID: 0}
-  disableDuringTransition: []
+  disableDuringTransition:
+  - {fileID: 604270837}
 --- !u!1 &1396507679
 GameObject:
   m_ObjectHideFlags: 0

@@ -65,7 +65,7 @@ public class PlayerFlashbangSystem : MonoBehaviour
         if (!isActive) return;
 
         currentTime -= Time.deltaTime;
-        //quimiVision.enabled = false; 
+        quimiVision.enabled = false; 
         escombros.SetActive(true);
         quimiController.enabled = true;
 
