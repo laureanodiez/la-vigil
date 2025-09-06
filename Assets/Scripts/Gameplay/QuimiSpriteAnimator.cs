@@ -22,6 +22,10 @@ public class QuimiSpriteAnimator : MonoBehaviour
     private float timer;
     private bool toggleFrame;
 
+    // Última orientación conocida para mostrar el idle correcto cuando está quieto
+    private enum Direction { Front, Back, Left, Right }
+    private Direction lastDirection = Direction.Front;
+
     void Awake() {
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
@@ -40,12 +44,12 @@ public class QuimiSpriteAnimator : MonoBehaviour
             Sprite idle, mov;
             if (Mathf.Abs(move.x) > Mathf.Abs(move.y)) {
                 // horizontal
-                if (move.x > 0) { idle = rightIdle; mov = rightMove; }
-                else          { idle = leftIdle;  mov = leftMove;  }
+                if (move.x > 0) { idle = rightIdle; mov = rightMove; lastDirection = Direction.Right; }
+                else          { idle = leftIdle;  mov = leftMove;  lastDirection = Direction.Left;  }
             } else {
                 // vertical
-                if (move.y > 0) { idle = backIdle;  mov = backMove;  }
-                else            { idle = frontIdle; mov = frontMove; }
+                if (move.y > 0) { idle = backIdle;  mov = backMove;  lastDirection = Direction.Back; }
+                else            { idle = frontIdle; mov = frontMove; lastDirection = Direction.Front; }
             }
 
             // B) Alternar frames MOV
@@ -54,16 +58,29 @@ public class QuimiSpriteAnimator : MonoBehaviour
                 timer = 0f;
                 toggleFrame = !toggleFrame;
             }
-            sr.sprite = toggleFrame ? mov : idle;
+            sr.sprite = toggleFrame ? idle : mov;
         }
         else {
             // Quieto → siempre idle de la última orientación:
             timer = 0f;
             toggleFrame = false;
-            // Detectar última orientación:
-            // Si mov.x o mov.y vienen de antes, podrías guardarlas; pero
-            // para empezar usaremos frontIdle si no te importa.
-            sr.sprite = frontIdle;
+
+            // Mostrar el idle correspondiente a la última orientación guardada
+            switch (lastDirection) {
+                case Direction.Right:
+                    sr.sprite = rightIdle;
+                    break;
+                case Direction.Left:
+                    sr.sprite = leftIdle;
+                    break;
+                case Direction.Back:
+                    sr.sprite = backIdle;
+                    break;
+                case Direction.Front:
+                default:
+                    sr.sprite = frontIdle;
+                    break;
+            }
         }
     }
 
