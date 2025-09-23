@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      presente silla izq pasado_0: -1570241403239727304
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

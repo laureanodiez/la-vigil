@@ -223,7 +223,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rampa rota - bibl2 pasado_0: -1987732541185033823
+      rampa rota - bibl2 pasado_1: -6677498795465319347
+      rampa rota - bibl2 pasado_2: -2370157272820005638
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cartel (placa) normal pasado_0: -3204706700241137523
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

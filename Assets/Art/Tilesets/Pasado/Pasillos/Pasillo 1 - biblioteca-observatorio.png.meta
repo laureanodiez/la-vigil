@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pasillo 1 - biblioteca-observatorio_0: 412754214048920777
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mesa de laboratorio normal pasado_0: 2005997833905451619
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

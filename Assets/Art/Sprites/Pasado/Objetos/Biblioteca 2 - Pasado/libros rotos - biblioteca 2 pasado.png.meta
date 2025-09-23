@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      libros rotos - biblioteca 2 pasado_0: 1779361284806438727
+      libros rotos - biblioteca 2 pasado_1: 8265971091852775136
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

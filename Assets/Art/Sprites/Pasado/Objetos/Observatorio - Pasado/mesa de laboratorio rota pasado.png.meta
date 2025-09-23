@@ -223,7 +223,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mesa de laboratorio rota pasado_0: 1772798500665344257
+      mesa de laboratorio rota pasado_1: 6457893077267580771
+      mesa de laboratorio rota pasado_2: -3469802285359533057
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

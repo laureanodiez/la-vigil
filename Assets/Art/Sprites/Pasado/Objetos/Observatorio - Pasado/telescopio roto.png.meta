@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      telescopio roto_0: 1803603901941512543
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

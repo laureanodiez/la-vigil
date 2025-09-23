@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cartel (placa) caida pasado_0: -759484494030123263
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
