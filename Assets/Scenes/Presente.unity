@@ -1905,6 +1905,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 416046185545009189, guid: 5a1f68ddd8682b0419089aacd4bd7bd0, type: 3}
   m_PrefabInstance: {fileID: 573056794}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &142898787 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3694929911074800897, guid: 5a1f68ddd8682b0419089aacd4bd7bd0, type: 3}
+  m_PrefabInstance: {fileID: 573056794}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &151784150
 GameObject:
   m_ObjectHideFlags: 0
@@ -4189,6 +4200,7 @@ Transform:
   - {fileID: 1922170845}
   - {fileID: 1396507683}
   - {fileID: 925557465}
+  - {fileID: 950741122}
   m_Father: {fileID: 252271042}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &604270833
@@ -4808,7 +4820,8 @@ Transform:
   m_LocalPosition: {x: 0.83, y: -0.63, z: -0.17601734}
   m_LocalScale: {x: 0.67606735, y: 0.67606735, z: 0.67606735}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1545289264}
   m_Father: {fileID: 252271042}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &656079060
@@ -7665,9 +7678,9 @@ MonoBehaviour:
   requiredActiveQuests:
   - serigrafia
   forbiddenQuests: []
-  interactPrompt: {fileID: 0}
-  promptText: {fileID: 0}
-  customPromptText: Inspeccionar
+  interactPrompt: {fileID: 142451851}
+  promptText: {fileID: 142898787}
+  customPromptText: Estampar
   changePromptByState: 1
   singleUse: 1
   interactCooldown: 0.5
@@ -7676,8 +7689,8 @@ MonoBehaviour:
   disableOnComplete: 0
   activateOnComplete: {fileID: 0}
   effectPrefab: {fileID: 0}
-  interactSound: {fileID: 0}
-  completeSound: {fileID: 0}
+  interactSound: {fileID: 8300000, guid: 6b08b670c3835ef42a7eda2a903138b9, type: 3}
+  completeSound: {fileID: 8300000, guid: 6b08b670c3835ef42a7eda2a903138b9, type: 3}
   soundVolume: 1
   onInteractionSuccess:
     m_PersistentCalls:
@@ -7693,7 +7706,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: serigrafia
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
   onInteractionFailed:
     m_PersistentCalls:
       m_Calls: []
@@ -7706,6 +7719,126 @@ MonoBehaviour:
   onPlayerExit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &950741121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 950741122}
+  - component: {fileID: 950741123}
+  - component: {fileID: 950741124}
+  m_Layer: 0
+  m_Name: Autodialogo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &950741122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950741121}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 604270831}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &950741123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950741121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4baed06e7e6834b40b9049a3945dbe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueCanvas: {fileID: 1133978475}
+  interactCanvas: {fileID: 142451851}
+  speakerText: {fileID: 573056798}
+  dialogueText: {fileID: 573056797}
+  portraitImage: {fileID: 573056796}
+  dialogueSets:
+  - setName: Autodialogo Constancio
+    speaker:
+    - Quime
+    dialogueWords:
+    - "*Deber\xEDa seguir al gato.*"
+    portrait:
+    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    requiredCompletedQuests:
+    - constancio1
+    requiredActiveQuests: []
+    forbiddenQuests: []
+    priority: 0
+    onDialogueStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onDialogueEnd:
+      m_PersistentCalls:
+        m_Calls: []
+  rememberLastDialogue: 1
+  disableDuringTransition:
+  - {fileID: 604270837}
+  typewriterSpeed: 0.03
+  useTypewriter: 1
+--- !u!61 &950741124
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950741121}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.10430932, y: -5.580454}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 7.3627715, y: 4.6507587}
+  m_EdgeRadius: 0
 --- !u!1 &950863210
 GameObject:
   m_ObjectHideFlags: 0
@@ -8977,7 +9110,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: serigrafia
             m_BoolArgument: 0
-          m_CallState: 1
+          m_CallState: 2
   - setName: "Serigraf\xEDant"
     speaker:
     - Secretaria
@@ -9017,8 +9150,20 @@ MonoBehaviour:
         m_Calls: []
     onDialogueEnd:
       m_PersistentCalls:
-        m_Calls: []
-  rememberLastDialogue: 1
+        m_Calls:
+        - m_Target: {fileID: 656079056}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  rememberLastDialogue: 0
   disableDuringTransition:
   - {fileID: 604270837}
   typewriterSpeed: 0.03
@@ -9465,6 +9610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1121162983}
   - component: {fileID: 1121162982}
+  - component: {fileID: 1121162984}
   m_Layer: 0
   m_Name: QuestManager
   m_TagString: Untagged
@@ -9493,19 +9639,7 @@ MonoBehaviour:
     isActive: 0
     onQuestStart:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 325927524}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 1
+        m_Calls: []
     onQuestComplete:
       m_PersistentCalls:
         m_Calls:
@@ -9521,6 +9655,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - questID: constancio1
+    questName: Hablar con constancio
+    description: Primer encuentro con Constancio
+    isCompleted: 0
+    isActive: 0
+    onQuestStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onQuestComplete:
+      m_PersistentCalls:
+        m_Calls: []
   showDebugLogs: 0
 --- !u!4 &1121162983
 Transform:
@@ -9537,6 +9682,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1121162984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121162981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4453da4a780ee33419933abf44136f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetQuestsOnStart: 1
+  showDebugUI: 0
+  debugMenuKey: 282
+  debugPanel: {fileID: 0}
+  questStatusText: {fileID: 0}
+  questsToMonitor: []
 --- !u!1 &1133978475 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7033013812274284576, guid: 5a1f68ddd8682b0419089aacd4bd7bd0, type: 3}
@@ -11067,7 +11230,7 @@ Transform:
   m_GameObject: {fileID: 1332626974}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.52, y: 6.41, z: 0}
+  m_LocalPosition: {x: -2.11, y: 6.41, z: 0}
   m_LocalScale: {x: 0.67606735, y: 0.67606735, z: 0.67606735}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12732,6 +12895,183 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1545289263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1545289264}
+  - component: {fileID: 1545289266}
+  - component: {fileID: 1545289265}
+  m_Layer: 0
+  m_Name: DialogoConstancio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1545289264
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545289263}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 656079057}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1545289265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545289263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4baed06e7e6834b40b9049a3945dbe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueCanvas: {fileID: 1133978475}
+  interactCanvas: {fileID: 142451851}
+  speakerText: {fileID: 573056798}
+  dialogueText: {fileID: 573056797}
+  portraitImage: {fileID: 573056796}
+  dialogueSets:
+  - setName: Inicio
+    speaker:
+    - Constancio
+    - Quime
+    - Constancio
+    - Quime
+    - Constancio
+    - Quime
+    - Constancio
+    - Quime
+    dialogueWords:
+    - "\xBFQuer\xE9s un tel\xE9fono?"
+    - QUEEEEE :00000 !!!!!!!!!!!
+    - Digo... m i a u
+    - "Ok, ya me enloquec\xED. Tengo que irme."
+    - "Soy Constancio, el gato de La Vigil y s\xED, puedo hablar."
+    - "\xBFC\xF3mo?"
+    - qsy
+    - "Bueno, \xBFme prest\xE1s un celular?"
+    portrait:
+    - {fileID: 3286163911610860551, guid: abc1ddb33780d3443939571a907da4e7, type: 3}
+    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: 3286163911610860551, guid: abc1ddb33780d3443939571a907da4e7, type: 3}
+    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: 3286163911610860551, guid: abc1ddb33780d3443939571a907da4e7, type: 3}
+    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: 3286163911610860551, guid: abc1ddb33780d3443939571a907da4e7, type: 3}
+    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    requiredCompletedQuests:
+    - serigrafia
+    requiredActiveQuests: []
+    forbiddenQuests: []
+    priority: 0
+    onDialogueStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onDialogueEnd:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 656079056}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1121162982}
+          m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
+          m_MethodName: CompleteQuest
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: constancio1
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 950741124}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: constancio1
+            m_BoolArgument: 1
+          m_CallState: 2
+  rememberLastDialogue: 1
+  disableDuringTransition:
+  - {fileID: 604270837}
+  typewriterSpeed: 0.03
+  useTypewriter: 1
+--- !u!61 &1545289266
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545289263}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -4.4123516, y: -2.002976}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 10.753618, y: 5.7026396}
+  m_EdgeRadius: 0
 --- !u!1 &1554650536
 GameObject:
   m_ObjectHideFlags: 0
@@ -13195,6 +13535,136 @@ Transform:
   m_Children: []
   m_Father: {fileID: 106933182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1573991203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1573991204}
+  - component: {fileID: 1573991205}
+  - component: {fileID: 1573991206}
+  m_Layer: 0
+  m_Name: "D\xEDalogo"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1573991204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573991203}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2110053087}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1573991205
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573991203}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 1.097641, y: -0.5349852}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 6.515876, y: 6.8294907}
+  m_EdgeRadius: 0
+--- !u!114 &1573991206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573991203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4baed06e7e6834b40b9049a3945dbe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueCanvas: {fileID: 1133978475}
+  interactCanvas: {fileID: 142451851}
+  speakerText: {fileID: 573056798}
+  dialogueText: {fileID: 573056797}
+  portraitImage: {fileID: 573056796}
+  dialogueSets:
+  - setName: "D\xEDalogo"
+    speaker:
+    - Bartender
+    - Quime
+    - Bartender
+    - Quime
+    dialogueWords:
+    - "Hola, bienvenida. \xBFPuedo ayudarte en algo?"
+    - "Hola, \xBFC\xF3mo est\xE1s? Me qued\xE9 sin bater\xEDa y necesitar\xEDa un
+      tel\xE9fono para llamar a mi mam\xE1. \xBFPodr\xEDas prestarme el tuyo?"
+    - "Justo me qued\xE9 sin bater\xEDa tambi\xE9n, pero preguntale a la bibliotecaria."
+    - "Dale, \xA1muchas gracias!"
+    portrait:
+    - {fileID: 3359208071225570717, guid: 39927f9329eb4484da419697b1f4f943, type: 3}
+    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: 3359208071225570717, guid: 39927f9329eb4484da419697b1f4f943, type: 3}
+    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    requiredCompletedQuests:
+    - serigrafia
+    requiredActiveQuests: []
+    forbiddenQuests: []
+    priority: 0
+    onDialogueStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onDialogueEnd:
+      m_PersistentCalls:
+        m_Calls: []
+  rememberLastDialogue: 1
+  disableDuringTransition:
+  - {fileID: 604270837}
+  typewriterSpeed: 0.03
+  useTypewriter: 1
 --- !u!1 &1632079791
 GameObject:
   m_ObjectHideFlags: 0
@@ -17871,7 +18341,8 @@ Transform:
   m_LocalPosition: {x: -14.650064, y: 2.86798, z: 0}
   m_LocalScale: {x: 0.67606735, y: 0.67606735, z: 0.67606735}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1573991204}
   m_Father: {fileID: 106933182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2117839936

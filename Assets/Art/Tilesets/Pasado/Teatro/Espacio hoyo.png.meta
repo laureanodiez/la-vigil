@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Espacio hoyo_0: -1899248729702310260
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

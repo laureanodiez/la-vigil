@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 9e4c3480cb8ea26419b32b90436c096f
+guid: 39927f9329eb4484da419697b1f4f943
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1987732541185033823
-    second: rampa rota - bibl2 pasado_0
-  - first:
-      213: -6677498795465319347
-    second: rampa rota - bibl2 pasado_1
-  - first:
-      213: -2370157272820005638
-    second: rampa rota - bibl2 pasado_2
+      213: 3359208071225570717
+    second: Hall 4 presente - bartender FR 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -145,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rampa rota - bibl2 pasado_0
+      name: Hall 4 presente - bartender FR 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 400
-        height: 400
+        x: 179
+        y: 219
+        width: 162
+        height: 132
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,52 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a97e2609c72a64e0800000000000000
-      internalID: -1987732541185033823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rampa rota - bibl2 pasado_1
-      rect:
-        serializedVersion: 2
-        x: 79
-        y: 169
-        width: 52
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d4cd0347932c453a0800000000000000
-      internalID: -6677498795465319347
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rampa rota - bibl2 pasado_2
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 19
-        width: 271
-        height: 212
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: af441cb94828b1fd0800000000000000
-      internalID: -2370157272820005638
+      spriteID: d95760461fd4e9e20800000000000000
+      internalID: 3359208071225570717
       vertices: []
       indices: 
       edges: []
@@ -214,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 479ed200f54012f408c70be68b1efe95
+    spriteID: 6f5dd3d7e0e046e4d83deab7eec72e6b
     internalID: 0
     vertices: []
     indices: 
@@ -224,9 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rampa rota - bibl2 pasado_0: -1987732541185033823
-      rampa rota - bibl2 pasado_1: -6677498795465319347
-      rampa rota - bibl2 pasado_2: -2370157272820005638
+      Hall 4 presente - bartender FR 1_0: 3359208071225570717
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

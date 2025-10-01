@@ -278,7 +278,17 @@ public class QuestManager : MonoBehaviour
             CompleteQuest(quest.questID);
         }
     }
-    
+
+//   [ContextMenu("Reinicia todas las tareas")]
+// void ResetAllQuests()
+  //  {
+  //      foreach (var quest in questDictionary.Values)
+      //  {
+          //  quest.isCompleted = false;
+ //           quest.isActive = false;
+   //     }
+   // }
+
     [ContextMenu("Activar Todas las Tareas")]
     void ActivateAllQuests()
     {
