@@ -325,6 +325,7 @@ Transform:
   - {fileID: 1989587586}
   - {fileID: 300639764}
   - {fileID: 585495040}
+  - {fileID: 1428753835}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &45023426
@@ -4175,6 +4176,7 @@ GameObject:
   - component: {fileID: 604270835}
   - component: {fileID: 604270837}
   - component: {fileID: 604270836}
+  - component: {fileID: 604270843}
   - component: {fileID: 604270841}
   - component: {fileID: 604270840}
   - component: {fileID: 604270842}
@@ -4194,7 +4196,7 @@ Transform:
   m_GameObject: {fileID: 604270830}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.23, y: -27.87, z: 0.054032445}
+  m_LocalPosition: {x: -27.23, y: -28.47, z: 0.054032445}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4247,7 +4249,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -780392627
   m_SortingLayer: 3
-  m_SortingOrder: 1429
+  m_SortingOrder: 1489
   m_Sprite: {fileID: 424747059916271092, guid: 5d6b1ad0491b8e649adaf14848289365, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4354,6 +4356,7 @@ MonoBehaviour:
   rightMove: {fileID: 1315036728045639869, guid: 075e1e4cb3649dd42816794e1ee5b767, type: 3}
   switchInterval: 0.3
   speed: 3
+  steps: {fileID: 604270843}
 --- !u!114 &604270840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4361,7 +4364,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604270830}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1ebce9fa9513854e838855841b2d12d, type: 3}
   m_Name: 
@@ -4482,6 +4485,103 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sortingOffset: 0
   multiplier: 100
+--- !u!82 &604270843
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604270830}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ae5007c2e1b14884fbecfe784ecff65b, type: 3}
+  m_Resource: {fileID: 8300000, guid: ae5007c2e1b14884fbecfe784ecff65b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &623342003
 GameObject:
   m_ObjectHideFlags: 0
@@ -9090,7 +9190,8 @@ MonoBehaviour:
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
     requiredCompletedQuests: []
-    requiredActiveQuests: []
+    requiredActiveQuests:
+    - secretaria1
     forbiddenQuests:
     - serigrafia
     priority: 0
@@ -9100,6 +9201,18 @@ MonoBehaviour:
     onDialogueEnd:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1121162982}
+          m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
+          m_MethodName: CompleteQuest
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: secretaria1
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 1121162982}
           m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
           m_MethodName: StartQuest
@@ -9119,7 +9232,8 @@ MonoBehaviour:
     - "\xBFPudiste estampar la remera?"
     portrait:
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
-    requiredCompletedQuests: []
+    requiredCompletedQuests:
+    - secretaria1
     requiredActiveQuests:
     - serigrafia
     forbiddenQuests: []
@@ -9632,6 +9746,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allQuests:
+  - questID: secretaria1
+    questName: Hablar con la secretaria
+    description: Primer encuentro con la secretaria
+    isCompleted: 0
+    isActive: 0
+    onQuestStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onQuestComplete:
+      m_PersistentCalls:
+        m_Calls: []
   - questID: serigrafia
     questName: Estampar la remera
     description: "La secretaria le pide a Quime que estampe una remera, luego podr\xE1
@@ -11398,7 +11523,7 @@ Transform:
   m_GameObject: {fileID: 1377021101}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.403492, y: 18.124504, z: -9.949415}
+  m_LocalPosition: {x: 17.403492, y: 17.524506, z: -9.949415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12203,6 +12328,125 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1428753834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1428753835}
+  - component: {fileID: 1428753836}
+  - component: {fileID: 1428753837}
+  m_Layer: 0
+  m_Name: Trigger Inicio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1428753835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428753834}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.92, y: -23.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 37445176}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1428753836
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428753834}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.28287435, y: -0.98660994}
+  m_Radius: 1.7694843
+--- !u!114 &1428753837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428753834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6b168b8e030b440821e9fce5355059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 0
+  questActions:
+  - type: 0
+    questID: secretaria1
+  requiredCompletedQuests: []
+  requiredActiveQuests: []
+  forbiddenQuests:
+  - serigrafia
+  - constancio1
+  interactPrompt: {fileID: 0}
+  promptText: {fileID: 0}
+  customPromptText: Inspeccionar
+  changePromptByState: 1
+  singleUse: 1
+  interactCooldown: 0.5
+  requirePlayerFacing: 0
+  destroyOnComplete: 0
+  disableOnComplete: 0
+  activateOnComplete: {fileID: 0}
+  effectPrefab: {fileID: 0}
+  interactSound: {fileID: 0}
+  completeSound: {fileID: 0}
+  soundVolume: 1
+  onInteractionSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  onInteractionFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  onConditionsNotMet:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1448297584
 GameObject:
   m_ObjectHideFlags: 0

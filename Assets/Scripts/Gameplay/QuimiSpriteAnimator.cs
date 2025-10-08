@@ -13,6 +13,10 @@ public class QuimiSpriteAnimator : MonoBehaviour
     public float switchInterval = 0.3f;  // Tiempo entre frames MOV
     public float speed = 3f;
 
+    [Header("Step Sound")]
+    [SerializeField] public AudioSource steps;
+
+
     // Componentes
     private SpriteRenderer sr;
     private Rigidbody2D rb;
@@ -26,11 +30,14 @@ public class QuimiSpriteAnimator : MonoBehaviour
     private enum Direction { Front, Back, Left, Right }
     private Direction lastDirection = Direction.Front;
 
-    void Awake() {
+    void Awake()
+    {
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
         rb.freezeRotation = true;
+        steps.loop = true;
+        
     }
 
     void Update() {
@@ -40,6 +47,10 @@ public class QuimiSpriteAnimator : MonoBehaviour
 
         // 2) Control de Sprite
         if (move.sqrMagnitude > 0) {
+            if (steps != null && !steps.isPlaying) {
+                steps.Play();
+            }
+
             // A) Elegir orientación principal
             Sprite idle, mov;
             if (Mathf.Abs(move.x) > Mathf.Abs(move.y)) {
@@ -64,9 +75,13 @@ public class QuimiSpriteAnimator : MonoBehaviour
             // Quieto → siempre idle de la última orientación:
             timer = 0f;
             toggleFrame = false;
+            if (steps != null && steps.isPlaying) {
+                steps.Stop();
+            }
 
             // Mostrar el idle correspondiente a la última orientación guardada
-            switch (lastDirection) {
+            switch (lastDirection)
+            {
                 case Direction.Right:
                     sr.sprite = rightIdle;
                     break;
