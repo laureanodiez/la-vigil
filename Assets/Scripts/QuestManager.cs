@@ -42,16 +42,26 @@ public class QuestManager : MonoBehaviour
     
     void Awake()
     {
-        // Singleton pattern
-        if (Instance == null)
+        // Si este QuestManager es para una escena específica
+        if (gameObject.name == "LocalQuestManager")
         {
+            // NO hacer singleton, permitir múltiples
             Instance = this;
-            DontDestroyOnLoad(gameObject);
             InitializeQuests();
         }
         else
         {
-            Destroy(gameObject);
+            // Comportamiento normal (global)
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+                InitializeQuests();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
     
