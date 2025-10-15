@@ -1,0 +1,251 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1187498767710846609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5074657694730986455}
+  - component: {fileID: 2712869031392810193}
+  - component: {fileID: 1904208268730902997}
+  - component: {fileID: 5315065914491738300}
+  m_Layer: 0
+  m_Name: DialogoConstancio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5074657694730986455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187498767710846609}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2712869031392810193
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187498767710846609}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -4.4123516, y: -2.002976}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 10.753618, y: 5.7026396}
+  m_EdgeRadius: 0
+--- !u!114 &1904208268730902997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187498767710846609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4baed06e7e6834b40b9049a3945dbe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueCanvas: {fileID: 0}
+  interactCanvas: {fileID: 0}
+  speakerText: {fileID: 0}
+  dialogueText: {fileID: 0}
+  portraitImage: {fileID: 0}
+  dialogueSets:
+  - setName: Inicio
+    speaker:
+    - Constancio
+    - Quime
+    - Constancio
+    - Quime
+    - Constancio
+    - Quime
+    - Constancio
+    - Quime
+    dialogueWords:
+    - "\xBFQuer\xE9s un tel\xE9fono?"
+    - QUEEEEE :00000 !!!!!!!!!!!
+    - Digo... m i a u
+    - "Ok, ya me enloquec\xED. Tengo que irme."
+    - "Soy Constancio, el gato de La Vigil y s\xED, puedo hablar."
+    - "\xBFC\xF3mo?"
+    - qsy
+    - "Bueno, \xBFme prest\xE1s un celular?"
+    portrait:
+    - {fileID: 3286163911610860551, guid: abc1ddb33780d3443939571a907da4e7, type: 3}
+    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: 3286163911610860551, guid: abc1ddb33780d3443939571a907da4e7, type: 3}
+    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: 3286163911610860551, guid: abc1ddb33780d3443939571a907da4e7, type: 3}
+    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: 3286163911610860551, guid: abc1ddb33780d3443939571a907da4e7, type: 3}
+    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    requiredCompletedQuests:
+    - serigrafia
+    requiredActiveQuests: []
+    forbiddenQuests: []
+    priority: 0
+    onDialogueStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onDialogueEnd:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
+          m_MethodName: CompleteQuest
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: constancio1
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: ForceDialogueSet
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Autodialogo Constancio
+            m_BoolArgument: 1
+          m_CallState: 2
+  rememberLastDialogue: 1
+  disableDuringTransition:
+  - {fileID: 0}
+  typewriterSpeed: 0.03
+  useTypewriter: 1
+--- !u!114 &5315065914491738300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187498767710846609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6b168b8e030b440821e9fce5355059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 2
+  questActions: []
+  requiredCompletedQuests:
+  - serigrafia
+  requiredActiveQuests: []
+  forbiddenQuests: []
+  interactPrompt: {fileID: 0}
+  promptText: {fileID: 0}
+  customPromptText: Hablar
+  changePromptByState: 1
+  singleUse: 1
+  interactCooldown: 0.5
+  requirePlayerFacing: 0
+  destroyOnComplete: 0
+  disableOnComplete: 0
+  activateOnComplete: {fileID: 0}
+  effectPrefab: {fileID: 0}
+  interactSound: {fileID: 0}
+  completeSound: {fileID: 0}
+  soundVolume: 1
+  onInteractionSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1904208268730902997}
+        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+        m_MethodName: ForceDialogueSet
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Inicio
+          m_BoolArgument: 0
+        m_CallState: 2
+  onInteractionFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  onConditionsNotMet:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1904208268730902997}
+        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+        m_MethodName: ForceDialogueSet
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Inicio
+          m_BoolArgument: 0
+        m_CallState: 0
+  onPlayerExit:
+    m_PersistentCalls:
+      m_Calls: []
