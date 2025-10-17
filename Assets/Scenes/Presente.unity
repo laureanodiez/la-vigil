@@ -1299,7 +1299,8 @@ Transform:
   m_LocalPosition: {x: 0.6248364, y: -14.607058, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 416396526}
   m_Father: {fileID: 1845481825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &69118348
@@ -3128,6 +3129,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 950741122}
+  - {fileID: 1512324167}
   - {fileID: 604270831}
   - {fileID: 656079057}
   m_Father: {fileID: 0}
@@ -5006,6 +5008,201 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &416396525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 416396526}
+  - component: {fileID: 416396527}
+  - component: {fileID: 416396528}
+  m_Layer: 0
+  m_Name: Bibliorato Zoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &416396526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416396525}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 65355277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &416396527
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416396525}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.11471009, y: -1.2044427}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5.014812, y: 0.8279362}
+  m_EdgeRadius: 0
+--- !u!114 &416396528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416396525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4baed06e7e6834b40b9049a3945dbe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueCanvas: {fileID: 1133978475}
+  interactCanvas: {fileID: 142451851}
+  speakerText: {fileID: 573056798}
+  dialogueText: {fileID: 573056797}
+  portraitImage: {fileID: 573056796}
+  dialogueSets:
+  - setName: Bibliorato
+    speaker:
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    - Bibliorato
+    dialogueWords:
+    - "Manifiesto de la Biblioteca Popular Constancio C. Vigil\r"
+    - "La Biblioteca Popular Constancio C. Vigil es, fue y ser\xE1 una experiencia
+      \xFAnica en la historia de la educaci\xF3n y la cultura popular argentina."
+    - "Nacida del coraz\xF3n de un barrio popular de la zona sur de Rosario, fue
+      un..."
+    - "...modelo de lo que significa construir conocimiento y dignidad desde abajo,
+      con el pueblo y para el pueblo.\r"
+    - "Nuestra propuesta educativa se sostuvo sobre pilares firmes: una educaci\xF3n..."
+    - "...permanente, integral, gratuita, laica, coeducativa, no dogm\xE1tica y popular,
+      guiada por un compromiso..."
+    - "...indeclinable con la justicia social. Ense\xF1ar no era s\xF3lo transmitir
+      contenidos:"
+    - "Era formar sujetos cr\xEDticos, libres, comprometidos con su tiempo y su comunidad.\r"
+    - "El 25 de febrero de 1977, el gobierno de facto orden\xF3 la intervenci\xF3n
+      y liquidaci\xF3n de la instituci\xF3n."
+    - "Se cerraron las aulas, se quemaron los libros y se apagaron las voces, pero
+      no se borr\xF3 la experiencia."
+    - "Fueron 35 a\xF1os de silencio, impunidad y abandono, pero tambi\xE9n de memoria,
+      lucha y persistencia."
+    - "Durante d\xE9cadas, ex alumnxs, trabajadorxs, vecinxs y directivxs guardaron
+      la llave de ese sue\xF1o colectivo."
+    - "La sostuvieron con la convicci\xF3n de que volver era posible.\r"
+    - Y volvimos.
+    - "En julio del 2008 se recuper\xF3 la personer\xEDa jur\xEDdica original y en
+      2012 se dio por terminada la intervenci\xF3n."
+    - "Recuperamos, as\xED, nuestra identidad. Hoy, la Biblioteca Constancio C. Vigil
+      retoma su propuesta, no como..."
+    - "...r\xE9plica del pasado, sino como proyecto vivo que dialoga con las realidades..."
+    - "...sociales, culturales, econ\xF3micas y tecnol\xF3gicas del presente."
+    - "Lo hacemos con la misma convicci\xF3n de siempre: nada menos que brindar al
+      pueblo todo, sin distinci\xF3n..."
+    - "...de clases sociales, de fortunas, de creencias, de religi\xF3n o de ideolog\xEDas.\r"
+    - "La Biblioteca Vigil nunca fue cap\xEDtulo cerrado. Hoy, con nuestra identidad
+      recuperada, elegimos..."
+    - ...hacer de la memoria una herramienta para construir y seguir poniendo la
+      cultura en movimiento.
+    portrait:
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    requiredCompletedQuests: []
+    requiredActiveQuests: []
+    forbiddenQuests: []
+    priority: 0
+    onDialogueStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onDialogueEnd:
+      m_PersistentCalls:
+        m_Calls: []
+  rememberLastDialogue: 1
+  disableDuringTransition: []
+  typewriterSpeed: 0.03
+  useTypewriter: 0
 --- !u!1 &445958988
 GameObject:
   m_ObjectHideFlags: 0
@@ -8856,6 +9053,143 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &859766622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 859766623}
+  - component: {fileID: 859766625}
+  - component: {fileID: 859766624}
+  m_Layer: 0
+  m_Name: Ciervo Azul Zoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &859766623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859766622}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.18, y: -0.72, z: 0}
+  m_LocalScale: {x: 1.2546384, y: 1.2546384, z: 1.2546384}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1332626978}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &859766624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859766622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4baed06e7e6834b40b9049a3945dbe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueCanvas: {fileID: 1133978475}
+  interactCanvas: {fileID: 142451851}
+  speakerText: {fileID: 573056798}
+  dialogueText: {fileID: 573056797}
+  portraitImage: {fileID: 573056796}
+  dialogueSets:
+  - setName: CiervoAzul
+    speaker:
+    - Ciervo Azul
+    - Ciervo Azul
+    - Ciervo Azul
+    - Ciervo Azul
+    - Ciervo Azul
+    - Ciervo Azul
+    dialogueWords:
+    - Los animales embalsamados, parte del Departamento de Ciencias Naturales de
+      La Vigil, fueron...
+    - "...objeto de la violencia del terrorismo de Estado desde la intervenci\xF3n
+      de nuestra instituci\xF3n en el a\xF1o 1977."
+    - 'El personal policial que custodiaba las instalaciones de nuestro Museo de
+      Ciencias Naturales, '
+    - "...cubr\xEDa sus guardias practicando tiro al blanco contra los animales embalsamados, "
+    - "...producir despu\xE9s, tal vez, primeras muertes. De las piezas perdidas
+      durante la..."
+    - "...intervenci\xF3n de La Vigil, esta es una de las pocas que han sido recuperadas."
+    portrait:
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    requiredCompletedQuests: []
+    requiredActiveQuests: []
+    forbiddenQuests: []
+    priority: 0
+    onDialogueStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onDialogueEnd:
+      m_PersistentCalls:
+        m_Calls: []
+  rememberLastDialogue: 1
+  disableDuringTransition: []
+  typewriterSpeed: 0.03
+  useTypewriter: 0
+--- !u!61 &859766625
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859766622}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.11471009, y: -1.2044427}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5.014812, y: 0.8279362}
+  m_EdgeRadius: 0
 --- !u!1 &864848382
 GameObject:
   m_ObjectHideFlags: 0
@@ -9979,6 +10313,18 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1428753837}
+          m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+          m_MethodName: CancelInvoke
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14524,7 +14870,8 @@ Transform:
   m_LocalPosition: {x: -2.1099997, y: 6.41, z: 0}
   m_LocalScale: {x: 0.67606735, y: 0.67606735, z: 0.67606735}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 859766623}
   m_Father: {fileID: 2118121458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1377021101
@@ -15938,7 +16285,7 @@ MonoBehaviour:
   interactCooldown: 0.5
   requirePlayerFacing: 0
   destroyOnComplete: 0
-  disableOnComplete: 0
+  disableOnComplete: 1
   activateOnComplete: {fileID: 0}
   effectPrefab: {fileID: 0}
   interactSound: {fileID: 0}
@@ -16365,7 +16712,7 @@ Transform:
   m_GameObject: {fileID: 1465845517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.540691, y: 21.362755, z: -9.949415}
+  m_LocalPosition: {x: 17.539894, y: 21.362745, z: -9.949415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16882,6 +17229,197 @@ MonoBehaviour:
     MaxWindowSize: 0
     Padding: 0
   m_LegacyMaxWindowSize: -2
+--- !u!1 &1512324163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1512324167}
+  - component: {fileID: 1512324166}
+  - component: {fileID: 1512324165}
+  - component: {fileID: 1512324164}
+  m_Layer: 0
+  m_Name: Autodialogo (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1512324164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512324163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6b168b8e030b440821e9fce5355059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 2
+  questActions: []
+  requiredCompletedQuests: []
+  requiredActiveQuests:
+  - autodialogoconstancio
+  forbiddenQuests: []
+  interactPrompt: {fileID: 0}
+  promptText: {fileID: 0}
+  customPromptText: Inspeccionar
+  changePromptByState: 1
+  singleUse: 1
+  interactCooldown: 0.5
+  requirePlayerFacing: 0
+  destroyOnComplete: 0
+  disableOnComplete: 0
+  activateOnComplete: {fileID: 0}
+  effectPrefab: {fileID: 0}
+  interactSound: {fileID: 0}
+  completeSound: {fileID: 0}
+  soundVolume: 1
+  onInteractionSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1512324165}
+        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+        m_MethodName: ForceDialogueSet
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: AutodialogoConstancio
+          m_BoolArgument: 0
+        m_CallState: 2
+  onInteractionFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  onConditionsNotMet:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerExit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1512324165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512324163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4baed06e7e6834b40b9049a3945dbe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueCanvas: {fileID: 1133978475}
+  interactCanvas: {fileID: 142451851}
+  speakerText: {fileID: 573056798}
+  dialogueText: {fileID: 573056797}
+  portraitImage: {fileID: 573056796}
+  dialogueSets:
+  - setName: AutodialogoConstancio
+    speaker:
+    - Quime
+    dialogueWords:
+    - "*Deber\xEDa seguir al gato.*"
+    portrait:
+    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    requiredCompletedQuests: []
+    requiredActiveQuests: []
+    forbiddenQuests: []
+    priority: 0
+    onDialogueStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onDialogueEnd:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1512324163}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  rememberLastDialogue: 1
+  disableDuringTransition:
+  - {fileID: 604270837}
+  typewriterSpeed: 0.03
+  useTypewriter: 1
+--- !u!61 &1512324166
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512324163}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.10430932, y: -5.580454}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 7.3627715, y: 4.6507587}
+  m_EdgeRadius: 0
+--- !u!4 &1512324167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512324163}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -27.23, y: -28.47, z: 0.054032445}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 252271042}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1535648518
 GameObject:
   m_ObjectHideFlags: 0
@@ -23138,7 +23676,7 @@ PrefabInstance:
       objectReference: {fileID: 604270837}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -23175,7 +23713,7 @@ PrefabInstance:
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 950741124}
+      objectReference: {fileID: 1512324163}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
@@ -23190,7 +23728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[5].m_CallState
@@ -23214,7 +23752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: set_enabled
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
@@ -23238,7 +23776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: UnityEngine.Behaviour, UnityEngine
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
