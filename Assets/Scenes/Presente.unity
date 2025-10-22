@@ -2112,6 +2112,16 @@ MonoBehaviour:
     - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
     - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
     - {fileID: -683080583186284860, guid: 2d72ccb5dc89a3e4cae55f894f4763ba, type: 3}
+    blipSounds:
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    blipPitch:
+    - 1.1
+    - 1.2
+    - 1.2
+    - 1.1
     requiredCompletedQuests: []
     requiredActiveQuests: []
     forbiddenQuests:
@@ -2155,6 +2165,9 @@ MonoBehaviour:
       en alguna parte..."
     portrait:
     - {fileID: -683080583186284860, guid: 2d72ccb5dc89a3e4cae55f894f4763ba, type: 3}
+    blipSounds: []
+    blipPitch:
+    - 1
     requiredCompletedQuests:
     - bibliotecaria0
     requiredActiveQuests:
@@ -2172,6 +2185,14 @@ MonoBehaviour:
   - {fileID: 604270837}
   typewriterSpeed: 0.03
   useTypewriter: 1
+  audioSource: {fileID: 0}
+  useDialogueAudio: 1
+  defaultBlipSound: {fileID: 0}
+  blipVolume: 0.5
+  charactersPerBlip: 2
+  skipSpaces: 1
+  skipPunctuation: 1
+  pitchVariation: 0.05
 --- !u!1 &142451851 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 416046185545009189, guid: 5a1f68ddd8682b0419089aacd4bd7bd0, type: 3}
@@ -2371,6 +2392,9 @@ MonoBehaviour:
     - "Che...\xA1Ac\xE1 hay un tel\xE9fono!"
     portrait:
     - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    blipSounds: []
+    blipPitch:
+    - 1
     requiredCompletedQuests: []
     requiredActiveQuests: []
     forbiddenQuests: []
@@ -2398,6 +2422,14 @@ MonoBehaviour:
   - {fileID: 604270837}
   typewriterSpeed: 0.03
   useTypewriter: 1
+  audioSource: {fileID: 0}
+  useDialogueAudio: 1
+  defaultBlipSound: {fileID: 0}
+  blipVolume: 0.5
+  charactersPerBlip: 2
+  skipSpaces: 1
+  skipPunctuation: 1
+  pitchVariation: 0.05
 --- !u!114 &166993348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2634,10 +2666,12 @@ PolygonCollider2D:
       - {x: 2.2533855, y: -1.0970917}
       - {x: 2.2592926, y: -0.2863617}
       - {x: 1.7488785, y: -0.2871189}
-      - {x: 1.7743893, y: 1.111187}
+      - {x: 1.7831173, y: 0.5787716}
+      - {x: 0.35671616, y: 0.5642433}
       - {x: 0.40245056, y: 1.0928345}
-      - {x: -0.35999107, y: 1.0926218}
-      - {x: -1.7599114, y: 1.1078827}
+      - {x: -0.35222626, y: 1.1305466}
+      - {x: -0.3687191, y: 0.5863924}
+      - {x: -1.7948254, y: 0.5929253}
   m_UseDelaunayMesh: 0
 --- !u!114 &192754946
 MonoBehaviour:
@@ -4461,15 +4495,113 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c668b238e2cfa41813482c54b2714a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  globalLight: {fileID: 0}
-  virtualCamera: {fileID: 0}
-  mainCamera: {fileID: 0}
+  globalLight: {fileID: 170707446}
+  virtualCamera: {fileID: 1377021105}
+  mainCamera: {fileID: 1465845519}
   screenOverlay: {fileID: 0}
-  fadeImage: {fileID: 0}
-  musicSource: {fileID: 0}
+  fadeImage: {fileID: 2053528601}
+  musicSource: {fileID: 547415742}
   sfxSource: {fileID: 0}
   dialogueSystem: {fileID: 0}
-  sequences: []
+  sequences:
+  - sequenceName: intro
+    playOnStart: 1
+    loop: 0
+    effects:
+    - effectName: wait
+      type: 18
+      duration: 1
+      curve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 4
+      targetIntensity: 0
+      targetColor: {r: 0, g: 0, b: 0, a: 0}
+      flickerSpeed: 0
+      shakeIntensity: 0
+      shakeFrequency: 0
+      targetZoom: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      targetRotation: {x: 0, y: 0, z: 0}
+      screenColor: {r: 0, g: 0, b: 0, a: 0}
+      targetVignetteIntensity: 0
+      targetChromaticIntensity: 0
+      audioClip: {fileID: 0}
+      targetVolume: 0
+      audioSource: {fileID: 0}
+      mixerGroup: {fileID: 0}
+      waitTime: 0
+      targetTimeScale: 0
+      targetObject: {fileID: 0}
+      onEffectStart:
+        m_PersistentCalls:
+          m_Calls: []
+      onEffectComplete:
+        m_PersistentCalls:
+          m_Calls: []
+      dialogueSetName: 
+    - effectName: fade
+      type: 9
+      duration: 1
+      curve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      targetIntensity: 0
+      targetColor: {r: 0, g: 0, b: 0, a: 0}
+      flickerSpeed: 0
+      shakeIntensity: 0
+      shakeFrequency: 0
+      targetZoom: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      targetRotation: {x: 0, y: 0, z: 0}
+      screenColor: {r: 0, g: 0, b: 0, a: 0}
+      targetVignetteIntensity: 0
+      targetChromaticIntensity: 0
+      audioClip: {fileID: 0}
+      targetVolume: 0
+      audioSource: {fileID: 0}
+      mixerGroup: {fileID: 0}
+      waitTime: 1
+      targetTimeScale: 0
+      targetObject: {fileID: 0}
+      onEffectStart:
+        m_PersistentCalls:
+          m_Calls: []
+      onEffectComplete:
+        m_PersistentCalls:
+          m_Calls: []
+      dialogueSetName: 
+    requiredCompletedQuests: []
+    requiredActiveQuests: []
+    onSequenceStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onSequenceComplete:
+      m_PersistentCalls:
+        m_Calls: []
   debugMode: 0
   skipWithInput: 1
   skipKey: 32
@@ -5189,6 +5321,9 @@ MonoBehaviour:
     - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
     - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
     - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    blipSounds: []
+    blipPitch:
+    - 1
     requiredCompletedQuests: []
     requiredActiveQuests: []
     forbiddenQuests: []
@@ -5203,6 +5338,14 @@ MonoBehaviour:
   disableDuringTransition: []
   typewriterSpeed: 0.03
   useTypewriter: 0
+  audioSource: {fileID: 0}
+  useDialogueAudio: 1
+  defaultBlipSound: {fileID: 0}
+  blipVolume: 0.5
+  charactersPerBlip: 2
+  skipSpaces: 1
+  skipPunctuation: 1
+  pitchVariation: 0.05
 --- !u!1 &445958988
 GameObject:
   m_ObjectHideFlags: 0
@@ -5465,7 +5608,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: ad1b4d9c963632f488a818d9dd3d2e47, type: 3}
   m_Resource: {fileID: 8300000, guid: ad1b4d9c963632f488a818d9dd3d2e47, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.255
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5509,7 +5652,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.312
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -9130,6 +9273,9 @@ MonoBehaviour:
     - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
     - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
     - {fileID: 7836661382712827478, guid: f64f4f84ffa556340924c4c9807dda60, type: 3}
+    blipSounds: []
+    blipPitch:
+    - 1
     requiredCompletedQuests: []
     requiredActiveQuests: []
     forbiddenQuests: []
@@ -9144,6 +9290,14 @@ MonoBehaviour:
   disableDuringTransition: []
   typewriterSpeed: 0.03
   useTypewriter: 0
+  audioSource: {fileID: 0}
+  useDialogueAudio: 1
+  defaultBlipSound: {fileID: 0}
+  blipVolume: 0.5
+  charactersPerBlip: 2
+  skipSpaces: 1
+  skipPunctuation: 1
+  pitchVariation: 0.05
 --- !u!61 &859766625
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10193,9 +10347,9 @@ MonoBehaviour:
   disableOnComplete: 0
   activateOnComplete: {fileID: 0}
   effectPrefab: {fileID: 0}
-  interactSound: {fileID: 8300000, guid: 6b08b670c3835ef42a7eda2a903138b9, type: 3}
-  completeSound: {fileID: 8300000, guid: 6b08b670c3835ef42a7eda2a903138b9, type: 3}
-  soundVolume: 10
+  interactSound: {fileID: 8300000, guid: 2e58a593f4853334da4561fd55d90a18, type: 3}
+  completeSound: {fileID: 8300000, guid: 2e58a593f4853334da4561fd55d90a18, type: 3}
+  soundVolume: 50
   onInteractionSuccess:
     m_PersistentCalls:
       m_Calls:
@@ -10286,6 +10440,12 @@ MonoBehaviour:
     portrait:
     - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
     - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    blipSounds:
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    blipPitch:
+    - 1.2
+    - 1.2
     requiredCompletedQuests: []
     requiredActiveQuests: []
     forbiddenQuests:
@@ -10340,6 +10500,9 @@ MonoBehaviour:
     - "*Deber\xEDa seguir al gato.*"
     portrait:
     - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    blipSounds: []
+    blipPitch:
+    - 1
     requiredCompletedQuests:
     - constancio1
     requiredActiveQuests:
@@ -10369,6 +10532,14 @@ MonoBehaviour:
   - {fileID: 604270837}
   typewriterSpeed: 0.03
   useTypewriter: 1
+  audioSource: {fileID: 0}
+  useDialogueAudio: 1
+  defaultBlipSound: {fileID: 0}
+  blipVolume: 0.5
+  charactersPerBlip: 2
+  skipSpaces: 1
+  skipPunctuation: 1
+  pitchVariation: 0.05
 --- !u!61 &950741124
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12006,6 +12177,22 @@ MonoBehaviour:
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
+    blipSounds:
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    blipPitch:
+    - 1.2
+    - 1.05
+    - 1.05
+    - 1.2
+    - 1.05
+    - 1.05
+    - 1.05
     requiredCompletedQuests: []
     requiredActiveQuests:
     - secretaria1
@@ -12049,6 +12236,10 @@ MonoBehaviour:
     - "\xBFPudiste estampar la remera?"
     portrait:
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
+    blipSounds:
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    blipPitch:
+    - 1.05
     requiredCompletedQuests:
     - secretaria1
     requiredActiveQuests:
@@ -12075,6 +12266,14 @@ MonoBehaviour:
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
+    blipSounds:
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    blipPitch:
+    - 1.05
+    - 1.05
+    - 1.05
     requiredCompletedQuests:
     - serigrafia
     requiredActiveQuests: []
@@ -12115,6 +12314,14 @@ MonoBehaviour:
   - {fileID: 604270837}
   typewriterSpeed: 0.03
   useTypewriter: 1
+  audioSource: {fileID: 0}
+  useDialogueAudio: 1
+  defaultBlipSound: {fileID: 0}
+  blipVolume: 0.5
+  charactersPerBlip: 2
+  skipSpaces: 1
+  skipPunctuation: 1
+  pitchVariation: 0.05
 --- !u!60 &1079061538
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -12866,7 +13073,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: AutodialogoConstancio
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 0
     onQuestComplete:
       m_PersistentCalls:
         m_Calls: []
@@ -13239,6 +13446,9 @@ MonoBehaviour:
     portrait:
     - {fileID: -7303599756011970469, guid: d3997354d2ca4f548bd423339f8f4976, type: 3}
     - {fileID: -2220157337281160119, guid: 0c2da1371082dc749a6b8e73db97c987, type: 3}
+    blipSounds: []
+    blipPitch:
+    - 1
     requiredCompletedQuests: []
     requiredActiveQuests: []
     forbiddenQuests: []
@@ -13265,6 +13475,14 @@ MonoBehaviour:
   disableDuringTransition: []
   typewriterSpeed: 0.03
   useTypewriter: 1
+  audioSource: {fileID: 0}
+  useDialogueAudio: 1
+  defaultBlipSound: {fileID: 0}
+  blipVolume: 0.5
+  charactersPerBlip: 2
+  skipSpaces: 1
+  skipPunctuation: 1
+  pitchVariation: 0.05
 --- !u!1 &1196305720
 GameObject:
   m_ObjectHideFlags: 0
@@ -16712,7 +16930,7 @@ Transform:
   m_GameObject: {fileID: 1465845517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.539894, y: 21.362745, z: -9.949415}
+  m_LocalPosition: {x: 17.537735, y: 21.362745, z: -9.949415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17247,7 +17465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1512324164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17260,11 +17478,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6b168b8e030b440821e9fce5355059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionType: 2
+  interactionType: 0
   questActions: []
   requiredCompletedQuests: []
-  requiredActiveQuests:
-  - autodialogoconstancio
+  requiredActiveQuests: []
   forbiddenQuests: []
   interactPrompt: {fileID: 0}
   promptText: {fileID: 0}
@@ -17332,6 +17549,9 @@ MonoBehaviour:
     - "*Deber\xEDa seguir al gato.*"
     portrait:
     - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    blipSounds: []
+    blipPitch:
+    - 1
     requiredCompletedQuests: []
     requiredActiveQuests: []
     forbiddenQuests: []
@@ -17359,6 +17579,14 @@ MonoBehaviour:
   - {fileID: 604270837}
   typewriterSpeed: 0.03
   useTypewriter: 1
+  audioSource: {fileID: 0}
+  useDialogueAudio: 1
+  defaultBlipSound: {fileID: 0}
+  blipVolume: 0.5
+  charactersPerBlip: 2
+  skipSpaces: 1
+  skipPunctuation: 1
+  pitchVariation: 0.05
 --- !u!61 &1512324166
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17366,7 +17594,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512324163}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -17393,7 +17621,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.10430932, y: -5.580454}
+  m_Offset: {x: 25.629555, y: -16.665697}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -17403,7 +17631,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.3627715, y: 4.6507587}
+  m_Size: {x: 71.832245, y: 30.321857}
   m_EdgeRadius: 0
 --- !u!4 &1512324167
 Transform:
@@ -17414,7 +17642,7 @@ Transform:
   m_GameObject: {fileID: 1512324163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.23, y: -28.47, z: 0.054032445}
+  m_LocalPosition: {x: -6.84, y: 0.28, z: 0.054032445}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18266,6 +18494,20 @@ MonoBehaviour:
     - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
     - {fileID: 3359208071225570717, guid: 39927f9329eb4484da419697b1f4f943, type: 3}
     - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    blipSounds:
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    blipPitch:
+    - 0.75
+    - 1.2
+    - 1.2
+    - 1.2
+    - 0.75
+    - 1.2
     requiredCompletedQuests:
     - serigrafia
     requiredActiveQuests: []
@@ -18282,6 +18524,14 @@ MonoBehaviour:
   - {fileID: 604270837}
   typewriterSpeed: 0.03
   useTypewriter: 1
+  audioSource: {fileID: 0}
+  useDialogueAudio: 1
+  defaultBlipSound: {fileID: 0}
+  blipVolume: 0.5
+  charactersPerBlip: 2
+  skipSpaces: 1
+  skipPunctuation: 1
+  pitchVariation: 0.05
 --- !u!1 &1578241409
 GameObject:
   m_ObjectHideFlags: 0
@@ -18521,6 +18771,9 @@ MonoBehaviour:
     - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
     - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
     - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    blipSounds: []
+    blipPitch:
+    - 1
     requiredCompletedQuests: []
     requiredActiveQuests: []
     forbiddenQuests: []
@@ -18536,6 +18789,14 @@ MonoBehaviour:
   - {fileID: 604270837}
   typewriterSpeed: 0.03
   useTypewriter: 1
+  audioSource: {fileID: 0}
+  useDialogueAudio: 1
+  defaultBlipSound: {fileID: 0}
+  blipVolume: 0.5
+  charactersPerBlip: 2
+  skipSpaces: 1
+  skipPunctuation: 1
+  pitchVariation: 0.05
 --- !u!1 &1632079791
 GameObject:
   m_ObjectHideFlags: 0
@@ -23675,6 +23936,78 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 604270837}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: dialogueSets.Array.data[0].blipPitch.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: dialogueSets.Array.data[0].blipSounds.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipPitch.Array.data[0]'
+      value: 1.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipPitch.Array.data[1]'
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipPitch.Array.data[2]'
+      value: 1.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipPitch.Array.data[3]'
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipPitch.Array.data[4]'
+      value: 1.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipPitch.Array.data[5]'
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipPitch.Array.data[6]'
+      value: 1.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipPitch.Array.data[7]'
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipSounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipSounds.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipSounds.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipSounds.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipSounds.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipSounds.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].blipSounds.Array.data[7]'
+      value: 
+      objectReference: {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -23683,12 +24016,16 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
@@ -23705,22 +24042,22 @@ PrefabInstance:
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 950741123}
+      objectReference: {fileID: 656079056}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 656079056}
+      objectReference: {fileID: 1512324166}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 1512324163}
+      objectReference: {fileID: 1512324165}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
       objectReference: {fileID: 950741125}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
@@ -23728,7 +24065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[5].m_CallState
@@ -23744,15 +24081,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: ForceDialogueSet
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: SetActive
+      value: set_enabled
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: SetActive
+      value: ForceDialogueSet
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
@@ -23768,15 +24105,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: Dialogue, Assembly-CSharp
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Behaviour, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: Dialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
@@ -23788,11 +24125,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
@@ -23812,11 +24149,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
-      value: AutodialogoConstancio
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_StringArgument
+      value: AutodialogoConstancio
       objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName

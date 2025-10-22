@@ -15,6 +15,11 @@ public class DialogueSet
     public string[] dialogueWords;
     public Sprite[] portrait;
     
+    [Header("Audio del Diálogo (opcional)")]
+    public AudioClip[] blipSounds; // Sonidos de "blip" para cada línea de diálogo (puede ser el mismo)
+    [Range(0.5f, 2f)]
+    public float[] blipPitch = new float[] { 1f }; // Pitch para cada línea (opcional)
+    
     [Header("Condiciones para activar este set")]
     public List<string> requiredCompletedQuests = new List<string>(); // Tareas que deben estar COMPLETADAS
     public List<string> requiredActiveQuests = new List<string>(); // Tareas que deben estar ACTIVAS (en progreso)
@@ -51,6 +56,32 @@ public class DialogueSet
         
         return true;
     }
+    
+    // Obtener el clip de audio para un paso específico
+    public AudioClip GetBlipForStep(int step)
+    {
+        if (blipSounds == null || blipSounds.Length == 0)
+            return null;
+        
+        // Si hay un clip por cada línea, usar el correspondiente
+        if (step < blipSounds.Length)
+            return blipSounds[step];
+        
+        // Si hay menos clips que líneas, usar el último disponible
+        return blipSounds[blipSounds.Length - 1];
+    }
+    
+    // Obtener el pitch para un paso específico
+    public float GetPitchForStep(int step)
+    {
+        if (blipPitch == null || blipPitch.Length == 0)
+            return 1f;
+        
+        if (step < blipPitch.Length)
+            return blipPitch[step];
+        
+        return blipPitch[blipPitch.Length - 1];
+    }
 }
 
 public class Dialogue : MonoBehaviour
@@ -71,6 +102,18 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private float typewriterSpeed = 0.03f; // Velocidad del efecto máquina de escribir
     [SerializeField] private bool useTypewriter = false;
     
+    [Header("Configuración de Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private bool useDialogueAudio = true;
+    [SerializeField] private AudioClip defaultBlipSound; // Sonido por defecto si no se especifica
+    [Range(0f, 1f)]
+    [SerializeField] private float blipVolume = 0.5f;
+    [SerializeField] private int charactersPerBlip = 2; // Cada cuántos caracteres suena (1-3 recomendado)
+    [SerializeField] private bool skipSpaces = true; // No sonar en espacios
+    [SerializeField] private bool skipPunctuation = true; // No sonar en puntuación al final
+    [Range(0f, 0.3f)]
+    [SerializeField] private float pitchVariation = 0.05f; // Variación aleatoria del pitch
+    
     private DialogueSet currentSet;
     private bool dialogueActivated;
     private int step;
@@ -83,6 +126,16 @@ public class Dialogue : MonoBehaviour
         // Asegurarse de que el canvas esté desactivado al inicio
         if (dialogueCanvas != null) dialogueCanvas.SetActive(false);
         if (interactCanvas != null) interactCanvas.SetActive(false);
+        
+        // Crear AudioSource si no existe
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        
+        // Configurar AudioSource
+        audioSource.playOnAwake = false;
+        audioSource.loop = false;
     }
     
     void Update()
@@ -180,7 +233,7 @@ public class Dialogue : MonoBehaviour
         // Mostrar texto con o sin efecto
         if (useTypewriter)
         {
-            typewriterCoroutine = StartCoroutine(TypewriterEffect(currentSet.dialogueWords[step]));
+            typewriterCoroutine = StartCoroutine(TypewriterEffect(currentSet.dialogueWords[step], step));
         }
         else
         {
@@ -190,18 +243,60 @@ public class Dialogue : MonoBehaviour
         step++;
     }
     
-    IEnumerator TypewriterEffect(string text)
+    IEnumerator TypewriterEffect(string text, int currentStep)
     {
         isTyping = true;
         dialogueText.text = "";
         
+        // Obtener el audio y pitch para este paso
+        AudioClip blipClip = currentSet.GetBlipForStep(currentStep);
+        if (blipClip == null) blipClip = defaultBlipSound;
+        
+        float basePitch = currentSet.GetPitchForStep(currentStep);
+        
+        int charCount = 0;
+        
         foreach (char letter in text)
         {
             dialogueText.text += letter;
+            
+            // Reproducir sonido si corresponde
+            if (useDialogueAudio && blipClip != null && ShouldPlayBlip(letter, charCount))
+            {
+                PlayBlip(blipClip, basePitch);
+            }
+            
+            charCount++;
             yield return new WaitForSeconds(typewriterSpeed);
         }
         
         isTyping = false;
+    }
+    
+    bool ShouldPlayBlip(char character, int charCount)
+    {
+        // Solo sonar cada X caracteres
+        if (charCount % charactersPerBlip != 0)
+            return false;
+        
+        // Saltar espacios si está configurado
+        if (skipSpaces && char.IsWhiteSpace(character))
+            return false;
+        
+        // Saltar puntuación si está configurado
+        if (skipPunctuation && char.IsPunctuation(character))
+            return false;
+        
+        return true;
+    }
+    
+    void PlayBlip(AudioClip clip, float basePitch)
+    {
+        if (audioSource == null || clip == null) return;
+        
+        // Aplicar pitch base + variación aleatoria
+        audioSource.pitch = basePitch + Random.Range(-pitchVariation, pitchVariation);
+        audioSource.PlayOneShot(clip, blipVolume);
     }
     
     void EndDialogue()
@@ -273,5 +368,16 @@ public class Dialogue : MonoBehaviour
         {
             dialogueSets.Add(newSet);
         }
+    }
+    
+    // Métodos públicos para controlar el audio
+    public void SetDialogueAudioEnabled(bool enabled)
+    {
+        useDialogueAudio = enabled;
+    }
+    
+    public void SetBlipVolume(float volume)
+    {
+        blipVolume = Mathf.Clamp01(volume);
     }
 }
