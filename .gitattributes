@@ -14,3 +14,4 @@ Assets/Art/Tilesets/Pasado/Subsuelo/Subsuelo[[:space:]]1.svg filter=lfs diff=lfs
 "Assets/Art/Sprites/Presente/Objetos/Bibliotecas/Biblioteca[[:space:]]2/*.png" filter=lfs diff=lfs merge=lfs -text
 "*.mp3" filter=lfs diff=lfs merge=lfs -text
 "Assets/Audio/Music/**" filter=lfs diff=lfs merge=lfs -text
+"*.svg" filter=lfs diff=lfs merge=lfs -text
