@@ -1,20 +1,37 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class triggerActivacion : MonoBehaviour
+public class TriggerEscombros : MonoBehaviour
 {
-    [Header("Eventos")]
-    [SerializeField] private GameObject trigger;
-    [SerializeField] private GameObject objeto;
+    [SerializeField] private GameObject escombros;
+    [SerializeField] private CinematicEffects cinematicManager;
+    private bool yaActivado = false;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player") && !yaActivado)
         {
-            objeto.SetActive(true);
+            yaActivado = true;
+            
+            // Detener jugador
+            var player = other.gameObject;
+            var rb = player.GetComponent<Rigidbody2D>();
+            if (rb != null) rb.linearVelocity = Vector2.zero;
+            
+            var movimiento = player.GetComponent<MonoBehaviour>();
+            if (movimiento != null)
+            {
+                movimiento.enabled = false;
+                StartCoroutine(ReactivarMovimiento(movimiento, 1f));
+            }
+
+            // Activar secuencia
+            cinematicManager.PlaySequence("CaidaEscombros");
         }
+    }
+
+    System.Collections.IEnumerator ReactivarMovimiento(MonoBehaviour script, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        script.enabled = true;
     }
 }

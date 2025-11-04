@@ -48,6 +48,11 @@ public class QuestManager : MonoBehaviour
             // NO hacer singleton, permitir múltiples
             Instance = this;
             InitializeQuests();
+            
+            #if UNITY_WEBGL && !UNITY_EDITOR
+            // SOLO para WebGL: Limpiar PlayerPrefs al iniciar (para testing)
+            ResetAllQuestsWebGL();
+            #endif
         }
         else
         {
@@ -57,12 +62,33 @@ public class QuestManager : MonoBehaviour
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
                 InitializeQuests();
+                
+                #if UNITY_WEBGL && !UNITY_EDITOR
+                // SOLO para WebGL: Limpiar PlayerPrefs al iniciar (para testing)
+                ResetAllQuestsWebGL();
+                #endif
             }
             else
             {
                 Destroy(gameObject);
             }
         }
+    }
+
+    // Método para limpiar SOLO en WebGL
+    void ResetAllQuestsWebGL()
+    {
+        foreach (var quest in questDictionary.Values)
+        {
+            quest.isCompleted = false;
+            quest.isActive = false;
+            PlayerPrefs.DeleteKey($"Quest_{quest.questID}_Completed");
+            PlayerPrefs.DeleteKey($"Quest_{quest.questID}_Active");
+        }
+        PlayerPrefs.Save();
+        
+        if (showDebugLogs)
+            Debug.Log("🌐 [WebGL] PlayerPrefs limpiados al iniciar");
     }
     
     void InitializeQuests()

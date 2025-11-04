@@ -2165,9 +2165,10 @@ MonoBehaviour:
       en alguna parte..."
     portrait:
     - {fileID: -683080583186284860, guid: 2d72ccb5dc89a3e4cae55f894f4763ba, type: 3}
-    blipSounds: []
+    blipSounds:
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
     blipPitch:
-    - 1
+    - 1.1
     requiredCompletedQuests:
     - bibliotecaria0
     requiredActiveQuests:
@@ -2355,7 +2356,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.44156647, y: -0.15517426}
+  m_Offset: {x: -4.5273466, y: -0.15517426}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2365,7 +2366,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.223587, y: 2.020462}
+  m_Size: {x: 10.395147, y: 2.020462}
   m_EdgeRadius: 0
 --- !u!114 &166993347
 MonoBehaviour:
@@ -3274,7 +3275,7 @@ Transform:
   m_GameObject: {fileID: 276807319}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.66, y: 22.37, z: 0}
+  m_LocalPosition: {x: 36.66, y: 26.65, z: 0}
   m_LocalScale: {x: 0.84822005, y: 0.84822005, z: 0.84822005}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3388,7 +3389,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -780392627
   m_SortingLayer: 3
-  m_SortingOrder: -2985
+  m_SortingOrder: -3413
   m_Sprite: {fileID: 7557399122080069335, guid: 8587d6c427f9e7744a3a2357a6119c65, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3647,7 +3648,7 @@ Transform:
   m_GameObject: {fileID: 325342532}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.66, y: 18.83, z: 0}
+  m_LocalPosition: {x: 36.66, y: 21.85, z: 0}
   m_LocalScale: {x: 0.84822005, y: 0.84822005, z: 0.84822005}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3761,7 +3762,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -780392627
   m_SortingLayer: 3
-  m_SortingOrder: -2631
+  m_SortingOrder: -2933
   m_Sprite: {fileID: 7557399122080069335, guid: 8587d6c427f9e7744a3a2357a6119c65, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3784,7 +3785,7 @@ GameObject:
   - component: {fileID: 325927525}
   - component: {fileID: 325927526}
   m_Layer: 7
-  m_Name: ParedInvisible (17)
+  m_Name: ParedPasilloHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4508,43 +4509,9 @@ MonoBehaviour:
     playOnStart: 1
     loop: 0
     effects:
-    - effectName: wait
-      type: 18
-      duration: 1
-      curve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 4
-      targetIntensity: 0
-      targetColor: {r: 0, g: 0, b: 0, a: 0}
-      flickerSpeed: 0
-      shakeIntensity: 0
-      shakeFrequency: 0
-      targetZoom: 0
-      targetPosition: {x: 0, y: 0, z: 0}
-      targetRotation: {x: 0, y: 0, z: 0}
-      screenColor: {r: 0, g: 0, b: 0, a: 0}
-      targetVignetteIntensity: 0
-      targetChromaticIntensity: 0
-      audioClip: {fileID: 0}
-      targetVolume: 0
-      audioSource: {fileID: 0}
-      mixerGroup: {fileID: 0}
-      waitTime: 0
-      targetTimeScale: 0
-      targetObject: {fileID: 0}
-      onEffectStart:
-        m_PersistentCalls:
-          m_Calls: []
-      onEffectComplete:
-        m_PersistentCalls:
-          m_Calls: []
-      dialogueSetName: 
-    - effectName: fade
-      type: 9
-      duration: 1
+    - effectName: Pantalla Negra Inicial
+      type: 8
+      duration: 0.01
       curve:
         serializedVersion: 2
         m_Curve:
@@ -4584,7 +4551,7 @@ MonoBehaviour:
       targetVolume: 0
       audioSource: {fileID: 0}
       mixerGroup: {fileID: 0}
-      waitTime: 1
+      waitTime: 0
       targetTimeScale: 0
       targetObject: {fileID: 0}
       onEffectStart:
@@ -4594,11 +4561,170 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
       dialogueSetName: 
+    - effectName: Fade In
+      type: 9
+      duration: 2
+      curve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 2
+          outSlope: 2
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      targetIntensity: 0
+      targetColor: {r: 0, g: 0, b: 0, a: 0}
+      flickerSpeed: 0
+      shakeIntensity: 0
+      shakeFrequency: 0
+      targetZoom: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      targetRotation: {x: 0, y: 0, z: 0}
+      screenColor: {r: 0, g: 0, b: 0, a: 0}
+      targetVignetteIntensity: 0
+      targetChromaticIntensity: 0
+      audioClip: {fileID: 0}
+      targetVolume: 0
+      audioSource: {fileID: 0}
+      mixerGroup: {fileID: 0}
+      waitTime: 0
+      targetTimeScale: 0
+      targetObject: {fileID: 0}
+      onEffectStart:
+        m_PersistentCalls:
+          m_Calls: []
+      onEffectComplete:
+        m_PersistentCalls:
+          m_Calls: []
+      dialogueSetName: 
+    - effectName: Espera
+      type: 18
+      duration: 1
+      curve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      targetIntensity: 0
+      targetColor: {r: 0, g: 0, b: 0, a: 0}
+      flickerSpeed: 0
+      shakeIntensity: 0
+      shakeFrequency: 0
+      targetZoom: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      targetRotation: {x: 0, y: 0, z: 0}
+      screenColor: {r: 0, g: 0, b: 0, a: 0}
+      targetVignetteIntensity: 0
+      targetChromaticIntensity: 0
+      audioClip: {fileID: 0}
+      targetVolume: 0
+      audioSource: {fileID: 0}
+      mixerGroup: {fileID: 0}
+      waitTime: 0
+      targetTimeScale: 0
+      targetObject: {fileID: 0}
+      onEffectStart:
+        m_PersistentCalls:
+          m_Calls: []
+      onEffectComplete:
+        m_PersistentCalls:
+          m_Calls: []
+      dialogueSetName: 
+    - effectName: Activar Dialogo
+      type: 22
+      duration: 1
+      curve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      targetIntensity: 0
+      targetColor: {r: 0, g: 0, b: 0, a: 0}
+      flickerSpeed: 0
+      shakeIntensity: 0
+      shakeFrequency: 0
+      targetZoom: 0
+      targetPosition: {x: 0, y: 0, z: 0}
+      targetRotation: {x: 0, y: 0, z: 0}
+      screenColor: {r: 0, g: 0, b: 0, a: 0}
+      targetVignetteIntensity: 0
+      targetChromaticIntensity: 0
+      audioClip: {fileID: 0}
+      targetVolume: 0
+      audioSource: {fileID: 0}
+      mixerGroup: {fileID: 0}
+      waitTime: 0
+      targetTimeScale: 0
+      targetObject: {fileID: 0}
+      onEffectStart:
+        m_PersistentCalls:
+          m_Calls: []
+      onEffectComplete:
+        m_PersistentCalls:
+          m_Calls: []
+      dialogueSetName: AutodialogoInicio
     requiredCompletedQuests: []
     requiredActiveQuests: []
     onSequenceStart:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1428753834}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
     onSequenceComplete:
       m_PersistentCalls:
         m_Calls: []
@@ -6212,7 +6338,7 @@ MonoBehaviour:
   leftMove: {fileID: 6590483116930940163, guid: 537f851709005e341a9cf092b33c590d, type: 3}
   rightIdle: {fileID: 643360504356032832, guid: 9fd9d47e0c21ee44ba4d79c85dba6903, type: 3}
   rightMove: {fileID: 1315036728045639869, guid: 075e1e4cb3649dd42816794e1ee5b767, type: 3}
-  switchInterval: 0.3
+  switchInterval: 0.45
   speed: 3
   steps: {fileID: 604270843}
 --- !u!114 &604270840
@@ -10388,7 +10514,6 @@ GameObject:
   - component: {fileID: 950741122}
   - component: {fileID: 950741124}
   - component: {fileID: 950741123}
-  - component: {fileID: 950741125}
   m_Layer: 0
   m_Name: Autodialogo
   m_TagString: Untagged
@@ -10480,7 +10605,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 0
         - m_Target: {fileID: 1428753837}
           m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
           m_MethodName: CancelInvoke
@@ -10493,29 +10618,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - setName: AutodialogoConstancio
-    speaker:
-    - Quime
-    dialogueWords:
-    - "*Deber\xEDa seguir al gato.*"
-    portrait:
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
-    blipSounds: []
-    blipPitch:
-    - 1
-    requiredCompletedQuests:
-    - constancio1
-    requiredActiveQuests:
-    - autodialogoconstancio
-    forbiddenQuests: []
-    priority: 0
-    onDialogueStart:
-      m_PersistentCalls:
-        m_Calls: []
-    onDialogueEnd:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 604270830}
+        - m_Target: {fileID: 950741121}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -10586,65 +10689,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 7.3627715, y: 4.6507587}
   m_EdgeRadius: 0
---- !u!114 &950741125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950741121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e6b168b8e030b440821e9fce5355059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionType: 0
-  questActions: []
-  requiredCompletedQuests: []
-  requiredActiveQuests:
-  - autodialogoconstancio
-  forbiddenQuests: []
-  interactPrompt: {fileID: 0}
-  promptText: {fileID: 0}
-  customPromptText: Inspeccionar
-  changePromptByState: 1
-  singleUse: 1
-  interactCooldown: 0.5
-  requirePlayerFacing: 0
-  destroyOnComplete: 0
-  disableOnComplete: 0
-  activateOnComplete: {fileID: 0}
-  effectPrefab: {fileID: 0}
-  interactSound: {fileID: 0}
-  completeSound: {fileID: 0}
-  soundVolume: 1
-  onInteractionSuccess:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 950741123}
-        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-        m_MethodName: ForceDialogueSet
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: AutodialogoConstancio
-          m_BoolArgument: 0
-        m_CallState: 2
-  onInteractionFailed:
-    m_PersistentCalls:
-      m_Calls: []
-  onConditionsNotMet:
-    m_PersistentCalls:
-      m_Calls: []
-  onPlayerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  onPlayerExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &950863210
 GameObject:
   m_ObjectHideFlags: 0
@@ -12401,7 +12445,7 @@ Transform:
   m_GameObject: {fileID: 1095364452}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.48, y: 12.42, z: 0}
+  m_LocalPosition: {x: 18.48, y: 2.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12461,14 +12505,12 @@ PolygonCollider2D:
       - {x: 1.0380878, y: -1.647933}
       - {x: 1.45636, y: -1.6479884}
       - {x: 1.6557941, y: -0.76379967}
-      - {x: 1.66, y: 0.745}
-      - {x: 1.1444874, y: 0.7512436}
-      - {x: 0.35531616, y: 0.7500305}
-      - {x: 0.35731506, y: 1.2421303}
-      - {x: -0.36855316, y: 1.2381573}
-      - {x: -0.34682655, y: 0.7548809}
-      - {x: -1.1464443, y: 0.74435997}
-      - {x: -1.6548756, y: 0.7403166}
+      - {x: 1.6730882, y: 0.29346192}
+      - {x: 0.35531616, y: 0.29194832}
+      - {x: 0.35731506, y: 1.0196342}
+      - {x: -0.36855316, y: 1.002573}
+      - {x: -0.3664589, y: 0.2902546}
+      - {x: -1.6614197, y: 0.30186677}
   m_UseDelaunayMesh: 0
 --- !u!114 &1095364455
 MonoBehaviour:
@@ -12527,7 +12569,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -780392627
   m_SortingLayer: 3
-  m_SortingOrder: -3497
+  m_SortingOrder: -2470
   m_Sprite: {fileID: 7825585277690020287, guid: 011ff1bcfca3b924e95f08f90bd83583, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12985,7 +13027,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 0
   - questID: constancio1
     questName: Hablar con constancio
     description: Primer encuentro con Constancio
@@ -13446,9 +13488,12 @@ MonoBehaviour:
     portrait:
     - {fileID: -7303599756011970469, guid: d3997354d2ca4f548bd423339f8f4976, type: 3}
     - {fileID: -2220157337281160119, guid: 0c2da1371082dc749a6b8e73db97c987, type: 3}
-    blipSounds: []
+    blipSounds:
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
+    - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
     blipPitch:
-    - 1
+    - 1.262
+    - 0.874
     requiredCompletedQuests: []
     requiredActiveQuests: []
     forbiddenQuests: []
@@ -15793,7 +15838,7 @@ Transform:
   m_GameObject: {fileID: 1398173690}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.56, y: 3.79, z: 0}
+  m_LocalPosition: {x: 43.56, y: 2.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15923,7 +15968,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -780392627
   m_SortingLayer: 3
-  m_SortingOrder: -1127
+  m_SortingOrder: -975
   m_Sprite: {fileID: -2168885635015458124, guid: 9934fa75a8b87ed419b1be4789c0472b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16494,16 +16539,17 @@ MonoBehaviour:
     questID: secretaria1
   requiredCompletedQuests: []
   requiredActiveQuests: []
-  forbiddenQuests: []
+  forbiddenQuests:
+  - secretaria1
   interactPrompt: {fileID: 0}
   promptText: {fileID: 0}
   customPromptText: Inspeccionar
-  changePromptByState: 1
+  changePromptByState: 0
   singleUse: 1
   interactCooldown: 0.5
   requirePlayerFacing: 0
   destroyOnComplete: 0
-  disableOnComplete: 1
+  disableOnComplete: 0
   activateOnComplete: {fileID: 0}
   effectPrefab: {fileID: 0}
   interactSound: {fileID: 0}
@@ -16536,6 +16582,18 @@ MonoBehaviour:
           m_StringArgument: secretaria1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 950741121}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: AutodialogoInicio
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 950741123}
         m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
         m_MethodName: ForceDialogueSet
@@ -16556,7 +16614,19 @@ MonoBehaviour:
       m_Calls: []
   onPlayerEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1428753836}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
   onPlayerExit:
     m_PersistentCalls:
       m_Calls: []
@@ -16930,7 +17000,7 @@ Transform:
   m_GameObject: {fileID: 1465845517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.537735, y: 21.362745, z: -9.949415}
+  m_LocalPosition: {x: 17.534607, y: 21.362745, z: -9.949415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24054,7 +24124,7 @@ PrefabInstance:
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
-      objectReference: {fileID: 950741125}
+      objectReference: {fileID: 0}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: dialogueSets.Array.data[0].onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -24226,6 +24296,42 @@ PrefabInstance:
     - target: {fileID: 5315065914491738300, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: onPlayerEnter.m_PersistentCalls.m_Calls.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315065914491738300, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: onInteractionSuccess.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315065914491738300, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: onInteractionSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315065914491738300, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: onInteractionSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 325927524}
+    - target: {fileID: 5315065914491738300, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: onInteractionSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315065914491738300, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: onInteractionSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315065914491738300, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: onInteractionSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315065914491738300, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: onInteractionSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315065914491738300, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: onInteractionSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Inicio
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315065914491738300, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: onInteractionSuccess.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
