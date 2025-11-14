@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using System.Collections;
-using System.Collections.Generic; 
+using System.Collections.Generic;
+using UnityEngine.Rendering;
 
 public class PlayerFlashbangSystem : MonoBehaviour
 {
@@ -21,13 +22,19 @@ public class PlayerFlashbangSystem : MonoBehaviour
     [SerializeField] private GameObject pared_sombra;
     [SerializeField] private GameObject pared_sombra1;
     [SerializeField] private QuimiSpriteAnimator quimiController;
+    [SerializeField] private AudioSource cancionPasado;
+    [SerializeField] private AudioSource breakbeat;
+    [SerializeField] private AudioSource respiracion;
+    [SerializeField] private AudioSource explosion;
+    [SerializeField] private AudioSource apagon;
+
 
     [Header("Configuración")]
     [SerializeField] private float totalDuration = 30f;
     [SerializeField] private float minOuterRadius = 0.5f;
 
     [Header("Configuración Flash")]
-    [SerializeField] private float flashIntensity = 30f;
+    [SerializeField] private float flashIntensity = 300f;
     [SerializeField] private float flashDuration = 0.5f;
     
     [Header("Posiciones")]
@@ -65,7 +72,7 @@ public class PlayerFlashbangSystem : MonoBehaviour
         if (!isActive) return;
 
         currentTime -= Time.deltaTime;
-        quimiVision.enabled = false; 
+        quimiVision.enabled = false;
         escombros.SetActive(true);
         quimiController.enabled = true;
 
@@ -74,10 +81,11 @@ public class PlayerFlashbangSystem : MonoBehaviour
         //Reducir progresivamente el radio de la luz
         float progress = currentTime / totalDuration;
         spotLight.pointLightOuterRadius = Mathf.Lerp(
-            minOuterRadius, 
-            initialOuterRadius, 
+            minOuterRadius,
+            initialOuterRadius,
             progress
         );
+        respiracion.volume = Mathf.Lerp(1f, 0f, progress);
 
 
         //Finalizar la secuencia cuando el tiempo se acaba
@@ -92,6 +100,10 @@ public class PlayerFlashbangSystem : MonoBehaviour
         quimiController.enabled = false;
         // 1. Flash inicial (aumento brusco de intensidad)
         yield return StartCoroutine(FlashEffect(true));
+        cancionPasado.Stop();
+        explosion.Play();
+        breakbeat.Play();
+        respiracion.Play();
         
         // 2. Cambio de luces
         if (globalLight != null) 
@@ -142,10 +154,10 @@ public class PlayerFlashbangSystem : MonoBehaviour
     private IEnumerator BadEndFlashSequence()
     {
         isActive = false;
-        
+
         // 1. Flash final (aumento)
         yield return StartCoroutine(FlashEffect(true));
-        
+
         // 2. Reset del sistema
         ResetSystem();
         
@@ -193,10 +205,15 @@ public class PlayerFlashbangSystem : MonoBehaviour
             globalLight.intensity = initialGlobalIntensity; // lo normalizamos para el fade-out
         }
         escombros1.SetActive(true);
+        quimiVision.enabled = true;
         mapa1.SetActive(false);
         mapa1_final.SetActive(true);
         pared_sombra.SetActive(false);
         pared_sombra1.SetActive(false);
+        breakbeat.Stop();
+        respiracion.Stop();
+        explosion.Play();
+        cancionPasado.Play();
 
         // Pequeña espera para asegurar que Unity haya aplicado transform/objetos (un frame)
         yield return null;
@@ -213,6 +230,9 @@ public class PlayerFlashbangSystem : MonoBehaviour
 
     private void ResetSystem()
     {
+        breakbeat.Stop();
+        respiracion.Stop();
+        apagon.Play();
         // 1. Teletransportar al punto de respawn actual
         TeleportPlayer(gameplayStartPosition);
 

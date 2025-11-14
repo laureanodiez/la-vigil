@@ -48,6 +48,7 @@ public class QuimiSpriteAnimator : MonoBehaviour
         // 2) Control de Sprite
         if (move.sqrMagnitude > 0) {
             if (steps != null && !steps.isPlaying) {
+                steps.pitch = Random.Range(0.9f, 1.1f);
                 steps.Play();
             }
 
@@ -68,6 +69,9 @@ public class QuimiSpriteAnimator : MonoBehaviour
             if (timer >= switchInterval) {
                 timer = 0f;
                 toggleFrame = !toggleFrame;
+                steps.Stop();
+                steps.pitch = Random.Range(0.9f, 1.1f);
+                steps.Play();
             }
             sr.sprite = toggleFrame ? idle : mov;
         }
