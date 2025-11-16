@@ -10474,8 +10474,8 @@ MonoBehaviour:
   disableOnComplete: 0
   activateOnComplete: {fileID: 0}
   effectPrefab: {fileID: 0}
-  interactSound: {fileID: 8300000, guid: 2e58a593f4853334da4561fd55d90a18, type: 3}
-  completeSound: {fileID: 8300000, guid: 2e58a593f4853334da4561fd55d90a18, type: 3}
+  interactSound: {fileID: 0}
+  completeSound: {fileID: 8300000, guid: 8fd5896ee90aae5459f99d1defd58a9d, type: 3}
   soundVolume: 50
   onInteractionSuccess:
     m_PersistentCalls:
@@ -10560,9 +10560,9 @@ MonoBehaviour:
     - Quime
     - Quime
     dialogueWords:
-    - Es enorme y encima hay una bocha de gente...
-    - "Capaz me pueden prestar un tel\xE9fono, as\xED llamo a alguien para que me
-      venga a buscar"
+    - '*Es enorme y encima hay una bocha de gente...*'
+    - "*Capaz me pueden prestar un tel\xE9fono, as\xED llamo a alguien para que me
+      venga a buscar.*"
     portrait:
     - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
     - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
@@ -17001,7 +17001,7 @@ Transform:
   m_GameObject: {fileID: 1465845517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.54117, y: 21.362755, z: -9.949415}
+  m_LocalPosition: {x: 17.526838, y: 21.362736, z: -9.949415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
