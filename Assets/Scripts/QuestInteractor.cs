@@ -58,8 +58,8 @@ public class QuestInteractor : MonoBehaviour
     [SerializeField] private List<string> forbiddenQuests = new List<string>();
     
     [Header("UI de Interacción")]
-    [SerializeField] private GameObject interactPrompt; // El canvas con "Inspeccionar"
-    [SerializeField] private TMP_Text promptText; // Texto del prompt
+    [SerializeField] private GameObject questInteractPrompt;
+    [SerializeField] private TMP_Text questPromptText;
     [SerializeField] private string customPromptText = "Inspeccionar";
     [SerializeField] private bool changePromptByState = true;
     
@@ -94,12 +94,12 @@ public class QuestInteractor : MonoBehaviour
     private void Start()
     {
         // Configurar el prompt inicial
-        if (interactPrompt != null)
+        if (questInteractPrompt != null)
         {
-            interactPrompt.SetActive(false);
+            questInteractPrompt.SetActive(false);
         }
         
-        if (promptText != null && !string.IsNullOrEmpty(customPromptText))
+        if (questPromptText != null && !string.IsNullOrEmpty(customPromptText))
         {
             UpdatePromptText();
         }
@@ -116,7 +116,7 @@ public class QuestInteractor : MonoBehaviour
         if (!playerInRange) return;
         
         // Actualizar texto del prompt según el estado
-        if (changePromptByState && promptText != null)
+        if (changePromptByState && questPromptText != null)
         {
             UpdatePromptText();
         }
@@ -141,13 +141,11 @@ public class QuestInteractor : MonoBehaviour
         playerInRange = true;
         onPlayerEnter?.Invoke();
         
-        // Verificar si podemos mostrar el prompt
         if (ShouldShowPrompt())
         {
             ShowInteractPrompt();
         }
         
-        // Interacción automática
         if (interactionType == InteractionType.Automatic || 
             interactionType == InteractionType.OnCollect)
         {
@@ -312,30 +310,29 @@ public class QuestInteractor : MonoBehaviour
     
     private void ShowInteractPrompt()
     {
-        if (interactPrompt != null)
+        if (questInteractPrompt != null)
         {
-            interactPrompt.SetActive(true);
+            questInteractPrompt.SetActive(true);
             UpdatePromptText();
         }
     }
     
     private void HideInteractPrompt()
     {
-        if (interactPrompt != null)
+        if (questInteractPrompt != null)
         {
-            interactPrompt.SetActive(false);
+            questInteractPrompt.SetActive(false);
         }
     }
     
-    private void UpdatePromptText()
+        private void UpdatePromptText()
     {
-        if (promptText == null) return;
+        if (questPromptText == null) return;
         
         string text = customPromptText;
         
         if (changePromptByState && questActions.Count > 0)
         {
-            // Cambiar texto según el estado de la primera misión
             var firstAction = questActions[0];
             
             if (!string.IsNullOrEmpty(firstAction.questID))
@@ -343,21 +340,21 @@ public class QuestInteractor : MonoBehaviour
                 if (QuestManager.Instance.IsQuestCompleted(firstAction.questID))
                 {
                     text = "Completado";
-                    promptText.color = Color.green;
+                    questPromptText.color = Color.green;
                 }
                 else if (QuestManager.Instance.IsQuestActive(firstAction.questID))
                 {
                     text = customPromptText + " (En progreso)";
-                    promptText.color = Color.yellow;
+                    questPromptText.color = Color.yellow;
                 }
                 else
                 {
-                    promptText.color = Color.white;
+                    questPromptText.color = Color.white;
                 }
             }
         }
         
-        promptText.text = text;
+        questPromptText.text = text;
     }
     
     private bool IsPlayerFacingObject()
@@ -374,12 +371,12 @@ public class QuestInteractor : MonoBehaviour
     
     private IEnumerator FlashPrompt(Color flashColor)
     {
-        if (promptText == null) yield break;
+        if (questPromptText == null) yield break;
         
-        Color originalColor = promptText.color;
-        promptText.color = flashColor;
+        Color originalColor = questPromptText.color;
+        questPromptText.color = flashColor;
         yield return new WaitForSeconds(0.2f);
-        promptText.color = originalColor;
+        questPromptText.color = originalColor;
     }
     
     // Métodos públicos para control externo

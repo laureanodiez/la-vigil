@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 24497589}
   - component: {fileID: 24497590}
   m_Layer: 8
-  m_Name: "Trigger C\xE1mara S2"
+  m_Name: "Trigger C\xE1mara S4"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -297,7 +297,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 2.6106062, y: -7.8563814}
+  m_Offset: {x: 2.6387095, y: 0.08484353}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -307,7 +307,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 18.897356, y: 15.962896}
+  m_Size: {x: 18.791481, y: 0.08044538}
   m_EdgeRadius: 0
 --- !u!114 &24497590
 MonoBehaviour:
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetCamera: {fileID: 394392081}
+  targetCamera: {fileID: 1448297587}
   playerTag: Player
   disablePreviousCamera: 1
   switchDebounce: 0.15
@@ -1389,11 +1389,108 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1043352903}
+  - {fileID: 917382571}
   - {fileID: 865206539}
+  - {fileID: 1330299592}
   - {fileID: 235814187}
   - {fileID: 1776016166}
   m_Father: {fileID: 2075592448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &69325369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 69325370}
+  - component: {fileID: 69325371}
+  - component: {fileID: 69325372}
+  m_Layer: 8
+  m_Name: "Trigger C\xE1mara S2"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &69325370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69325369}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1860476999}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &69325371
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69325369}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 9.599007, y: 0.0097465515}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.04713154, y: 15.953808}
+  m_EdgeRadius: 0
+--- !u!114 &69325372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69325369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 394392081}
+  playerTag: Player
+  disablePreviousCamera: 1
+  switchDebounce: 0.15
 --- !u!1 &84509406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,6 +2199,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 416046185545009189, guid: 5a1f68ddd8682b0419089aacd4bd7bd0, type: 3}
   m_PrefabInstance: {fileID: 573056794}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &142898787 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3694929911074800897, guid: 5a1f68ddd8682b0419089aacd4bd7bd0, type: 3}
+  m_PrefabInstance: {fileID: 573056794}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &151784150
 GameObject:
   m_ObjectHideFlags: 0
@@ -2341,8 +2449,8 @@ MonoBehaviour:
   requiredCompletedQuests: []
   requiredActiveQuests: []
   forbiddenQuests: []
-  questInteractPrompt: {fileID: 0}
-  questPromptText: {fileID: 0}
+  interactPrompt: {fileID: 0}
+  promptText: {fileID: 0}
   customPromptText: Inspeccionar
   changePromptByState: 1
   singleUse: 1
@@ -3745,6 +3853,101 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.4621296, y: 4.7245216}
   m_EdgeRadius: 0
+--- !u!1 &330913354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 330913355}
+  - component: {fileID: 330913356}
+  - component: {fileID: 330913357}
+  m_Layer: 8
+  m_Name: "Trigger C\xE1mara S3"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &330913355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330913354}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -19.19, y: 0.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 835787781}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &330913356
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330913354}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 9.599007, y: 0.0097465515}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.04713154, y: 15.953808}
+  m_EdgeRadius: 0
+--- !u!114 &330913357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330913354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 1820031093}
+  playerTag: Player
+  disablePreviousCamera: 1
+  switchDebounce: 0.15
 --- !u!1 &342206292
 GameObject:
   m_ObjectHideFlags: 0
@@ -5298,7 +5501,7 @@ Transform:
   m_GameObject: {fileID: 445958988}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.403492, y: 17.524506, z: -9.949415}
+  m_LocalPosition: {x: 44.833492, y: 44.894505, z: -9.949415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5872,10 +6075,6 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6171072752871688068, guid: 5a1f68ddd8682b0419089aacd4bd7bd0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7033013812274284576, guid: 5a1f68ddd8682b0419089aacd4bd7bd0, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5885,17 +6084,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a1f68ddd8682b0419089aacd4bd7bd0, type: 3}
---- !u!114 &573056795 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7082926529719690265, guid: 5a1f68ddd8682b0419089aacd4bd7bd0, type: 3}
-  m_PrefabInstance: {fileID: 573056794}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &573056796 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6319200220116262189, guid: 5a1f68ddd8682b0419089aacd4bd7bd0, type: 3}
@@ -8369,7 +8557,7 @@ GameObject:
   - component: {fileID: 791168866}
   - component: {fileID: 791168867}
   m_Layer: 8
-  m_Name: "Trigger C\xE1mara S4"
+  m_Name: "Trigger C\xE1mara S2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8424,7 +8612,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 2.6980839, y: 7.5060396}
+  m_Offset: {x: 2.6387095, y: 0.08484353}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8434,7 +8622,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 19.1521, y: 14.922838}
+  m_Size: {x: 18.791481, y: 0.08044538}
   m_EdgeRadius: 0
 --- !u!114 &791168867
 MonoBehaviour:
@@ -8448,7 +8636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetCamera: {fileID: 1448297587}
+  targetCamera: {fileID: 394392081}
   playerTag: Player
   disablePreviousCamera: 1
   switchDebounce: 0.15
@@ -8498,7 +8686,7 @@ GameObject:
   - component: {fileID: 793947372}
   - component: {fileID: 793947371}
   m_Layer: 8
-  m_Name: "Trigger C\xE1mara Bibli2"
+  m_Name: "Trigger C\xE1mara S6"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8531,7 +8719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetCamera: {fileID: 89655942}
+  targetCamera: {fileID: 748889565}
   playerTag: Player
   disablePreviousCamera: 1
   switchDebounce: 0.15
@@ -8569,7 +8757,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.5261259, y: 10.011576}
+  m_Offset: {x: 8.919197, y: 2.93432}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8579,7 +8767,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 19.176119, y: 16.034657}
+  m_Size: {x: 2.768158, y: 0.020895958}
   m_EdgeRadius: 0
 --- !u!1 &796412538
 GameObject:
@@ -8906,7 +9094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &835787781
 Transform:
   m_ObjectHideFlags: 0
@@ -8921,6 +9109,8 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 791168865}
+  - {fileID: 330913355}
+  - {fileID: 1716720444}
   - {fileID: 1387160445}
   m_Father: {fileID: 1041034199}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8979,11 +9169,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &853948290 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6171072752871688068, guid: 5a1f68ddd8682b0419089aacd4bd7bd0, type: 3}
-  m_PrefabInstance: {fileID: 573056794}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &858846975
 GameObject:
   m_ObjectHideFlags: 0
@@ -9518,7 +9703,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 8.933409, y: 2.9861126}
+  m_Offset: {x: 8.935018, y: 2.93432}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -9528,7 +9713,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.7355442, y: 0.07849336}
+  m_Size: {x: 2.732327, y: 0.020895958}
   m_EdgeRadius: 0
 --- !u!1 &875178652
 GameObject:
@@ -9789,6 +9974,101 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 0.2055651, y: 50.808422}
+  m_EdgeRadius: 0
+--- !u!1 &917382570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 917382571}
+  - component: {fileID: 917382573}
+  - component: {fileID: 917382572}
+  m_Layer: 8
+  m_Name: "Trigger C\xE1mara S6"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &917382571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917382570}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.26, y: -42.140038, z: -0.28904504}
+  m_LocalScale: {x: 5.7142854, y: 5.7142854, z: 5.7142854}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 69118350}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &917382572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917382570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 748889565}
+  playerTag: Player
+  disablePreviousCamera: 1
+  switchDebounce: 0.15
+--- !u!61 &917382573
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917382570}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 9.366409, y: 4.3150163}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.025403023, y: 2.5999575}
   m_EdgeRadius: 0
 --- !u!1 &923478475
 GameObject:
@@ -10183,8 +10463,8 @@ MonoBehaviour:
   requiredActiveQuests:
   - serigrafia
   forbiddenQuests: []
-  questInteractPrompt: {fileID: 853948290}
-  questPromptText: {fileID: 573056795}
+  interactPrompt: {fileID: 142451851}
+  promptText: {fileID: 142898787}
   customPromptText: Estampar
   changePromptByState: 1
   singleUse: 1
@@ -11080,7 +11360,7 @@ GameObject:
   - component: {fileID: 1043352905}
   - component: {fileID: 1043352904}
   m_Layer: 8
-  m_Name: "Trigger C\xE1mara Pasillo"
+  m_Name: "Trigger C\xE1mara S4"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11113,7 +11393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetCamera: {fileID: 547903962}
+  targetCamera: {fileID: 1448297587}
   playerTag: Player
   disablePreviousCamera: 1
   switchDebounce: 0.15
@@ -11151,7 +11431,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 16.371597, y: 4.199734}
+  m_Offset: {x: 9.303301, y: 4.354358}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -11161,7 +11441,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 13.958946, y: 2.5517244}
+  m_Size: {x: 0.11730099, y: 2.8609724}
   m_EdgeRadius: 0
 --- !u!1 &1046772459
 GameObject:
@@ -14607,6 +14887,101 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1145383825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1330299591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1330299592}
+  - component: {fileID: 1330299594}
+  - component: {fileID: 1330299593}
+  m_Layer: 8
+  m_Name: "Trigger C\xE1mara S8 (1)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1330299592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330299591}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -262.33, y: -30, z: -0.28904504}
+  m_LocalScale: {x: 29.386198, y: 5.7142854, z: 5.7142854}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 69118350}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1330299593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330299591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 547903962}
+  playerTag: Player
+  disablePreviousCamera: 1
+  switchDebounce: 0.15
+--- !u!61 &1330299594
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330299591}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 8.919197, y: 2.93432}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.768158, y: 0.020895958}
+  m_EdgeRadius: 0
 --- !u!1 &1332626974
 GameObject:
   m_ObjectHideFlags: 0
@@ -16167,8 +16542,8 @@ MonoBehaviour:
   requiredActiveQuests: []
   forbiddenQuests:
   - secretaria1
-  questInteractPrompt: {fileID: 0}
-  questPromptText: {fileID: 0}
+  interactPrompt: {fileID: 0}
+  promptText: {fileID: 0}
   customPromptText: Inspeccionar
   changePromptByState: 0
   singleUse: 1
@@ -16626,7 +17001,7 @@ Transform:
   m_GameObject: {fileID: 1465845517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.526838, y: 21.362736, z: -9.949415}
+  m_LocalPosition: {x: 17.529202, y: 21.362745, z: -9.949415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17179,8 +17554,8 @@ MonoBehaviour:
   requiredCompletedQuests: []
   requiredActiveQuests: []
   forbiddenQuests: []
-  questInteractPrompt: {fileID: 0}
-  questPromptText: {fileID: 0}
+  interactPrompt: {fileID: 0}
+  promptText: {fileID: 0}
   customPromptText: Inspeccionar
   changePromptByState: 1
   singleUse: 1
@@ -17375,6 +17750,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1871515867}
+  - {fileID: 1787751405}
   - {fileID: 989527645}
   m_Father: {fileID: 2075592448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18973,7 +19349,7 @@ GameObject:
   - component: {fileID: 1684221650}
   - component: {fileID: 1684221651}
   m_Layer: 8
-  m_Name: "Trigger C\xE1mara S1"
+  m_Name: "Trigger C\xE1mara S3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19028,7 +19404,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 2.4687147, y: -7.8677197}
+  m_Offset: {x: 2.5461512, y: 7.2077675}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -19038,7 +19414,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 19.13147, y: 16.00192}
+  m_Size: {x: 19.286346, y: 14.170185}
   m_EdgeRadius: 0
 --- !u!114 &1684221651
 MonoBehaviour:
@@ -19052,7 +19428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetCamera: {fileID: 1377021105}
+  targetCamera: {fileID: 1820031093}
   playerTag: Player
   disablePreviousCamera: 1
   switchDebounce: 0.15
@@ -19379,6 +19755,101 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1716720443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1716720444}
+  - component: {fileID: 1716720446}
+  - component: {fileID: 1716720445}
+  m_Layer: 8
+  m_Name: "Trigger C\xE1mara S5"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1716720444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716720443}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.1, y: 0.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 835787781}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1716720445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716720443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 547903962}
+  playerTag: Player
+  disablePreviousCamera: 1
+  switchDebounce: 0.15
+--- !u!61 &1716720446
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716720443}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 9.303301, y: 4.354358}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.11730099, y: 2.8609724}
+  m_EdgeRadius: 0
 --- !u!1 &1745936495
 GameObject:
   m_ObjectHideFlags: 0
@@ -19462,6 +19933,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 24497588}
+  - {fileID: 1936455967}
   - {fileID: 1325894546}
   m_Father: {fileID: 1041034199}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20066,6 +20538,101 @@ Transform:
   m_Children: []
   m_Father: {fileID: 709426922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1787751404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787751405}
+  - component: {fileID: 1787751407}
+  - component: {fileID: 1787751406}
+  m_Layer: 8
+  m_Name: "Trigger C\xE1mara S7"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1787751405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787751404}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.3000007, y: 21.08, z: 0}
+  m_LocalScale: {x: 4.166667, y: 4.166667, z: 4.166667}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1535648519}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1787751406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787751404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 89655942}
+  playerTag: Player
+  disablePreviousCamera: 1
+  switchDebounce: 0.15
+--- !u!61 &1787751407
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787751404}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 8.919197, y: 2.93432}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.768158, y: 0.020895958}
+  m_EdgeRadius: 0
 --- !u!1 &1809644401
 GameObject:
   m_ObjectHideFlags: 0
@@ -20611,6 +21178,101 @@ MonoBehaviour:
     Time: 0
     Smoothing: 0
     IgnoreY: 0
+--- !u!1 &1825116058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1825116059}
+  - component: {fileID: 1825116060}
+  - component: {fileID: 1825116061}
+  m_Layer: 8
+  m_Name: "Trigger C\xE1mara S4"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1825116059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825116058}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.14, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2034887859}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1825116060
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825116058}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 9.599007, y: 0.0097465515}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.04713154, y: 15.953808}
+  m_EdgeRadius: 0
+--- !u!114 &1825116061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825116058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 1448297587}
+  playerTag: Player
+  disablePreviousCamera: 1
+  switchDebounce: 0.15
 --- !u!1 &1838418667
 GameObject:
   m_ObjectHideFlags: 0
@@ -20857,7 +21519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1860476999
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20872,6 +21534,7 @@ RectTransform:
   m_Children:
   - {fileID: 84509407}
   - {fileID: 1684221649}
+  - {fileID: 69325370}
   m_Father: {fileID: 1041034199}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -20954,7 +21617,7 @@ GameObject:
   - component: {fileID: 1871515869}
   - component: {fileID: 1871515868}
   m_Layer: 8
-  m_Name: "Trigger C\xE1mara Bibli1"
+  m_Name: "Trigger C\xE1mara S5"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20987,7 +21650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetCamera: {fileID: 748889565}
+  targetCamera: {fileID: 547903962}
   playerTag: Player
   disablePreviousCamera: 1
   switchDebounce: 0.15
@@ -21025,7 +21688,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 18.889227, y: 6.2816343}
+  m_Offset: {x: 9.236935, y: 4.354358}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -21035,7 +21698,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 19.229343, y: 14.874617}
+  m_Size: {x: 0.065363884, y: 2.8609724}
   m_EdgeRadius: 0
 --- !u!1 &1889651089
 GameObject:
@@ -21331,6 +21994,101 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1936455966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1936455967}
+  - component: {fileID: 1936455968}
+  - component: {fileID: 1936455969}
+  m_Layer: 8
+  m_Name: "Trigger C\xE1mara S1"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1936455967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936455966}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -19.15, y: -0.00020172402, z: 0}
+  m_LocalScale: {x: 1.0072522, y: 1.0072522, z: 1.0072522}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1750734979}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1936455968
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936455966}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 9.599007, y: 0.0097465515}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.04713154, y: 15.953808}
+  m_EdgeRadius: 0
+--- !u!114 &1936455969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936455966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 1377021105}
+  playerTag: Player
+  disablePreviousCamera: 1
+  switchDebounce: 0.15
 --- !u!1 &1976063418
 GameObject:
   m_ObjectHideFlags: 0
@@ -21917,8 +22675,8 @@ MonoBehaviour:
   requiredCompletedQuests: []
   requiredActiveQuests: []
   forbiddenQuests: []
-  questInteractPrompt: {fileID: 0}
-  questPromptText: {fileID: 0}
+  interactPrompt: {fileID: 142451851}
+  promptText: {fileID: 142898787}
   customPromptText: Usar
   changePromptByState: 0
   singleUse: 1
@@ -22328,6 +23086,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2140254140}
+  - {fileID: 1825116059}
   - {fileID: 92998013}
   m_Father: {fileID: 1041034199}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23128,7 +23887,7 @@ GameObject:
   - component: {fileID: 2140254141}
   - component: {fileID: 2140254142}
   m_Layer: 8
-  m_Name: "Trigger C\xE1mara S3"
+  m_Name: "Trigger C\xE1mara S1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23183,7 +23942,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 2.5327768, y: 7.5385027}
+  m_Offset: {x: 2.4687147, y: 0.08484353}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -23193,7 +23952,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 19.259596, y: 14.987764}
+  m_Size: {x: 19.13147, y: 0.08044538}
   m_EdgeRadius: 0
 --- !u!114 &2140254142
 MonoBehaviour:
@@ -23207,7 +23966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227e4308ae9b2364883b5b196c3d5eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetCamera: {fileID: 1820031093}
+  targetCamera: {fileID: 1377021105}
   playerTag: Player
   disablePreviousCamera: 1
   switchDebounce: 0.15
