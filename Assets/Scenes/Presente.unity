@@ -324,7 +324,7 @@ MonoBehaviour:
   targetCamera: {fileID: 394392081}
   playerTag: Player
   disablePreviousCamera: 1
-  switchDebounce: 0.15
+  debugMode: 0
 --- !u!1 &37445175
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,10 +356,9 @@ Transform:
   m_Children:
   - {fileID: 117890638}
   - {fileID: 1989587586}
-  - {fileID: 300639764}
-  - {fileID: 585495040}
   - {fileID: 1428753835}
   - {fileID: 166993345}
+  - {fileID: 652208187}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &45023426
@@ -1505,7 +1504,7 @@ Transform:
   m_GameObject: {fileID: 89655938}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.403492, y: 17.524506, z: -9.949415}
+  m_LocalPosition: {x: 17.403492, y: 17.624504, z: -9.949415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3449,37 +3448,6 @@ PolygonCollider2D:
       - {x: 0.5837183, y: -0.6540749}
       - {x: 0.02889738, y: -1.1038598}
   m_UseDelaunayMesh: 0
---- !u!1 &300639763
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 300639764}
-  m_Layer: 0
-  m_Name: FinalSpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &300639764
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300639763}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.389936, y: 4.5179796, z: 0.17601734}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 37445176}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &319415479
 GameObject:
   m_ObjectHideFlags: 0
@@ -5929,37 +5897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &585495039
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 585495040}
-  m_Layer: 0
-  m_Name: ExplosionResetPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &585495040
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585495039}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.34993553, y: -9.09202, z: 0.31886497}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 37445176}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &604270830
 GameObject:
   m_ObjectHideFlags: 0
@@ -5994,7 +5931,7 @@ Transform:
   m_GameObject: {fileID: 604270830}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.23, y: -28.47, z: 0.054032445}
+  m_LocalPosition: {x: -27.23, y: -28.37, z: 0.054032445}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6046,7 +5983,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -780392627
   m_SortingLayer: 3
-  m_SortingOrder: 1489
+  m_SortingOrder: 1479
   m_Sprite: {fileID: 424747059916271092, guid: 5d6b1ad0491b8e649adaf14848289365, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6541,6 +6478,144 @@ Transform:
   m_Children: []
   m_Father: {fileID: 709426922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &652208186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 652208187}
+  - component: {fileID: 652208189}
+  - component: {fileID: 652208188}
+  m_Layer: 0
+  m_Name: Frente
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &652208187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652208186}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.81, y: -23.92, z: 0}
+  m_LocalScale: {x: 0.78999996, y: 0.78999996, z: 0.78999996}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2048143914}
+  m_Father: {fileID: 37445176}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &652208188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652208186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6b168b8e030b440821e9fce5355059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 1
+  questActions: []
+  requiredCompletedQuests: []
+  requiredActiveQuests: []
+  forbiddenQuests: []
+  questInteractPrompt: {fileID: 0}
+  questPromptText: {fileID: 0}
+  customPromptText: Salir a la calle
+  changePromptByState: 0
+  singleUse: 1
+  interactCooldown: 0.5
+  requirePlayerFacing: 0
+  destroyOnComplete: 0
+  disableOnComplete: 0
+  activateOnComplete: {fileID: 0}
+  effectPrefab: {fileID: 0}
+  interactSound: {fileID: 8300000, guid: 6b08b670c3835ef42a7eda2a903138b9, type: 3}
+  completeSound: {fileID: 0}
+  soundVolume: 10
+  onInteractionSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1078539255}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onInteractionFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  onConditionsNotMet:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerExit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!61 &652208189
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652208186}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.45431185, y: 0.24643235}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 7.569499, y: 0.4459599}
+  m_EdgeRadius: 0
 --- !u!1 &656079056
 GameObject:
   m_ObjectHideFlags: 0
@@ -8451,7 +8526,7 @@ MonoBehaviour:
   targetCamera: {fileID: 1448297587}
   playerTag: Player
   disablePreviousCamera: 1
-  switchDebounce: 0.15
+  debugMode: 0
 --- !u!1 &792771406
 GameObject:
   m_ObjectHideFlags: 0
@@ -8534,7 +8609,7 @@ MonoBehaviour:
   targetCamera: {fileID: 89655942}
   playerTag: Player
   disablePreviousCamera: 1
-  switchDebounce: 0.15
+  debugMode: 0
 --- !u!61 &793947372
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9483,7 +9558,7 @@ MonoBehaviour:
   targetCamera: {fileID: 445958992}
   playerTag: Player
   disablePreviousCamera: 1
-  switchDebounce: 0.15
+  debugMode: 0
 --- !u!61 &865206541
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11116,7 +11191,7 @@ MonoBehaviour:
   targetCamera: {fileID: 547903962}
   playerTag: Player
   disablePreviousCamera: 1
-  switchDebounce: 0.15
+  debugMode: 0
 --- !u!61 &1043352905
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14791,7 +14866,7 @@ Transform:
   m_GameObject: {fileID: 1377021101}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.403492, y: 17.524506, z: -9.949415}
+  m_LocalPosition: {x: 17.403492, y: 17.624504, z: -9.949415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16626,7 +16701,7 @@ Transform:
   m_GameObject: {fileID: 1465845517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.526838, y: 21.362736, z: -9.949415}
+  m_LocalPosition: {x: 17.537119, y: 21.362745, z: -9.949415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19055,7 +19130,7 @@ MonoBehaviour:
   targetCamera: {fileID: 1377021105}
   playerTag: Player
   disablePreviousCamera: 1
-  switchDebounce: 0.15
+  debugMode: 0
 --- !u!1 &1687882094
 GameObject:
   m_ObjectHideFlags: 0
@@ -20990,7 +21065,7 @@ MonoBehaviour:
   targetCamera: {fileID: 748889565}
   playerTag: Player
   disablePreviousCamera: 1
-  switchDebounce: 0.15
+  debugMode: 0
 --- !u!61 &1871515869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21917,8 +21992,8 @@ MonoBehaviour:
   requiredCompletedQuests: []
   requiredActiveQuests: []
   forbiddenQuests: []
-  questInteractPrompt: {fileID: 0}
-  questPromptText: {fileID: 0}
+  questInteractPrompt: {fileID: 853948290}
+  questPromptText: {fileID: 573056795}
   customPromptText: Usar
   changePromptByState: 0
   singleUse: 1
@@ -22386,6 +22461,98 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2048143913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2048143914}
+  - component: {fileID: 2048143916}
+  - component: {fileID: 2048143915}
+  m_Layer: 6
+  m_Name: TriggerFrente
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2048143914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048143913}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.06, y: 0.42, z: 0.22717333}
+  m_LocalScale: {x: 1.2658229, y: 1.2658229, z: 1.2658229}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 652208187}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2048143915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048143913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61eab79d1d519ea43bda6daa16ca6b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Frente
+--- !u!61 &2048143916
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048143913}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.3331213, y: 0.09224701}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5.99428, y: 1.9687042}
+  m_EdgeRadius: 0
 --- !u!1 &2049623096
 GameObject:
   m_ObjectHideFlags: 0
@@ -23210,7 +23377,7 @@ MonoBehaviour:
   targetCamera: {fileID: 1820031093}
   playerTag: Player
   disablePreviousCamera: 1
-  switchDebounce: 0.15
+  debugMode: 0
 --- !u!1001 &2481788158512975963
 PrefabInstance:
   m_ObjectHideFlags: 0

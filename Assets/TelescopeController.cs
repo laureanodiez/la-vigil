@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.Events;
 
 public class TelescopeController : MonoBehaviour
 {
@@ -23,7 +24,9 @@ public class TelescopeController : MonoBehaviour
     [SerializeField] private AudioSource audioSource; // Para sonidos inquietantes
     [SerializeField] private AudioClip[] eerieNoises;
     [SerializeField] private AudioSource[] audioSourcesToDisable; // Pasos de Quime, música, etc.
-    
+    [Tooltip("Desmarcar si esta es la secuencia final y no quieres que vuelva la música del juego")]
+    [SerializeField] private bool reactivateAudioOnFinish = true;
+
     [Header("Environment Changes")]
     [SerializeField] private GameObject[] objectsToActivate;
     [SerializeField] private GameObject[] objectsToDeactivate;
@@ -42,6 +45,10 @@ public class TelescopeController : MonoBehaviour
     [Header("Quest Integration")]
     [SerializeField] private GameObject questManagerObject; // GameObject con QuestManager
     [SerializeField] private string questToComplete = ""; // Nombre de la quest a completar
+
+    [Header("Events")]
+    [Tooltip("Aquí puedes arrastrar tu sistema de diálogo para forzar una conversación al terminar")]
+    public UnityEvent onTelescopeFinished;
     
     private bool isViewing = false;
     private float[] originalLightIntensities;
@@ -142,11 +149,18 @@ public class TelescopeController : MonoBehaviour
         // 9. Encender luces gradualmente
         yield return StartCoroutine(FadeLights(true));
         
-        // 10. Reactivar AudioSources
-        EnableAudioSources();
+        // 10. Reactivar AudioSources (SOLO SI ESTÁ MARCADO)
+        if (reactivateAudioOnFinish)
+        {
+            EnableAudioSources();
+        }
         
         // 11. Completar quest si está configurada
         CompleteQuest();
+
+        // 12. INVOCAR EVENTO (Diálogo)
+        // Esto ejecutará cualquier función que arrastres en el inspector
+        onTelescopeFinished.Invoke(); // <--- AGREGAR ESTO
         
         isViewing = false;
     }
