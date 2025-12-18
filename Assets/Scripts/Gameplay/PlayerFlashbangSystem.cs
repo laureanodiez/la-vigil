@@ -213,7 +213,7 @@ public class PlayerFlashbangSystem : MonoBehaviour
         breakbeat.Stop();
         respiracion.Stop();
         explosion.Play();
-        cancionPasado.Play();
+        //cancionPasado.Play();
 
         // Pequeña espera para asegurar que Unity haya aplicado transform/objetos (un frame)
         yield return null;

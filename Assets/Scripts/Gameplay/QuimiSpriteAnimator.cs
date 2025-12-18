@@ -3,30 +3,38 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer), typeof(Rigidbody2D))]
 public class QuimiSpriteAnimator : MonoBehaviour
 {
-    [Header("Sprites Idle / Moving")]
-    public Sprite frontIdle, frontMove;
-    public Sprite backIdle,  backMove;
-    public Sprite leftIdle,  leftMove;
-    public Sprite rightIdle, rightMove;
+    [Header("Sprites")]
+    public Sprite frontIdle, frontMove1, frontMove2;
+    public Sprite backIdle,  backMove1,  backMove2;
+    public Sprite leftIdle,  leftMove1,  leftMove2;
+    public Sprite rightIdle, rightMove1, rightMove2;
 
-    [Header("Settings")]
-    public float switchInterval = 0.3f;  // Tiempo entre frames MOV
-    public float speed = 3f;
+    [Header("Movement Settings")]
+    public float walkSpeed = 3f;      
+    public float runSpeed = 5f;       
+    
 
-    [Header("Step Sound")]
+    public float acceleration = 20f;  
+    public float deceleration = 25f;  
+
+    [Header("Animation")]
+    public float baseStepInterval = 0.25f; // Un poco más rápido para que el ciclo de 4 no se sienta lento
+    
+    [Header("Audio")]
     [SerializeField] public AudioSource steps;
-
 
     // Componentes
     private SpriteRenderer sr;
     private Rigidbody2D rb;
 
-    // Estado
-    private Vector2 move;
-    private float timer;
-    private bool toggleFrame;
+    // Estado interno
+    private Vector2 moveInput;
+    private float currentSpeed;
+    private float animationTimer;
+    
+    // CAMBIO: En vez de bool, usamos un int para contar pasos (0, 1, 2, 3)
+    private int stepIndex = 0; 
 
-    // Última orientación conocida para mostrar el idle correcto cuando está quieto
     private enum Direction { Front, Back, Left, Right }
     private Direction lastDirection = Direction.Front;
 
@@ -36,74 +44,93 @@ public class QuimiSpriteAnimator : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
         rb.freezeRotation = true;
-        steps.loop = true;
-        
+        currentSpeed = walkSpeed;
+        if(steps != null) steps.loop = true;
     }
 
     void Update() {
-        // 1) Movimiento
-        move.x = Input.GetAxisRaw("Horizontal");
-        move.y = Input.GetAxisRaw("Vertical");
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
 
-        // 2) Control de Sprite
-        if (move.sqrMagnitude > 0) {
-            if (steps != null && !steps.isPlaying) {
-                steps.pitch = Random.Range(0.9f, 1.1f);
-                steps.Play();
-            }
+        if (moveInput.sqrMagnitude > 0) {
+            
+            // 1. Definir qué set de sprites usar según dirección
+            Sprite idle, mov1, mov2;
 
-            // A) Elegir orientación principal
-            Sprite idle, mov;
-            if (Mathf.Abs(move.x) > Mathf.Abs(move.y)) {
-                // horizontal
-                if (move.x > 0) { idle = rightIdle; mov = rightMove; lastDirection = Direction.Right; }
-                else          { idle = leftIdle;  mov = leftMove;  lastDirection = Direction.Left;  }
+            if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y)) {
+                if (moveInput.x > 0) { 
+                    idle = rightIdle; mov1 = rightMove1; mov2 = rightMove2; 
+                    lastDirection = Direction.Right; 
+                } else { 
+                    idle = leftIdle;  mov1 = leftMove1;  mov2 = leftMove2; 
+                    lastDirection = Direction.Left;  
+                }
             } else {
-                // vertical
-                if (move.y > 0) { idle = backIdle;  mov = backMove;  lastDirection = Direction.Back; }
-                else            { idle = frontIdle; mov = frontMove; lastDirection = Direction.Front; }
+                if (moveInput.y > 0) { 
+                    idle = backIdle;  mov1 = backMove1;  mov2 = backMove2; 
+                    lastDirection = Direction.Back; 
+                } else { 
+                    idle = frontIdle; mov1 = frontMove1; mov2 = frontMove2; 
+                    lastDirection = Direction.Front; 
+                }
             }
 
-            // B) Alternar frames MOV
-            timer += Time.deltaTime;
-            if (timer >= switchInterval) {
-                timer = 0f;
-                toggleFrame = !toggleFrame;
-                steps.Stop();
-                steps.pitch = Random.Range(0.9f, 1.1f);
-                steps.Play();
+            // 2. Calcular Frecuencia (igual que antes)
+            float speedMultiplier = currentSpeed / walkSpeed;
+            // Evitamos dividir por 0 si la velocidad es muy baja
+            if(speedMultiplier < 0.1f) speedMultiplier = 1f; 
+
+            float dynamicInterval = baseStepInterval / speedMultiplier;
+
+            // 3. Ciclo de Animación de 4 Pasos
+            animationTimer += Time.deltaTime;
+            
+            if (animationTimer >= dynamicInterval) {
+                animationTimer = 0f;
+                stepIndex++; // Pasamos al siguiente frame
+                
+                // Si llegamos a 4, volvemos a 0 (El ciclo es 0, 1, 2, 3)
+                if (stepIndex > 3) stepIndex = 0;
+
+                // Sonido: Solo suena en los frames de movimiento (1 y 3), no en los idle
+                if((stepIndex == 1 || stepIndex == 3) && steps != null) {
+                    steps.pitch = Random.Range(0.9f, 1.1f); //* speedMultiplier;
+                    steps.Play();
+                }
             }
-            sr.sprite = toggleFrame ? idle : mov;
+
+            // 4. Asignar el Sprite según el paso actual
+            if (stepIndex == 0 || stepIndex == 2) {
+                sr.sprite = idle;
+            }
+            else if (stepIndex == 1) {
+                sr.sprite = mov1;
+            }
+            else if (stepIndex == 3) {
+                sr.sprite = mov2;
+            }
         }
         else {
-            // Quieto → siempre idle de la última orientación:
-            timer = 0f;
-            toggleFrame = false;
-            if (steps != null && steps.isPlaying) {
-                steps.Stop();
-            }
+            // Quieto
+            animationTimer = 0f;
+            stepIndex = 0;
+            if (steps != null && steps.isPlaying) steps.Stop();
 
-            // Mostrar el idle correspondiente a la última orientación guardada
             switch (lastDirection)
             {
-                case Direction.Right:
-                    sr.sprite = rightIdle;
-                    break;
-                case Direction.Left:
-                    sr.sprite = leftIdle;
-                    break;
-                case Direction.Back:
-                    sr.sprite = backIdle;
-                    break;
-                case Direction.Front:
-                default:
-                    sr.sprite = frontIdle;
-                    break;
+                case Direction.Right: sr.sprite = rightIdle; break;
+                case Direction.Left:  sr.sprite = leftIdle; break;
+                case Direction.Back:  sr.sprite = backIdle; break;
+                default:              sr.sprite = frontIdle; break;
             }
         }
     }
 
     void FixedUpdate() {
-        rb.MovePosition(rb.position + move.normalized * speed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + moveInput.normalized * currentSpeed * Time.fixedDeltaTime);
+
+        float targetSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
+        float rate = (targetSpeed > currentSpeed) ? acceleration : deceleration;
+        currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, rate * Time.fixedDeltaTime);
     }
 }

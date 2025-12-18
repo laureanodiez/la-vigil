@@ -2011,8 +2011,8 @@ MonoBehaviour:
     - "\xA1Ay! Me lo dej\xE9 en casa, disculpame."
     portrait:
     - {fileID: -683080583186284860, guid: 2d72ccb5dc89a3e4cae55f894f4763ba, type: 3}
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
     - {fileID: -683080583186284860, guid: 2d72ccb5dc89a3e4cae55f894f4763ba, type: 3}
     blipSounds:
     - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
@@ -2283,7 +2283,7 @@ MonoBehaviour:
     dialogueWords:
     - "Che...\xA1Ac\xE1 hay un tel\xE9fono!"
     portrait:
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
     blipSounds:
     - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
     blipPitch:
@@ -5932,8 +5932,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -27.23, y: -28.37, z: 0.054032445}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.5}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1922170845}
   - {fileID: 1396507683}
@@ -5984,7 +5984,7 @@ SpriteRenderer:
   m_SortingLayerID: -780392627
   m_SortingLayer: 3
   m_SortingOrder: 1479
-  m_Sprite: {fileID: 424747059916271092, guid: 5d6b1ad0491b8e649adaf14848289365, type: 3}
+  m_Sprite: {fileID: -6571281707535819528, guid: 89ede6c2a03937245acff588e8646524, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6056,17 +6056,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.03243065, y: -6.2013154}
+  m_Offset: {x: 0.005188942, y: -1.542671}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.32, y: 13.4}
+    oldSize: {x: 1.92, y: 3.42}
     newSize: {x: 7.32, y: 13.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 6.27917, y: 1.0734682}
+  m_Size: {x: 1.5288002, y: 0.3520298}
   m_EdgeRadius: 0
 --- !u!114 &604270837
 MonoBehaviour:
@@ -6080,16 +6080,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d075dc21ba04ef41ab30356a19de9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frontIdle: {fileID: 424747059916271092, guid: 5d6b1ad0491b8e649adaf14848289365, type: 3}
-  frontMove: {fileID: -1200956260428435277, guid: e05555ddc0d3cc64987ab3ff0a79c7de, type: 3}
-  backIdle: {fileID: 6920483968621086552, guid: b13ba2977a0cb1548b8f27f56ef1a6db, type: 3}
-  backMove: {fileID: 2212207996893412166, guid: 8bfa19cf2f020774da7519f5b0600098, type: 3}
-  leftIdle: {fileID: -4799477416990311227, guid: fc285e00c9b7354499adadee82ad6d3b, type: 3}
-  leftMove: {fileID: 6590483116930940163, guid: 537f851709005e341a9cf092b33c590d, type: 3}
-  rightIdle: {fileID: 643360504356032832, guid: 9fd9d47e0c21ee44ba4d79c85dba6903, type: 3}
-  rightMove: {fileID: 1315036728045639869, guid: 075e1e4cb3649dd42816794e1ee5b767, type: 3}
-  switchInterval: 0.45
-  speed: 3
+  frontIdle: {fileID: -6571281707535819528, guid: 89ede6c2a03937245acff588e8646524, type: 3}
+  frontMove1: {fileID: 1603392484137552246, guid: 17797622cb685f249817d32dea44f9ba, type: 3}
+  frontMove2: {fileID: -2823892751061295995, guid: 602c418d3b0af56479d0ae03933fb450, type: 3}
+  backIdle: {fileID: -7961607566263818401, guid: 7c53a8df801b80f4cade96f4c429e81d, type: 3}
+  backMove1: {fileID: 7197282969960565985, guid: 3f56ca40faf0f5f4ea00736902798e46, type: 3}
+  backMove2: {fileID: -5530287734279062085, guid: def420b150feb394e89c6772ba87f9f1, type: 3}
+  leftIdle: {fileID: -7606153732872708655, guid: caa23829660a5124d845440894e71f5a, type: 3}
+  leftMove1: {fileID: 4894199879626973864, guid: 72832abcafcfff44894ff04d1c920643, type: 3}
+  leftMove2: {fileID: -1871835979941861245, guid: c988cc46e5a4e8a4b863f9b3343360fe, type: 3}
+  rightIdle: {fileID: -4941978389303537683, guid: 68972cbe451661042a90980d31f69eea, type: 3}
+  rightMove1: {fileID: 770902528002145992, guid: ce5354f0a4275664e8cb3da1cb5cfae6, type: 3}
+  rightMove2: {fileID: -7497161995131163128, guid: f3da52300e689d34aafa30d78b397c41, type: 3}
+  walkSpeed: 3
+  runSpeed: 5
+  acceleration: 20
+  deceleration: 25
+  baseStepInterval: 0.25
   steps: {fileID: 604270843}
 --- !u!114 &604270840
 MonoBehaviour:
@@ -10359,8 +10366,8 @@ MonoBehaviour:
     - "*Capaz me pueden prestar un tel\xE9fono, as\xED llamo a alguien para que me
       venga a buscar.*"
     portrait:
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
     blipSounds:
     - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
     - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
@@ -12010,10 +12017,10 @@ MonoBehaviour:
     - "...y se me traspapel\xF3 una que qued\xF3 sin estampar."
     - "\xBFPodr\xE1s estamparla vos? Es un segundo, ah\xED arriba ten\xE9s las cosas."
     portrait:
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
     - {fileID: 3027631833645653385, guid: 248bb5d85e85d7146a296ab428ec04c9, type: 3}
@@ -17319,7 +17326,7 @@ MonoBehaviour:
     dialogueWords:
     - "*Deber\xEDa seguir al gato.*"
     portrait:
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
     blipSounds: []
     blipPitch:
     - 1
@@ -18259,11 +18266,11 @@ MonoBehaviour:
     - "Dale, \xA1muchas gracias!"
     portrait:
     - {fileID: 3359208071225570717, guid: 39927f9329eb4484da419697b1f4f943, type: 3}
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
     - {fileID: 3359208071225570717, guid: 39927f9329eb4484da419697b1f4f943, type: 3}
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
     blipSounds:
     - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
     - {fileID: 8300000, guid: bb9fb03a7b761d7408cb72ea18b0e2cd, type: 3}
@@ -18538,9 +18545,9 @@ MonoBehaviour:
     - ..."Constancio & the Pussycats"??
     - ...mid
     portrait:
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
-    - {fileID: 424747059916271092, guid: a220acd3fcb35f64cab410cdff2862f2, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
+    - {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
     blipSounds: []
     blipPitch:
     - 1
@@ -23430,6 +23437,22 @@ PrefabInstance:
       propertyPath: dialogueSets.Array.data[0].blipSounds.Array.size
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].portrait.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].portrait.Array.data[3]'
+      value: 
+      objectReference: {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].portrait.Array.data[5]'
+      value: 
+      objectReference: {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
+    - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
+      propertyPath: 'dialogueSets.Array.data[0].portrait.Array.data[7]'
+      value: 
+      objectReference: {fileID: -6571281707535819528, guid: aa51ebf9711c0be4c953c6e2279d9fac, type: 3}
     - target: {fileID: 1904208268730902997, guid: 80a5aa8237c969e42a3eb7e3c9f1f513, type: 3}
       propertyPath: 'dialogueSets.Array.data[0].blipPitch.Array.data[0]'
       value: 1.55
