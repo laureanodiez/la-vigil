@@ -101,6 +101,10 @@ public class Dialogue : MonoBehaviour
     public Behaviour[] disableDuringTransition;
     [SerializeField] private float typewriterSpeed = 0.03f; // Velocidad del efecto máquina de escribir
     [SerializeField] private bool useTypewriter = false;
+
+    [Header("Player Control")]
+// Referencia directa al componente, no al GameObject
+    [SerializeField] private QuimiSpriteAnimator playerMovement;
     
     [Header("Configuración de Audio")]
     [SerializeField] private AudioSource audioSource;
@@ -219,7 +223,10 @@ public class Dialogue : MonoBehaviour
     
     void ShowDialogueStep()
     {
-        // Desactivar controles del jugador
+        if (playerMovement != null) 
+        {
+            playerMovement.SetInputActive(false); 
+        }
         foreach (var b in disableDuringTransition)
             if (b != null) b.enabled = false;
         
@@ -310,8 +317,11 @@ public class Dialogue : MonoBehaviour
         dialogueCanvas.SetActive(false);
         currentSet = null;
         step = 0;
-        
-        // Reactivar controles del jugador
+
+        if (playerMovement != null) 
+        {
+            playerMovement.SetInputActive(true); 
+        }        
         foreach (var b in disableDuringTransition)
             if (b != null) b.enabled = true;
         

@@ -3,6 +3,9 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer), typeof(Rigidbody2D))]
 public class QuimiSpriteAnimator : MonoBehaviour
 {
+    [Header("Control")]
+    public bool canMove = true; // Esta es la variable clave
+
     [Header("Sprites")]
     public Sprite frontIdle, frontMove1, frontMove2;
     public Sprite backIdle,  backMove1,  backMove2;
@@ -13,12 +16,11 @@ public class QuimiSpriteAnimator : MonoBehaviour
     public float walkSpeed = 3f;      
     public float runSpeed = 5f;       
     
-
     public float acceleration = 20f;  
     public float deceleration = 25f;  
 
     [Header("Animation")]
-    public float baseStepInterval = 0.25f; // Un poco más rápido para que el ciclo de 4 no se sienta lento
+    public float baseStepInterval = 0.25f;
     
     [Header("Audio")]
     [SerializeField] public AudioSource steps;
@@ -31,8 +33,6 @@ public class QuimiSpriteAnimator : MonoBehaviour
     private Vector2 moveInput;
     private float currentSpeed;
     private float animationTimer;
-    
-    // CAMBIO: En vez de bool, usamos un int para contar pasos (0, 1, 2, 3)
     private int stepIndex = 0; 
 
     private enum Direction { Front, Back, Left, Right }
@@ -48,13 +48,38 @@ public class QuimiSpriteAnimator : MonoBehaviour
         if(steps != null) steps.loop = true;
     }
 
+    // Método público para llamar desde tus otros scripts
+    public void SetInputActive(bool active)
+    {
+        canMove = active;
+        
+        // Opcional: Si desactivamos input, forzamos frenado inmediato de la física también
+        if (!active) {
+            rb.linearVelocity = Vector2.zero; 
+            currentSpeed = 0;
+        }
+    }
+
     void Update() {
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
+        
+        // 1. INPUT MODIFICADO
+        // Si canMove es true, leemos teclado. Si es false, moveInput es cero.
+        if (canMove)
+        {
+            moveInput.x = Input.GetAxisRaw("Horizontal");
+            moveInput.y = Input.GetAxisRaw("Vertical");
+        }
+        else
+        {
+            moveInput = Vector2.zero;
+        }
+
+        // A partir de aquí, tu lógica original funciona perfecto.
+        // Al ser moveInput (0,0), el código saltará automáticamente al 'else' de abajo.
 
         if (moveInput.sqrMagnitude > 0) {
             
-            // 1. Definir qué set de sprites usar según dirección
+            // Lógica de dirección...
             Sprite idle, mov1, mov2;
 
             if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y)) {
@@ -75,43 +100,36 @@ public class QuimiSpriteAnimator : MonoBehaviour
                 }
             }
 
-            // 2. Calcular Frecuencia (igual que antes)
+            // Frecuencia...
             float speedMultiplier = currentSpeed / walkSpeed;
-            // Evitamos dividir por 0 si la velocidad es muy baja
             if(speedMultiplier < 0.1f) speedMultiplier = 1f; 
 
             float dynamicInterval = baseStepInterval / speedMultiplier;
 
-            // 3. Ciclo de Animación de 4 Pasos
+            // Ciclo de Animación...
             animationTimer += Time.deltaTime;
             
             if (animationTimer >= dynamicInterval) {
                 animationTimer = 0f;
-                stepIndex++; // Pasamos al siguiente frame
-                
-                // Si llegamos a 4, volvemos a 0 (El ciclo es 0, 1, 2, 3)
+                stepIndex++; 
                 if (stepIndex > 3) stepIndex = 0;
 
-                // Sonido: Solo suena en los frames de movimiento (1 y 3), no en los idle
                 if((stepIndex == 1 || stepIndex == 3) && steps != null) {
-                    steps.pitch = Random.Range(0.9f, 1.1f); //* speedMultiplier;
+                    steps.pitch = Random.Range(0.9f, 1.1f); 
                     steps.Play();
                 }
             }
 
-            // 4. Asignar el Sprite según el paso actual
-            if (stepIndex == 0 || stepIndex == 2) {
-                sr.sprite = idle;
-            }
-            else if (stepIndex == 1) {
-                sr.sprite = mov1;
-            }
-            else if (stepIndex == 3) {
-                sr.sprite = mov2;
-            }
+            // Asignar Sprite...
+            if (stepIndex == 0 || stepIndex == 2) sr.sprite = idle;
+            else if (stepIndex == 1) sr.sprite = mov1;
+            else if (stepIndex == 3) sr.sprite = mov2;
         }
         else {
-            // Quieto
+            // ESTO ES LO QUE QUERÍAS:
+            // Al cortar el input, el código cae aquí naturalmente.
+            // Se resetea el timer, el index, se para el audio y se pone el IDLE.
+            
             animationTimer = 0f;
             stepIndex = 0;
             if (steps != null && steps.isPlaying) steps.Stop();
@@ -127,9 +145,20 @@ public class QuimiSpriteAnimator : MonoBehaviour
     }
 
     void FixedUpdate() {
+        // Si no hay input (porque canMove es false), moveInput es (0,0), 
+        // así que el personaje se detendrá suavemente según tu lógica de desaceleración.
         rb.MovePosition(rb.position + moveInput.normalized * currentSpeed * Time.fixedDeltaTime);
 
-        float targetSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
+        // Si canMove es false, moveInput es 0, por lo que querrás que currentSpeed baje a 0
+        // Nota: Input.GetKey seguirá funcionando si no lo bloqueamos, así que mejor usamos canMove también aquí.
+        
+        float targetSpeed = 0f;
+        
+        if (canMove) {
+            targetSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
+        } 
+        // Si canMove es false, targetSpeed se queda en 0.
+
         float rate = (targetSpeed > currentSpeed) ? acceleration : deceleration;
         currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, rate * Time.fixedDeltaTime);
     }

@@ -13,7 +13,13 @@ EditorBuildSettings:
     guid: a1adbc34247f431478a2da503253083f
   - enabled: 1
     path: Assets/Scenes/Presente.unity
-    guid: 7b408adee6119b541a4eaf9ad78baaba
+    guid: 3a43994978d93204d812acfa431a7eff
+  - enabled: 0
+    path: Assets/Scenes/Presente - Nuevas texturas (Escala Aumentada).unity
+    guid: e60b09637609506479f1606cad586c40
+  - enabled: 0
+    path: Assets/Scenes/Presente (VIEJOS SPRITES) 31012026.unity
+    guid: add69739ceb5e334a895207128dce4db
   - enabled: 1
     path: Assets/Scenes/Pasado.unity
     guid: 2cda990e2423bbf4892e6590ba056729

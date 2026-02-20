@@ -10,6 +10,12 @@ public class ControlPantallaInicio : MonoBehaviour
     [Header("Configuración")]
     [SerializeField] private float tiempoDeEspera = 3.0f;
 
+    [Header("Player Control")]
+    // Referencia directa al componente, no al GameObject
+    [SerializeField] private QuimiSpriteAnimator playerMovement;
+    [SerializeField] private QuimiShadowAnimator shadowMovement;
+
+    
     private bool permiteContinuar = false;
 
     // Usamos OnEnable para que pause cada vez que actives este Canvas
@@ -19,6 +25,14 @@ public class ControlPantallaInicio : MonoBehaviour
         if (mensajeContinuar != null)
         {
             mensajeContinuar.SetActive(false);
+        }
+        if (playerMovement != null) 
+        {
+            playerMovement.SetInputActive(false); 
+        }
+        if (shadowMovement != null) 
+        {
+            shadowMovement.SetInputActive(false); 
         }
 
         permiteContinuar = false;
@@ -50,7 +64,6 @@ public class ControlPantallaInicio : MonoBehaviour
         // IMPORTANTE: Usamos Realtime porque el Time.timeScale está en 0.
         // Si usáramos WaitForSeconds normal, esto se congelaría eternamente.
         yield return new WaitForSecondsRealtime(tiempoDeEspera);
-
         if (mensajeContinuar != null)
         {
             mensajeContinuar.SetActive(true);
@@ -63,6 +76,15 @@ public class ControlPantallaInicio : MonoBehaviour
     {
         // 1. Restaurar el tiempo normal
         Time.timeScale = 1f;
+
+        if (playerMovement != null) 
+        {
+            playerMovement.SetInputActive(true); 
+        }
+        if (shadowMovement != null) 
+        {
+            shadowMovement.SetInputActive(true); 
+        }
 
         // 2. Restaurar el sonido
         AudioListener.pause = false;

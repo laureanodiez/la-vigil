@@ -15,7 +15,7 @@ TagManager:
   - Paredes
   - Mapa (BG)
   - Fog
-  - 
+  - Sombra
   - 
   - 
   - 
@@ -46,6 +46,12 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2655655735
+    locked: 0
+  - name: sombra background
+    uniqueID: 1525250097
+    locked: 0
+  - name: Objects
+    uniqueID: 1392913605
     locked: 0
   - name: Floor
     uniqueID: 3246167785
