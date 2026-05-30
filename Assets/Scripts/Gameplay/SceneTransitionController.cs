@@ -45,39 +45,39 @@ public class SceneTransitionController : MonoBehaviour
 
     IEnumerator TransitionCoroutine(string sceneName)
     {
-        // desactivar input / movement si se le pasaron referencias
+        // 1. Desactivar input/movimiento de Quime
         foreach (var b in disableDuringTransition)
             if (b != null) b.enabled = false;
 
-        // sonido opcional
         if (transitionSfx != null)
             transitionSfx.Play();
 
-        // Fade out
+        // 2. Fade Out a pantalla negra
         yield return StartCoroutine(Fade(0f, 1f, fadeDuration));
 
-        // start async load
+        // 3. Iniciar carga asíncrona
         AsyncOperation op = SceneManager.LoadSceneAsync(sceneName);
         op.allowSceneActivation = false;
 
-        // espera que se cargue hasta 90%
         while (op.progress < 0.9f)
+        {
             yield return null;
+        }
 
-        // activa la escena (finaliza la carga)
+        // 4. Activar la nueva escena
         op.allowSceneActivation = true;
+        yield return new WaitUntil(() => op.isDone);
 
-        // opcional wait one frame
+        // Esperar un frame extra para estabilizar el motor
         yield return null;
 
-        // Fade in (del nuevo contenido)
+        // 5. Fade In (mostrar la nueva escena)
         yield return StartCoroutine(Fade(1f, 0f, fadeDuration));
 
-        // reenables (si deseás volver a habilitar)
+        // 6. ¡AHORA SÍ! Reactivar input/movimiento de Quime
         foreach (var b in disableDuringTransition)
             if (b != null) b.enabled = true;
     }
-
     IEnumerator Fade(float from, float to, float dur)
     {
         if (fadeImage == null) yield break;

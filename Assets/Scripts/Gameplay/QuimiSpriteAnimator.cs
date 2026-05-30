@@ -4,7 +4,11 @@ using UnityEngine;
 public class QuimiSpriteAnimator : MonoBehaviour
 {
     [Header("Control")]
-    public bool canMove = true; // Esta es la variable clave
+    public bool canMove = true; 
+
+    [Header("Cinemática")]
+    public bool isCinematic = false; // <-- Nuevo: Indica si el Timeline tomó el control
+    private Vector2 cinematicInput = Vector2.zero;
 
     [Header("Sprites")]
     public Sprite frontIdle, frontMove1, frontMove2;
@@ -48,12 +52,10 @@ public class QuimiSpriteAnimator : MonoBehaviour
         if(steps != null) steps.loop = true;
     }
 
-    // Método público para llamar desde tus otros scripts
     public void SetInputActive(bool active)
     {
         canMove = active;
         
-        // Opcional: Si desactivamos input, forzamos frenado inmediato de la física también
         if (!active) {
             rb.linearVelocity = Vector2.zero; 
             currentSpeed = 0;
@@ -62,24 +64,27 @@ public class QuimiSpriteAnimator : MonoBehaviour
 
     void Update() {
         
-        // 1. INPUT MODIFICADO
-        // Si canMove es true, leemos teclado. Si es false, moveInput es cero.
-        if (canMove)
+        // 1. CONTROL DE INPUT: ¿Quién maneja?
+        if (isCinematic)
         {
+            // El Timeline dicta hacia dónde ir
+            moveInput = cinematicInput;
+        }
+        else if (canMove)
+        {
+            // El jugador tiene el control
             moveInput.x = Input.GetAxisRaw("Horizontal");
             moveInput.y = Input.GetAxisRaw("Vertical");
         }
         else
         {
+            // Nadie tiene el control (ej: en un diálogo quieto)
             moveInput = Vector2.zero;
         }
 
-        // A partir de aquí, tu lógica original funciona perfecto.
-        // Al ser moveInput (0,0), el código saltará automáticamente al 'else' de abajo.
-
+        // A partir de aquí, la lógica de animación original fluye natural...
         if (moveInput.sqrMagnitude > 0) {
             
-            // Lógica de dirección...
             Sprite idle, mov1, mov2;
 
             if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y)) {
@@ -100,13 +105,11 @@ public class QuimiSpriteAnimator : MonoBehaviour
                 }
             }
 
-            // Frecuencia...
             float speedMultiplier = currentSpeed / walkSpeed;
             if(speedMultiplier < 0.1f) speedMultiplier = 1f; 
 
             float dynamicInterval = baseStepInterval / speedMultiplier;
 
-            // Ciclo de Animación...
             animationTimer += Time.deltaTime;
             
             if (animationTimer >= dynamicInterval) {
@@ -120,16 +123,11 @@ public class QuimiSpriteAnimator : MonoBehaviour
                 }
             }
 
-            // Asignar Sprite...
             if (stepIndex == 0 || stepIndex == 2) sr.sprite = idle;
             else if (stepIndex == 1) sr.sprite = mov1;
             else if (stepIndex == 3) sr.sprite = mov2;
         }
         else {
-            // ESTO ES LO QUE QUERÍAS:
-            // Al cortar el input, el código cae aquí naturalmente.
-            // Se resetea el timer, el index, se para el audio y se pone el IDLE.
-            
             animationTimer = 0f;
             stepIndex = 0;
             if (steps != null && steps.isPlaying) steps.Stop();
@@ -145,21 +143,40 @@ public class QuimiSpriteAnimator : MonoBehaviour
     }
 
     void FixedUpdate() {
-        // Si no hay input (porque canMove es false), moveInput es (0,0), 
-        // así que el personaje se detendrá suavemente según tu lógica de desaceleración.
         rb.MovePosition(rb.position + moveInput.normalized * currentSpeed * Time.fixedDeltaTime);
-
-        // Si canMove es false, moveInput es 0, por lo que querrás que currentSpeed baje a 0
-        // Nota: Input.GetKey seguirá funcionando si no lo bloqueamos, así que mejor usamos canMove también aquí.
         
         float targetSpeed = 0f;
         
-        if (canMove) {
+        // 2. CONTROL DE VELOCIDAD FÍSICA
+        if (isCinematic) 
+        {
+            // En cinemáticas, queremos que camine a velocidad normal, 
+            // aunque el jugador no pueda tocar los controles.
+            targetSpeed = walkSpeed; 
+        }
+        else if (canMove) 
+        {
             targetSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
         } 
-        // Si canMove es false, targetSpeed se queda en 0.
 
         float rate = (targetSpeed > currentSpeed) ? acceleration : deceleration;
         currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, rate * Time.fixedDeltaTime);
+    }
+
+    // --- 3. MÉTODOS PÚBLICOS PARA TIMELINE SIGNALS ---
+    public void CinematicaCaminarArriba()    { isCinematic = true; cinematicInput = Vector2.up; }
+    public void CinematicaCaminarAbajo()     { isCinematic = true; cinematicInput = Vector2.down; }
+    public void CinematicaCaminarIzquierda() { isCinematic = true; cinematicInput = Vector2.left; }
+    public void CinematicaCaminarDerecha()   { isCinematic = true; cinematicInput = Vector2.right; }
+    public void CinematicaMirarArriba()    { CinematicaFrenar(); lastDirection = Direction.Back;  sr.sprite = backIdle; }
+    public void CinematicaMirarAbajo()     { CinematicaFrenar(); lastDirection = Direction.Front; sr.sprite = frontIdle; }
+    public void CinematicaMirarIzquierda() { CinematicaFrenar(); lastDirection = Direction.Left;  sr.sprite = leftIdle; }
+    public void CinematicaMirarDerecha()   { CinematicaFrenar(); lastDirection = Direction.Right; sr.sprite = rightIdle; }
+    
+    public void CinematicaFrenar() 
+    { 
+        isCinematic = false; 
+        cinematicInput = Vector2.zero; 
+        moveInput = Vector2.zero; 
     }
 }

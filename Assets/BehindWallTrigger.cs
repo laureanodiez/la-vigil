@@ -18,6 +18,14 @@ public class BehindWallTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             StartFade(transparentAlpha);
+
+            // --- NUEVO: Buscamos el Aura en Quime y la activamos ---
+            // Importante: El objeto hijo en Quime DEBE llamarse exactamente "AuraTransparente"
+            Transform aura = other.transform.Find("Mask");
+            if (aura != null)
+            {
+                aura.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -26,6 +34,13 @@ public class BehindWallTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             StartFade(1.0f);
+
+            // --- NUEVO: Buscamos el Aura en Quime y la desactivamos ---
+            Transform aura = other.transform.Find("Mask");
+            if (aura != null)
+            {
+                aura.gameObject.SetActive(false);
+            }
         }
     }
 

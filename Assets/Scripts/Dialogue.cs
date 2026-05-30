@@ -120,7 +120,8 @@ public class Dialogue : MonoBehaviour
     
     private DialogueSet currentSet;
     private bool dialogueActivated;
-    private int step;
+    private int step = 0;
+    private int maxStepReached = 0;
     private bool isTyping = false;
     private Coroutine typewriterCoroutine;
     private string lastUsedSetName = "";
@@ -144,38 +145,73 @@ public class Dialogue : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && dialogueActivated)
-        {
-            HandleDialogueInteraction();
-        }
-    }
-    
-    void HandleDialogueInteraction()
-    {
-        // Si está escribiendo, completar el texto actual
-        if (isTyping && typewriterCoroutine != null)
-        {
-            StopCoroutine(typewriterCoroutine);
-            dialogueText.text = currentSet.dialogueWords[step - 1];
-            isTyping = false;
-            return;
-        }
+        if (Time.timeScale == 0f) return;
         
-        // Si no hay diálogo activo, activar el apropiado
-        if (currentSet == null)
+        if (Input.GetButtonDown("Interact") && dialogueActivated && currentSet == null)
         {
             SelectAndStartDialogue();
             return;
         }
-        
-        // Avanzar al siguiente paso del diálogo
-        if (step >= currentSet.speaker.Length)
+
+        if (currentSet != null)
         {
-            EndDialogue();
+            HandleDialogueNavigation();
         }
-        else
+    }
+        
+    void HandleDialogueNavigation()
+    {
+        // 1. Si está escribiendo, Interacción (Espacio) autocompleta el texto actual
+        if (isTyping)
         {
-            ShowDialogueStep();
+            if (Input.GetButtonDown("Interact"))
+            {
+                StopCoroutine(typewriterCoroutine);
+                dialogueText.text = currentSet.dialogueWords[step];
+                isTyping = false;
+            }
+            return; // Bloqueamos las flechas mientras escribe
+        }
+
+        // 2. Navegación hacia atrás (Flecha Izquierda)
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            if (step > 0)
+            {
+                step--;
+                ShowDialogueInstantly();
+            }
+        }
+        // 3. Navegación hacia adelante por lo ya descubierto (Flecha Derecha)
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            if (step < maxStepReached)
+            {
+                step++;
+                ShowDialogueInstantly();
+            }
+        }
+        // 4. Avanzar a un nuevo diálogo o terminar (Interact/Espacio)
+        else if (Input.GetButtonDown("Interact"))
+        {
+            // Si estamos releyendo un diálogo viejo, avanzar al siguiente al apretar espacio
+            if (step < maxStepReached)
+            {
+                step++;
+                ShowDialogueInstantly();
+            }
+            // Si estamos en el último diálogo descubierto y hay más por descubrir
+            else if (step < currentSet.speaker.Length - 1)
+            {
+                step++;
+                maxStepReached = step;
+                ShowDialogueStep();
+            }
+            // Si ya leímos todo el set de diálogos
+            else
+            {
+                EndDialogue();
+            }
         }
     }
     
@@ -189,10 +225,17 @@ public class Dialogue : MonoBehaviour
             return;
         }
         
-        // Ejecutar evento de inicio del set
         currentSet.onDialogueStart?.Invoke();
         
+        // Preparar UI y bloquear jugador al inicio
+        if (playerMovement != null) playerMovement.SetInputActive(false); 
+        foreach (var b in disableDuringTransition) if (b != null) b.enabled = false;
+        interactCanvas.SetActive(false);
+        dialogueCanvas.SetActive(true);
+        DialogueHistoryManager.Instance?.SetHUDVisible(false);
+        
         step = 0;
+        maxStepReached = 0;
         ShowDialogueStep();
     }
     
@@ -223,21 +266,13 @@ public class Dialogue : MonoBehaviour
     
     void ShowDialogueStep()
     {
-        if (playerMovement != null) 
-        {
-            playerMovement.SetInputActive(false); 
-        }
-        foreach (var b in disableDuringTransition)
-            if (b != null) b.enabled = false;
-        
-        interactCanvas.SetActive(false);
-        dialogueCanvas.SetActive(true);
-        
-        // Actualizar UI
+        string lineID = $"{currentSet.setName}_{step}";
+
+        DialogueHistoryManager.Instance?.AddToHistory(lineID, currentSet.speaker[step], currentSet.dialogueWords[step]);
+
         speakerText.text = currentSet.speaker[step];
         portraitImage.sprite = currentSet.portrait[step];
         
-        // Mostrar texto con o sin efecto
         if (useTypewriter)
         {
             typewriterCoroutine = StartCoroutine(TypewriterEffect(currentSet.dialogueWords[step], step));
@@ -246,8 +281,13 @@ public class Dialogue : MonoBehaviour
         {
             dialogueText.text = currentSet.dialogueWords[step];
         }
-        
-        step++;
+    }
+
+    void ShowDialogueInstantly()
+    {
+        speakerText.text = currentSet.speaker[step];
+        portraitImage.sprite = currentSet.portrait[step];
+        dialogueText.text = currentSet.dialogueWords[step];
     }
     
     IEnumerator TypewriterEffect(string text, int currentStep)
@@ -315,6 +355,7 @@ public class Dialogue : MonoBehaviour
         }
         
         dialogueCanvas.SetActive(false);
+        DialogueHistoryManager.Instance?.SetHUDVisible(true);
         currentSet = null;
         step = 0;
 
@@ -367,7 +408,25 @@ public class Dialogue : MonoBehaviour
         {
             currentSet = forcedSet;
             step = 0;
+            maxStepReached = 0; // Reiniciamos el límite del carrusel
+            
+            // Disparamos el evento de inicio
+            currentSet.onDialogueStart?.Invoke();
+            
+            // Preparamos la UI y bloqueamos al jugador acá mismo
+            if (playerMovement != null) playerMovement.SetInputActive(false); 
+            foreach (var b in disableDuringTransition) if (b != null) b.enabled = false;
+            
+            interactCanvas.SetActive(false);
+            dialogueCanvas.SetActive(true);
+            DialogueHistoryManager.Instance?.SetHUDVisible(false);
+            
+            // Mostramos el primer paso
             ShowDialogueStep();
+        }
+        else
+        {
+            Debug.LogWarning($"No se encontró el set de diálogo forzado: {setName}");
         }
     }
     
